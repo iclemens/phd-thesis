@@ -1,11 +1,19 @@
 \documentclass[10pt,a5paper,onecolumn]{book}
 
+\usepackage[dutch,british]{babel}
+\usepackage[nottoc]{tocbibind}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{gensymb}
 \usepackage{textcomp}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{xcolor}
+
+\hypersetup{colorlinks=true, linkcolor=blue}
+\setcounter{tocdepth}{1}
 
 \begin{document}
 
@@ -18,10 +26,24 @@
 
 \mainmatter
 
+\selectlanguage{british}
+\input{src/s1_intro.tex}
 \input{src/paper1.tex}
 \input{src/paper2.tex}
+\input{src/s2_discussion.tex}
 
 \bibliography{refs}{}
-\bibliographystyle{plain}
+\bibliographystyle{plain_custom}
+
+\backmatter
+
+\selectlanguage{dutch}
+\input{src/s3_summary.tex}
+
+\selectlanguage{british}
+\input{src/s4_aboutme.tex}
+\input{src/s5_publications.tex}
+\input{src/s6_thanks.tex}
+\input{src/s7_series.tex}
 
 \end{document}
