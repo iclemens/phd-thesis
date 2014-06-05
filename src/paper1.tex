@@ -1,6 +1,14 @@
 
-\chapter{Multisensory Processing in Spatial Orientation: An Inverse Probabilistic Approach}
+\thispagestyle{empty}
+
+\chapter{Multisensory processing in spatial orientation:\\An inverse probabilistic approach}
 \chaptermark{}
+
+\vfill
+
+\noindent Published in the Journal of Neuroscience \cite{clemens2011}.
+
+\newpage
 
 \section*{Abstract}
 Most evidence that the brain uses Bayesian inference to integrate noisy sensory signals optimally has been obtained by showing that the noise levels in each modality separately can predict performance in combined conditions. Such a forward approach is difficult to implement when the various signals cannot be measured in isolation, as in spatial orientation, which involves the processing of visual, somatosensory, and vestibular cues. Instead, we applied an inverse probabilistic approach, based on optimal observer theory. Our goal was to investigate whether the perceptual differences found when probing two different states ---body-in-space and head-in-space orientation--- can be reconciled by a shared scheme using all available sensory signals. Using a psychometric approach, seven human subjects were tested on two orientation estimates at tilts \textless 120\textdegree: perception of body tilt [subjective body tilt (SBT)] and perception of visual vertical [subjective visual vertical (SVV)]. In all subjects, the SBT was more accurate than the SVV, which showed substantial systematic errors for tilt angles beyond 60\textdegree. Variability increased with tilt angle in both tasks, but was consistently lower in the SVV. The sensory integration model fitted both datasets very nicely. A further experiment, in which supine subjects judged their head orientation relative to the body, independently confirmed the predicted head-on-body noise by the model. Model predictions based on the derived noise properties from the various modalities were also consistent with previously published deficits in vestibular and somatosensory patients. We conclude that Bayesian computations can account for the typical differences in spatial orientation judgments associated with different task requirements.
@@ -306,18 +314,35 @@ In conclusion, we have tested the performance of healthy subjects in two psychop
 Here we provide further explanation about the Bayesian computations underlying the SVV as expressed in Equations 6 and 10 in Materials and Methods. Figure 8 illustrates graphically that the variance of the posterior distribution in a single trial (sH~S2) is not simply the same as the variance in its peak location in multiple trials, s2(H~S). In a single trial (Fig. 8A-C), the optimal estimate of head tilt is based on the likelihood (Fig. 8B, green curve) associated with the combined sensory input from the direct and the indirect pathway (Fig. 8A, green line, HS) and the prior (Fig. 8B, blue curve), by multiplication of the two probability distributions. The prior distribution is a Gaussian with mean HSP and variance sHSP2. The peak of the resulting posterior distribution (Fig. 8B, orange curve) is used as the optimal estimate of head tilt (H~S), given by the following: 
 
 % Equation 13
+\begin{equation}
+\label{p1eqn13}
+\tilde{H}_S = w_{HS} \cdot \hat{H}_S + w_{HP} \cdot H_{SP},
+\end{equation}
 
 with
 
-% Equation 14 
+% Equation 14
+\begin{equation}
+\label{p1eqn14}
+w_{HS} = \frac{1 / \sigma^2_{HS}}{1 / \sigma^2_{HS} + 1 / \sigma^2_{HSP}},
+\end{equation}
 
 and
 
 % Equation 15
+\begin{equation}
+\label{p1eqn15}
+w_{HP} = \frac{1 / \sigma^2_{HSP}}{1 / \sigma^2_{HS} + 1 / \sigma^2_{HSP}},
+\end{equation}
 
 in which sHS denotes the noise in the sensory signal, known to the observer, and wHS and wHP represent the relative weights of the sensory signal and the prior, respectively. Note that Equation 13 is equivalent to Equation 1 in Materials and Methods. The variance of the posterior distribution in a single trial is given by the following: 
 
 % Equation 16
+\begin{equation}
+\label{p1eqn16}
+\sigma^2_{HS} = w_{HS} \cdot \sigma^2_{HS} \\
+              = \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
+\end{equation}
 
 and is reflected by the width of the orange curve in Figure 8B. Figure 8D-F illustrates performance in multiple trials, in which the posterior distributions vary due to sensory noise (sHS), whereas the prior remains fixed. The variance of each posterior distribution is fixed and is given by Equation 16. 
 
@@ -328,6 +353,16 @@ and is reflected by the width of the orange curve in Figure 8B. Figure 8D-F illu
 That the variance of the peak locations across multiple trials, s2(H~S), is smaller can be shown by applying the rules of noise propagation to Equation 13. 
 
 % Equation 17
+\begin{equation}
+\label{p1eqn17}
+\sigma^2(\tilde{H}_S) = \\
+	\big( \frac{\delta\tilde{H}_S}{\delta\hat{H}_S^2} \big) \cdot \\
+	\sigma^2(\hat{H}_S) + \\
+	\big( \frac{\delta\tilde{H}_S}{\delta H_{SP}^2} \big) \cdot \\
+	\sigma^2(H_{SP}) \\
+	= w^2_{HS} \cdot \sigma^2_{HS} \\
+	= \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
+\end{equation}
 
 which is equivalent to Equation 10 in Materials and Methods. Corresponding panels G-I (Fig. 8) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. Figure 8I illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (Fig. 8B), which follows from the comparison of Equations 16 and 17, respectively. 
 
