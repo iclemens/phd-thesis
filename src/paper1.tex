@@ -1,0 +1,317 @@
+
+\chapter{Multisensory Processing in Spatial Orientation: An Inverse Probabilistic Approach}
+
+\section*{Abstract}
+Most evidence that the brain uses Bayesian inference to integrate noisy sensory signals optimally has been obtained by showing that the noise levels in each modality separately can predict performance in combined conditions. Such a forward approach is difficult to implement when the various signals cannot be measured in isolation, as in spatial orientation, which involves the processing of visual, somatosensory, and vestibular cues. Instead, we applied an inverse probabilistic approach, based on optimal observer theory. Our goal was to investigate whether the perceptual differences found when probing two different states ---body-in-space and head-in-space orientation--- can be reconciled by a shared scheme using all available sensory signals. Using a psychometric approach, seven human subjects were tested on two orientation estimates at tilts \textless 120\textdegree: perception of body tilt [subjective body tilt (SBT)] and perception of visual vertical [subjective visual vertical (SVV)]. In all subjects, the SBT was more accurate than the SVV, which showed substantial systematic errors for tilt angles beyond 60\textdegree. Variability increased with tilt angle in both tasks, but was consistently lower in the SVV. The sensory integration model fitted both datasets very nicely. A further experiment, in which supine subjects judged their head orientation relative to the body, independently confirmed the predicted head-on-body noise by the model. Model predictions based on the derived noise properties from the various modalities were also consistent with previously published deficits in vestibular and somatosensory patients. We conclude that Bayesian computations can account for the typical differences in spatial orientation judgments associated with different task requirements.
+
+\section{Introduction}
+
+To infer the current state of the body in space, the brain must rely on noisy sensory inputs. Thus, a degree of uncertainty in the reconstructed physical state is unavoidable. However, according to the rules of Bayesian inference, perceptual uncertainty can be reduced by combining overlapping information from different sensory modalities, weighting each signal in proportion to its reliability \cite{knill2004,kording2004,angelaki2008}. For example, psychophysical studies have shown that human observers behave optimally when integrating visual--proprioceptive \cite{vanbeers1999}, visual--haptic \cite{ernst2002}, or visual--auditory \cite{alais2004} cues. In these studies, the approach was to estimate noise levels of the two sensory modalities in separate unimodal experiments that were then used to predict performance in the bimodal case. Unfortunately, such a forward approach is difficult to implement when the involved sensory modalities cannot be studied in isolation, as in spatial orientation, which involves visual, somatosensory, and vestibular cues. Here the visual contribution can be eliminated easily, but to test whether somatosensory and vestibular cues are combined optimally, one cannot simply ``switch off'' one system to assess the noise level of the other. 
+
+Instead, we took optimality as a starting point and implemented an inverse probabilistic approach to deduce noise levels of the various individual sensors. We probed two spatial orientation estimates---body-in-space and head-in-space orientation--- which, according to optimal theory, will use all available sensory signals that can be obtained by various reference frame transformations. This transformation and integration scheme, shown in Figure 1, involves at least three sensory systems: (1) head sensors, supplying information about the orientation of the head with respect to gravity (vestibular system); (2) body sensors, providing an estimate of the orientation of the body in space (``somatic graviceptors'') \cite{mittelstaedt1997}; and (3) neck sensors, providing an estimate of the angle between head and body (neck proprioceptors). 
+
+% Figure 1
+
+In this scheme, an estimate of body orientation in space can be obtained directly from the body sensors, but also indirectly from the head-sensor signal, by subtracting the neck signal. Likewise, the estimate of head-in-space orientation can be obtained from the head sensors, but also through an indirect pathway, by combining the body-sensor signal with neck information. Importantly, as the two state estimates require different transformations, Bayesian theory predicts that the relative contribution of the sensory signals will differ as well \cite{mcguire2009}. Apart from the crucial role of sensory information, the scheme allows for the possibility that the estimates of the two orientation states can be further influenced by prior beliefs about sensory states. 
+
+Here, we used two psychophysical tasks---subjective body tilt (SBT) and subjective visual vertical (SVV) to quantify the two orientation estimates in a group of healthy subjects. Using an inverse probabilistic approach, we obtained stable solutions for the noise properties of the involved sensor systems. Independent measurements of neck noise confirmed the levels predicted by the model. Forward model predictions based on these noise properties were consistent with previously published deficits of bilateral vestibular and paraplegic patients, which would be difficult to explain otherwise. Our results suggest that Bayesian integration of multisensory information explains the major task-dependent features in spatial orientation perception. 
+
+\section{Materials and Methods}
+
+\subsection{Subjects}
+
+Seven subjects (6 male, 1 female) provided written informed consent to participate in the experiments. Ages ranged from 23 to 65 years. Subjects were free of any known vestibular or other neurological disorder and had normal or corrected-to-normal visual acuity. All subjects took part in SBT and SVV experiments (see below, Experiments) and returned to the laboratory for an independent measurement of neck proprioception. Before each experiment started, subjects received careful instructions and performed a few practice runs to get used to the task. Participants never received any feedback about their performance, not even in the training trials. Each subject participated in 20 experimental sessions of {\textasciitilde}45 min each, yielding {\textgreater} 15 h recording time per participant.
+%%% ^^ Needs fixing
+
+\subsection{Setup}
+
+Body tilt was controlled by a computer-controlled vestibular chair, which was configured to allow subject rotation in the roll axis. A digital position encoder measured roll position with an angular resolution of 0.04\textdegree. The subject's body was tightly fixated using a five-point seat belt and adjustable shoulder and hip supports. Velcro straps restrained both legs and feet, and a padded helmet firmly fixated the head in a natural upright position for looking straight ahead. Subject-specific seat adjustments ensured that the naso-occipital axis, midway between the eyes, coincided with the roll axis of the chair. Experiments took place in complete darkness. 
+
+\subsection{Experiments}
+
+\subsubsection{SBT}
+ 
+The SBT experiment served to obtain a psychometric measure of each subject's accuracy and precision of body-tilt perception at five body-tilt angles: upright (0\textdegree, SBT0 task) and 45\textdegree and 90\textdegree right side and left side down (SBT\textpm45 task and SBT\textpm90 task). Negative angles indicated left side down. We applied the method of constant stimuli, using a set of 10 equidistant body-tilt angles, centered on tentative estimates of the subject's 0\textdegree (SBT0), 45\textdegree  (SBT45), -45\textdegree (SBT-45), 90\textdegree (SBT90), and -90\textdegree (SBT-90) body-tilt percept. The latter were determined in a few pilot trials that also served to familiarize the subject with the task, without providing a reference of the five respective orientations to be tested. Relative to the test angle, we used test angle intervals of 3\textdegree, 4\textdegree, and 4\textdegree  in the SBT0, SBT\textpm45, and SBT\textpm90 tasks, respectively. Body-tilt angles were tested 14 times in random order, yielding 140 responses for each psychometric curve. 
+
+To perform the psychophysical SBT experiments, two methodological problems had to be solved. The first relates to the number of experimental sessions that we could reasonably ask subjects to perform. We realized that returning the subject to upright for reorientation after each trial would require too large a number of experimental sessions. Our overriding concern was that starting each trial from upright would confound the SBT0 task in the sense that subjects could then simply notice the change in chair position. To prevent this, we always inserted a detour rotation before moving the subject to the test angle in a given trial. The detour, always to a tilt position clearly outside the psychometric test range, served to reset the subject's memory of the previous tilt position. These detour angles were chosen randomly from a range at 30-40\textdegree clockwise (CW) and counterclockwise (CCW) from the presumed threshold. As an illustration, Figure 2 shows how the subject was moved from one trial to the next in the course of an SBT90 experiment. Detour angles preceding each test angle were taken from the CW and the CCW detour range in equal proportions. An analysis of trial history effects indicated that detour angles did not affect the judgment in the subsequent trial ($p > 0.05$). 
+
+% Figure 2
+
+
+Each experimental run started in upright position with the room lights on. After the lights were turned off, subjects were first rotated at a constant angular velocity of 30\textdegree/s to a random detour angle, outside of the test angle range, where they remained for 3 s. The chair then moved to a randomly chosen position within the test range with a very slow and noisy profile, defined by the sum of a ramp of 0.4-2\textdegree/s and Gaussian white noise (bandwidth, 0-0.7 Hz; RMS amplitude, 3.4\textdegree). Ramp speed was chosen such that the trajectory between detour angle and test angle was reached in 30 s (Fig. 2). These precautions were taken to enforce independent absolute tilt judgments and to deter reliance on sensed changes in tilt position that had occurred since the previous trial. Three seconds after arrival at the test angle, a beep signal prompted the subject to indicate whether body orientation was CW or CCW from the instructed reference orientation (0\textdegree in the SBT0 task, \textpm45\textdegree in the SBT\textpm45, or ±90\textdegree in the SBT\textpm90 task), using a toggle switch. The subject was then rotated at a constant velocity to a new randomly drawn detour angle, and the above procedure was repeated. Each run, comprising seven test angles, lasted ~5 min, after which the subject was rotated back to upright, and room lights were turned on. Between runs, there was a 60 s rest interval before the next run started. Each SBT task was tested in separate sessions of \textasciitilde45 min each, thus amounting to a total of 15 sessions per subject (i.e., \textasciitilde11 h of recording time). 
+% ^ Needs fixing
+
+\subsubsection{SVV}
+ 
+The same subjects were also tested in a series of SVV experiments. Part of this dataset (four subjects) has been published previously as part of a larger dataset on visual verticality perception (De Vrijer et al., 2009). Data in the other three subjects were collected anew. Here we provide a brief summary of the paradigm. SVV was tested at nine roll-tilt angles, ranging from -120 to 120\textdegree at 30\textdegree intervals. A luminous line (angular subtend, 20\textdegree), polarized with a bright dot at one end, was mounted in front of the subject. The line's rotation axis coincided with the chair rotation axis. In each experimental run, the subject was rotated from upright to the chosen test angle at a constant angular velocity of 30\textdegree/s. After a 30 s waiting period that allowed canal effects to subside, a luminous line was briefly flashed (20 ms), and the subject indicated whether its orientation in space was CW or CCW from the perceived direction of gravity. The line orientation was selected randomly from a set of 11 line orientations. After all line orientations had been tested, the subject was rotated back to upright, and room lights were turned on. Positive and negative body-tilt angles were alternated regularly. As in the SBT experiment, we used the method of constant stimuli. The set of 11 line orientations was centered on a coarse estimate of the SVV threshold at each tilt angle. We used orientation intervals of 3°, except for upright, where intervals of 2\textdegree were taken. Each set of line orientations was tested in random order in 12 experimental runs, thus yielding a total of 132 responses for each psychometric curve. SVV data were collected in a total of five 45 min sessions per subject. 
+
+\subsection{Data analysis}
+
+CW tilt angles of the body and the luminous line were defined positive. We quantified performance, for each roll-tilt angle (5 in the SBT and 9 in the SVV) independently, by examining the proportion of CW responses as a function of body orientation (SBT) and the proportion of CCW responses as a function of line orientation with respect to the body (SVV). Psychometric data were quantified by fitting a cumulative Gaussian function (Fig. 3): 
+
+\begin{equation}
+\label{p1psych}
+P(x) = \lambda + (1 - 2\lambda) \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{x}{e^{-(y-\mu)^2 / 2\sigma^2}}dy,
+\end{equation}
+% Equation 1
+
+
+in which $x$ represents body orientation in space (SBT experiment) or line orientation with respect to the body (SVV experiment). The mean of the Gaussian $\mu$ represents the subjective perception of the reference orientation in the SBT task, or the SVV compensation angle (the angle between the apparent visual vertical line and the body axis) in the SVV task. The width of the curve, $\sigma^2$, inversely related to precision, serves as a measure of the subject's variability in the SBT or SVV task. Parameter $\lambda$, representing the lapse rate, accounts for stimulus-independent errors caused by subject lapses or mistakes and was restricted to small values ($\lambda < 0.06$). Fits were performed using Matlab software (MathWorks) with the routine ``psignifit'' \cite{wichmann2001b}. 
+
+\subsection{Sensory integration model}
+
+To provide a theoretical framework that explains the observed responses, we designed a sensory integration model for visual verticality and body-tilt perception that assumes optimal processing of all potentially relevant sensory signals, including body, head, and neck sensors. The model links accuracy and variability in the two spatial tasks to the properties of the underlying sensors. For simplicity, the scheme is limited to SBT and SVV signal processing in darkness. 
+
+In the scheme (Fig. 1), we use the following conventions: physical variables are denoted by a capital with a subscript indicating the frame of reference. For example, $H_S$ represents the physical orientation of the head in space. Sensory signals and their reference-frame-transformed counterparts are denoted by a hat symbol ($\hat{}$), as in $\hat{H}_{S}$, which represents the orientation of the head in space as measured by the head-in-space sensors. The optimal estimate of a variable, obtained by integration of all available information, is indicated by a tilde ($\sim$), as in $\tilde{H}_S$, representing the final head-in-space estimate. 
+
+It is assumed that all sensory signals are accurately calibrated (i.e., unbiased) but corrupted by independent Gaussian noise with a given variance ($\sigma^2$), with subscripts to indicate the sensory modality (e.g., $\sigma_{BS}^2$ represents noise variance in the body-in-space sensors). 
+
+\subsubsection{SBT computation}
+ 
+To obtain an estimate of the orientation of the body in space, the brain can use ``direct'' sensory information from body sensors ($\hat{B}_S$), such as tactile receptors in the skin or so-called graviceptors in the trunk \cite{mittelstaedt1997, mittelstaedt1998, vaitl2002}. Alternatively, an ``indirect'' pathway, involving a reference frame transformation, can also provide a body-in-space estimate. For this purpose, sensory head-in-space information, provided by the otoliths, must be combined with information about head-on-body orientation, provided by proprioceptive signals from the neck ($\hat{B}_{SI} = \hat{H}_S - \hat{H}_B$). Because the sensors are contaminated by noise, the direct and indirect signals can be represented as Gaussian probability distributions with mean values of $\hat{B}_S$ and $\hat{H}_S - \hat{H}_B$, and variance levels of $\sigma_{BS}^2$ and $\sigma_{HS}^2 + \sigma_{HB}^2$, respectively. Theoretically, as shown in Figure 1, the brain could also use prior information about body-in-space orientation in the computation of the body-in-space estimate. The effect of including a prior on the SBT (centered on upright) would be a systematic error of underestimation at larger tilt angles. However, neither previous findings \cite{mittelstaedt1983, mast1996, jarchow1999, vanbeuzekom2001} nor the present results (Figs. 3, 4), showed such systematic errors across subjects. In modeling terms, this indicates a uniform (uninformative) prior, which corresponds to a weight of 0. Accordingly, a statistically optimal estimate of body-in-space orientation ($\tilde{B}_S$) is then given by the peak of the Gaussian distribution that results from the multiplication of the two distributions representing the direct and indirect sensory pathways. It follows that
+
+\begin{equation}
+\tilde{B}_S = w_{BD} \cdot \hat{B}_S + w_{BI} \cdot (\hat{H}_S - \hat{H}_B),
+\end{equation}
+
+with
+
+\begin{equation}
+w_{BD} = \frac{1/\sigma^2_{BS}}{1/(\sigma^2_{HS} + \sigma^2_{HB}) + 1/\sigma^2_{BS}}
+\end{equation}
+
+and
+
+\begin{equation}
+w_{BI} = \frac{1/(\sigma^2_{HS} + \sigma^2_{HB})}{1/(\sigma^2_{HS} + \sigma^2_{HB}) + 1/\sigma^2_{BS}}
+\end{equation}
+
+in which $w_{BD}$ and $w_{BI}$ (Fig. 1) represent the respective weights of the direct and indirect pathways, which add up to 1 \cite{landy1995,jacobs1999,ernst2002,bays2007}. Note that the weight of each pathway depends on its reciprocal noise variance (also known as precision), so that precise signals have a stronger influence on the final estimate than noisy signals. Furthermore, because both sensory pathways are supposed to carry unbiased signals, the mean estimate of body in space in multiple trials, $\mu(\tilde{B}_S)$, will also be accurate. 
+
+It can further be shown that the variance in $\tilde{B}_S$ in multiple trials, denoted as $\sigma^2(\tilde{B}_S)$, equals 
+
+\begin{equation}
+\sigma^2(\tilde{B}_S) = \frac{
+\sigma^2_{BS} \cdot (\sigma^2_{HS} + \sigma^2_{HB})
+}{
+\sigma^2_{BS} + (\sigma^2_{HS} + \sigma^2_{HB})
+}
+\end{equation}
+
+which implies that the final estimate has a lower variance than the signal provided by either the direct or the indirect pathway \cite{ernst2002,ernst2004}. Because we assume that sensory signals are accurate and that there is no prior information about body in space, the model predicts that there are no systematic errors in the SBT, so that $\mu(\tilde{B}_S)$ = BS. The variance in the SBT task is represented by $\sigma^2(\tilde{B}_S)$. 
+
+\subsubsection{SVV computation}
+
+The scheme applies a similar sensory signal processing strategy to estimate the orientation of head in space, $\tilde{H}_S$, used in the SVV. A direct estimate of head-in-space orientation is provided by the head-in-space sensors ($\hat{H}_S$), and an indirect estimate is obtained by a reference frame transformation of the body-in-space signal ($\hat{B}_S$) by adding the head-on-body estimate (HB), provided by the neck sensors ($H_{SI} = \hat{B}_S + \hat{H}_B$). Again, direct and indirect pathway signals are represented by two Gaussian probability distributions, with mean values of $\hat{H}_S$ and $\hat{B}_S + \hat{H}_B$, respectively, and corresponding variances of $\sigma^2_{HS}$ and $\sigma^2_{BS} + \sigma^2_{HB}$. In the computation of the head-in-space estimate, to account for systematic errors \cite{macneilage2007, devrijer2008}, it is further assumed that the brain uses prior knowledge about head-in-space orientation, which entails that small head-tilt angles are considered more probable than large tilts. Mathematically, the prior is represented by a Gaussian distribution that is centered at 0\textdegree head tilt (HSP = 0\textdegree) with a variance of sHSP2. Note that, in our scheme, the head-in-space prior, which contributes to the SVV computations, does not affect the body-in-space estimate. Integration of the direct and indirect sensory pathways and prior knowledge is performed by multiplication of the three Gaussian distributions. The peak of the resulting posterior distribution represents the optimal estimate of head-in-space orientation ($\tilde{H}_S$), which is given by the following: 
+
+% Equation 6
+\begin{equation}
+\label{p1eqn6}
+\tilde{H}_S = w_{HD} \cdot \hat{H}_S + w_{HI} \cdot (\hat{B}_S + \hat{H}_B) + w_{HP} \cdot H_{SP}
+\end{equation}
+
+with
+
+% Equation 7/8
+\begin{equation}
+w_{HD} = \frac{1 / \sigma^2_{HS}}{1 / (\sigma^2_{BS} + \sigma^2_{HB}) + 1/\sigma^2_{HS} + 1/\sigma^2_{HSP}},
+\end{equation}
+
+\begin{equation}
+w_{HI} = \frac{1 / (\sigma^2_{BS} + 1/\sigma^2_{HB})}{1 / (\sigma^2_{BS} + \sigma^2_{HB}) + 1/\sigma^2_{HS} + 1/\sigma^2_{HSP}}
+\end{equation}
+% Check eqn. 8 the 2nd 1/ might be a mistake
+
+and
+
+\begin{equation}
+w_{HP} = \frac{1 / \sigma^2_{HSP}}{1 / (\sigma^2_{BS} + \sigma^2_{HB}) + 1/\sigma^2_{HS} + 1/\sigma^2_{HSP}}
+\end{equation}
+% Equation 9
+
+In this equation, $w_{HD}$, $w_{HI}$, and $w_{HP}$ (which add up to one) represent the weights of the direct and indirect pathways and the prior, respectively, which are proportional to the relative precision of the sensory signals and the width of the prior. Equation 6 would result in an accurate estimate of $\tilde{H}_S$, if all three pathways were accurate by themselves. However, because the prior is centered on zero ($H_{SP} = 0\degree$), it introduces more and more bias toward upright, as head tilt increases further. Thus, optimization in terms of variance has a downside by causing underestimation of the actual head tilt. The amount of underestimation depends on the width of the prior and the reliability of the sensory inputs. 
+
+The variance in the head-in-space estimates, measured across many trials, $\sigma^2(\tilde{H}_S)$, can be derived directly from Equation \ref{p1eqn6} by applying the rules of error propagation (see Appendix for complete derivation). From these calculations, it follows that 
+
+% Equation 10
+\begin{equation}
+\label{p1eqn10}
+\sigma^2(\tilde{H}_{S}) = w^2_{HD} \cdot \sigma^2_{HS} + w^2_{HI} \cdot (\sigma^2_{BS} + \sigma^2_{HB}),
+\end{equation}
+
+in which the variance contributions of the direct and indirect pathways are represented by their squared weights. Although it does not appear explicitly in Equation \ref{p1eqn10}, it is important to notice that the prior has a noise-reducing effect by downscaling the sensory-related weighting terms ($w_{HD}$ and $w_{HI}$). The narrower the prior, the larger its relative weight ($w_{HP}$) and the smaller the sensory weights, because $w_{HD} + w_{HI} + w_{HP} = 1$. Thus, the effect of the head-in-space prior is twofold: it reduces the variance, but as noticed above, this occurs at the cost of a bias in the final estimate of head-in-space orientation, which becomes pronounced at large tilts (see Appendix for further details). 
+
+Previously, we have shown that to account for the typical nonlinear increase of the systematic SVV errors with tilt, the variability of the head-tilt signal in the model must increase with tilt angle \cite{devrijer2008,devrijer2009}. In line with this conclusion, decreasing effectiveness of the otoliths with increasing tilt has been suggested by various other reports \cite{schone1968,tarnutzer2009,tarnutzer2010} and may reflect the geometry of otolith organs, the nonuniform distribution of otolith afferents in the roll-plane and nonlinear firing rates \cite{tarnutzer2010}. This feature was incorporated by allowing the noise in the sensory head-tilt signal, sHS, to increase rectilinearly with tilt angle: 
+
+% Equation 11
+\begin{equation}
+\sigma_{HS} = a_{HS} |H_S| + b_{HS}
+\end{equation}
+
+in which aHS reflects the proportional increase of noise with tilt angle and bHS represents the noise at $H_{S} = 0\degree$. Note that, in the data fits, parameter $a_{HS}$ was allowed to be zero, so that the present model did not force sHS to depend on head tilt. 
+
+To compute the SVV, the brain not only requires an estimate of head orientation in space ($\tilde{H}_S$), but also needs estimates of eye-in-head orientation ($\tilde{E}_H$) and retinal line orientation ($\tilde{L}_E$). Together, these signals determine the orientation of a visual line in space ($\tilde{L}_S$) according to $\tilde{L}_S = \tilde{H}_S + \tilde{E}_H + \tilde{L}_E$. The systematic error in the SVV experiment (${\Delta}SVV$) corresponds to the error in $\tilde{L}_S$ and is thus given by ${\Delta}SVV = {\Delta}H_S + {\Delta}E_H + {\Delta}L_E$, in which $\Delta$ denotes the bias in each estimate. For simplicity, we assumed that the visual signal representing retinal line orientation is accurate, so that ${\Delta}L_E = 0\degree$. As explained in a previous study \cite{devrijer2009}, underestimation of eye torsion causes errors in the eye-in-head estimate (${\Delta}E_H$), which can be represented by ${\Delta}E_H = -A_{OCR} \cdot sin(\hat{H}_S$, where parameter $A_{OCR}$ denotes uncompensated ocular counterroll. Finally, the error in the head-in-space estimate is obtained by subtracting $\tilde{H}_S$ (see Eq. \ref{p1eqn6}) from the actual head tilt $H_S$, which ultimately leads to the following relation for the mean SVV error, $\mu({\Delta}SVV)$, in multiple trials: 
+
+% Equation 12
+\begin{equation}
+\label{p1eqn12}
+\mu({\Delta}SVV) = (1 - w_{HD} - w_{HI}) \cdot H_S - A_{OCR} \cdot sin(H_S)
+\end{equation}
+
+In Equation \ref{p1eqn12}, the influence of the prior works through the weight factors wHD and wHI. Because these weights do not add up to 1 (see above, $w_{HD} + w_{HI} = 1 - w_{HP} < 1$), the result is a systematic error in the head-in-space estimate, which becomes more pronounced at large tilt. The noise level in the eye-in-head and line-on-eye estimates is probably relatively small compared with the noise in the head-in-space estimate considering results from Vandenbussche et al. (1986), who reported just-noticeable difference levels for orientation discrimination of <1\textdegree. Given this low value, SVV variance is determined mainly by the variance in the latter estimate, so that $\sigma^2({\Delta}SVV) ~ \sigma^2(\tilde{H}_S)$.
+
+\subsection{Model fitting}
+
+The model contains seven fit parameters ($a_{HS}$, $b_{HS}$, $\sigma_{HSP}$, $\sigma_{BS}$, $\sigma_{HB}$, $A_{OCR}$, and $\lambda$) that were fitted to all data (SBT and SVV) simultaneously for each subject. As stated earlier, parameters $a_{HS}$ and $b_{HS}$ represent the increase and offset of sensory noise in the head-in-space estimate, respectively. The parameter $\sigma_{HSP}$ denotes the width of the prior distribution, reflecting a priori knowledge about head-in-space. Noise levels in the body and neck sensors are represented by parameters $\sigma_{BS}$ and $\sigma_{HB}$. Finally, the amplitude of uncompensated ocular counterroll is denoted by $A_{OCR}$. In addition to these six parameters related to sensory processing, there is a seventh parameter to account for lapses ($\lambda$). 
+
+In addition to these ``parameters of interest,'' the data were preprocessed before model fitting by applying mean correction \cite{mcguire2009}. Mean correction was performed to remove systematic errors in the SBT and the asymmetries in the SVV between CW and CCW tilt angles. Because the model is inherently left-right symmetric, it would try to account for differences in SVV bias between equal but opposite tilt angles by falsely increasing the variance. Likewise, because the model assumes that there is no bias in the SBT, it would try to explain any slight deviation from zero by excessively increasing the variance. The asymmetry in the SVV, if any, and a nonzero SBT bias, if any, are captured by fixed parameters of noninterest (n = 9) in the model fits. Thus, for the SBT data, one bias correction term was needed for each tilt angle (yielding five parameters of noninterest), and for the SVV data, one correction parameter was needed for each pair of equal but opposite tilt angles (yielding four parameters of noninterest). We emphasize that the nine parameters of noninterest are not free-fit parameters because they are not optimized by the model. So, although technically our number of free parameters amounts to a total of 16, only seven were determined by fitting the model. 
+
+In total, the seven free parameters of the model had to account for 149 data points, spread across various tilt angles, with each data point reflecting a proportion of CW responses based on either 14 (for the SBT) or 11 (for the SVV) experimental forced-choice CW/CCW responses. We fitted the model by maximizing the likelihood of the data [maximum likelihood estimation (MLE)], in relation to the set of six model parameters ($a_{HS}$, $b_{HS}$, $\sigma_{HSP}$, $\sigma_{BS}$, $\sigma_{HB}$, and $A_{OCR}$) and lapse rate ($\lambda$). Optimal parameter values were obtained by minimizing the negative likelihood function using the Matlab routine ``fmincon'' \cite{devrijer2008, mcguire2009}. Simulations confirmed that the inverse modeling approach was not sensitive to overfitting. SDs of the best-fit parameters were obtained by performing 1999 bootstrap runs. For each run, we constructed 149 data points (reflecting the size of the dataset), each of which was obtained by random sampling with replacement from the original dataset. The model was fit to this new dataset. The distribution of model parameters across all runs was used to derive the 68.2\% confidence interval of each parameter. 
+
+We emphasize that the model fit provided an estimate of the proprioceptive variance of the neck (sHB), even though the head-on-body signal was not directly manipulated during the experiment. Nevertheless, this signal, as sensed by the neck proprioceptors, is essential to implement the reference frame transformation from the body-in-space to the head-in-space signal, and vice versa. Because the neck signal is noisy, these reference frame transformations induce neck-related noise in the original BS and HS signals, even when the head and body are aligned. Because the SBT and SVV tasks require different reference frame transformations, they depend differently on the noise properties of the three sensory systems (body and neck sensors and otoliths). By solving the inverse problem, the noise properties of the three sensory systems, as well as the other fit parameters, can be determined. Finally, we note that the inverse problem can only be solved using both tasks at multiple tilt angles; just using a single task (SVV or SBT, not both) would have made this problem intractable. 
+
+\subsection{Model evaluation}
+
+To assess the importance of cross-modal sensory integration, we also fitted our model without the indirect, cross-modal pathways by setting the head-on-body noise to infinity, which effectively eliminates the indirect pathways and removes one degree of freedom. To compare the maximum-likelihood estimates from the full and the reduced model, we used a log-likelihood ratio test. The test statistic is two times the difference between the negative log-likelihoods of the data, given the reduced and the full model. A ?2 test with one free parameter (the difference in degrees of freedom between the two models) is used to calculate the p value \cite{dobson2002}. 
+
+Furthermore, we evaluated our mechanistic model in comparison with a pure descriptive model of the same dataset based on separate psychometric accounts, each with three free parameters, at the five SBT and nine SVV angles. We used the Bayesian information criterion (BIC) for model comparison. BIC provides a measure of the adequacy of the model fit and corrects for the number of parameters. The BIC is defined as $BIC = -2 log(L) + k \cdot log(n)$, in which $L$ is the total likelihood of the data given the model, $k$ the number of free parameters, and $n$ the number of data points to be explained. The number of free parameters is 42 [14 psychometric curves x 3 parameters ($\mu$, $\sigma$, and $\lambda$)] for the psychometric curves, whereas for the mechanistic Bayesian model, the number of free parameters is seven. A more appropriate model is characterized by a lower BIC value. 
+
+%%%% ^^^ Fixme x should be cross
+
+\subsection{Model validation: independent test of neck noise}
+
+The SBT and SVV measurements to test the model proposed in Figure 1 have yielded solutions for the noise properties of the involved sensor systems. To validate the model structure and the noise predictions that were obtained, we also devised an experiment that independently measured the noise in the neck sensors (head-on-body sensors), in a psychometric fashion. In this experiment, subjects were lying on a bed, in supine position, with their head fixed on a rotating platform. The platform was constructed such that it could passively rotate the head relative to the body, in the roll plane, while accounting for the shifting rotation axis in the neck vertebrae. The rotation of the platform was computer controlled, keeping the speed below $0.2{\degree}/s$, which is far below detection threshold of the canals ($>0.5{\degree}/s$) (Benson et al., 1989). In the supine condition, there is no gravity modulation of the otolith signal, so we excluded the contribution of the vestibular system in detecting head-on-body orientation and were only probing the role of the neck afferents. We applied the method of constant stimuli, using a set of 11 head angles relative to body midline. Test angles ranged from $-6\degree$ to $6\degree$. 
+
+In complete darkness, subjects were first rotated at a constant angular velocity of =15°/s to a random detour angle similar to the idea shown in Figure 2. The head then moved to a randomly chosen position within the test range with a very slow speed ($<0.2{\degree}/s$) such that the test angle was reached within 20s. Meanwhile, auditory white noise was presented to the subjects through earphones to mask any auditory cues generated by the moving platform. After arrival at the test angle, the auditory noise was interrupted, signaling the subject to indicate whether head-on-body orientation was CW or CCW relative to the body midline, using a toggle switch. The subject was then rotated at a constant velocity to a new randomly chosen detour angle, and the above procedure was repeated. Each test angle was repeated 10 times, yielding a total number of 110 responses in each subject. Psychometric data were quantified by fitting a cumulative Gaussian function (see above, Eq. 1). The width of the curve, $\sigma^2$, inversely related to precision, serves as an independent measure of the subject's variability of the head-on-body estimate and was compared with the model prediction. 
+
+\subsection{Model simulation of patient data}
+
+Based on the average parameter values of the model established in normal, healthy subjects, the model was also used to make predictions about SVV and SBT performance in two patient groups: bilateral vestibular patients and patients with somatosensory loss. The model simulated SVV and SBT in these patient groups by raising the variance values of the lost signals to infinity. 
+
+\section{Results}
+
+\subsection{Psychometric results}
+ 
+The SBT experiment, performed in seven subjects, tested the accuracy and precision of SBT percepts, near upright (SBT0), at 45\textdegree and 90\textdegree right side down (SBT45 and SBT90), and at 45\textdegree and 90\textdegree left side down (SBT-45 and SBT-90). The same subjects also performed the SVV experiment, tested at nine roll-tilt angles, ranging from -120 to 120\textdegree in 30\textdegree intervals. Figure 3 shows the results of a typical subject (S1) in both tasks. The top panels show the proportion of CW responses for the five SBT tasks, relative to the reference orientation. For an ideal observer, all psychometric functions would resemble a step centered at zero. Across the five reference orientations (0\textdegree, {\textpm}45\textdegree, or {\textpm}90\textdegree), the psychometric data indicate underestimations and overestimations of perceived body angle, but no consistent bias, which resembles previous reports \cite{mittelstaedt1983, mast1996, jarchow1999, vanbeuzekom2001} that body-tilt perception is accurate on average. We fitted psychometric curves through these data (see Materials and Methods, Eq. 1), to obtain estimates for the mean ($\mu$), SD ($\sigma$), and lapse rate ($\lambda$). Parameter $\mu$ is a measure for the accuracy of the subject's body-tilt percept. Perceptual variability, inversely related to precision, is reflected by $\sigma^2$, whereas the lapse rate ($\lambda = 0.06$) accounts for stimulus-independent errors \cite{wichmann2001}. In all five SBT tasks, the $\mu$ values are relatively close to the veridical reference orientation (0\textdegree, 45\textdegree, or 90\textdegree), i.e., errors are <5\textdegree. The psychometric fits further show that variability is lower in the SBT0 task, with s = ~4\textdegree, than in the SBT±45 and SBT±90 task, where s = ~10\textdegree. 
+
+% Figure 3
+
+The bottom section of Figure 3 illustrates the performance of the same subject in the SVV task. Each panel demonstrates how the fraction of CW responses changes as a function of line orientation relative to the perceived vertical, for each tilt angle tested. Performance is very accurate in the upright condition. For moderate body tilts, i.e., 30°, this subject shows small systematic errors, indicating that the line must be set in a direction opposite to the head tilt to be perceived vertical in space. For larger tilts (=60°), systematic errors occur with increasing tilt angle, with amplitudes up to 40\textdegree, as if tilt is underestimated. This response pattern is consistent with previous literature \cite{aubert1861, udodehaes1970, mittelstaedt1983, vanbeuzekom2000}. Close scrutiny also reveals that the precision in the vertical percept deteriorates away from the upright position. 
+
+Psychometric fits capture these observations. In the upright position, the percept of visual vertical is virtually unbiased, as indicated by a µ value of 0.8°. At large tilts, e.g., at -120\textdegree and 120\textdegree, $\mu = -37.7\degree$ and $\mu = 33.5\degree$, respectively, which means that the line must be tilted away from true vertical to be perceived as vertical in space. Furthermore, the fitted psychometric curves are steepest at 0\textdegree tilt, reflected by $\sigma = 1.5\degree$. With larger tilt angles, $\sigma$ increases, reaching maximum values of 7.2\textdegree and 4.3\textdegree at tilts of -120\textdegree and +120\textdegree, respectively. 
+
+The results of this subject are exemplary for all subjects, as shown by the bias and SD data points in Figure 4. The mean results across the seven subjects are shown in the rightmost column. The bold lines in Figure 4 represent the fits from our Bayesian model, which will be discussed later in this section. 
+
+% Figure 4
+
+
+The two top rows in Figure 4 show the accuracy ($\mu$) and precision ($\sigma$) of SBT percepts, now plotted against body orientation. For each subject, these values ($\mu$ and $\sigma$) were derived from the fitted cumulative Gaussian curves (Fig. 3). Biases for SBT, shown in the top row of Figure 4, indicate moderate deviations in either direction from perfect performance, but no systematic pattern emerges. Across the seven subjects, the $\mu$ values ranged from -14.2\textdegree to +11.7\textdegree across the five SBT tasks. On average, however, there was no systematic bias for the five body orientations (ANOVA; F(4,24) = 1.4; p = 0.25), as also indicated by the rightmost panels. The data further show that, in all subjects, variability is statistically lower ($p < 0.05$) at the upright orientation, with s values <4°, than in the tilted conditions (45\textdegree and 90\textdegree), with $\sigma$ values ranging up to ~12°. 
+
+The two bottom rows of Figure 4 summarize our SVV data across the entire tilt range. Accuracy is close to perfect at upright orientation in all subjects, with mean values ranging between 0.1° and 2.8°. For tilts =60°, all subjects show systematic SVV errors (biases) of undercompensation, ranging up to maximum values close to 60°. Three subjects (S1, S2, and S3) also show slight errors of overcompensation in the smallest tilt range (<60°). The variability in the SVV is <3.0° for upright, which is consistently lower than in the tilted conditions, where variability reaches values ranging up to 8°. 
+
+Together, the results in Figure 4 show that SVV and SBT have different accuracy and precision characteristics. Subjects perceive their body-tilt angle more accurately than the spatial orientation of the visual line. However, when it comes to variability, performance is reversed: SVV curves are narrower than the SBT curves in all subjects, at both tilt angles, meaning that they are consistently less variable in the SVV task than in the SBT task. 
+
+\subsection{Model predictions}
+
+The bold lines in Figure 4 present the predictions of the Bayesian integration model, fitted simultaneously to the original responses from the SBT and SVV tasks. The rightmost column of Figure 4 shows the mean predictions from this model superimposed on the averaged parameters from the psychometric fits, indicating that the sensory integration model can account very well for all the characteristics of the data. 
+
+By design (see Materials and Methods), the sensory integration model fits a horizontal fit line through µSBT = 0° because it cannot account for the small systematic SBT errors. As to SBT precision, the model predictions show an increase of noise with tilt angle similar to the actual increase of noise between 0° and 90° tilt, for all subjects. These model fits further suggest that the increase of SBT noise is steepest at small tilt angles and levels off at larger tilts. According to the model, the increase of SBT noise with tilt angle is attributable to the corresponding increase of noise in the head sensors (parameter aHS), but levels off by the constant noise level in the body sensors. The third row in Figure 4 depicts the model predictions of the systematic SVV errors, which show a very good match. Also with respect to SVV variability, fits and data show similar trends, suggesting an increase of SVV noise with tilt angle, which levels off at larger tilts. 
+
+For each subject, best-fit parameter values and their bootstrap-based SD levels are listed in Table 1. Parameter bHS, representing the noise (sHS) in the otolith signal in the upright subject, ranges between 1.1° and 3.9°. Best-fit values of parameter aHS are significantly positive (p < 0.05) for all subjects, ranging from 0.07°/° (S4) to 0.23°/° (S1). This implies that the noise in the otoliths increases with tilt angle. The width of the head-in-space prior (sHSP) ranges from 9.4° (S2) to 18.7° (S5), with a mean of 12.5 ± 3.2°, consistent with our previous report \cite{devrijer2009}. Best-fit values of parameter sBS, reflecting the noise in the sensory body-in-space signal, range from 6.7° (S3) to 15.0° (S5), with a mean of 10.8 ± 3.1°, which is about twice as large as the best-fit values of parameter sHB, reflecting noise in the head-on-body signal, ranging from 1.8° (S6) to 9.3° (S3), with a mean of 4.9 ± 2.7°. Thus, the parameter fits imply that the neck sensors are more precise than the body-tilt sensors. As has been discussed extensively in our previous paper \cite{devrijer2009}, the amplitude of uncompensated ocular counterroll (AOCR) shows large intersubject variability. 
+
+% Table 1
+
+\subsection{Sensory weights}
+ 
+To obtain the model fits in Figure 4, we made the assumption (see Introduction) that information from both direct and indirect pathways (Fig. 1) is used to estimate body and head orientation in space. The sensory weights, indicating the relative contribution of both pathways, can be computed from the fit results in Table 1. To obtain the body-in-space estimate, necessary for the SBT, the model uses both direct information from the body sensors and indirect information from the combination of otolith and neck information. Because the variability of the otolith signal (sHS) increases with tilt angle (aHS > 0), as shown in Table 1, the relative importance of direct and indirect pathways becomes dependent on tilt angle. This can be seen in Figure 5(top row), which shows the relative weights of these signals for each subject, derived from Equation 2 and the best-fit parameter values in Table 1. The mean (±SD) pattern across subjects is shown in the rightmost pattern. 
+
+
+Instead of an overall dominance of body receptors in the direct pathway, the model implies that it is actually the indirect pathway, carrying the otolith signal, that dominates the behaviorally important range near upright. In most of our subjects (S1, S3, S5, S6, and S7), it was only when the otoliths became less reliable, at larger tilts, that the body sensors (direct pathway) got the upper hand (wBD > 0.5). 
+
+For the SVV task, the model assumes that both information from the otoliths (direct) and the combination of body and neck information (indirect) is used. Figure 5 (bottom row) illustrates the relative contributions from these sensors as well as from the prior, based on the model fits (Table 1) and Equation 6. The SVV pattern looks similar to the SBT pattern (Fig. 5, top row): in all subjects, the otoliths are very dominant near upright, with weights close to 1, but their contribution declines when tilt angle increases. As we saw for the SBT signal weights, this decline reflects increasing otolith noise levels. In the SVV, the decline is steeper than in the SBT, where the reference frame transformation leads to an enhanced noise level with a less pronounced tilt dependence. As the otolith contribution decays, the contributions of the prior and indirect pathway become more manifest. According to our model fits, the weight of the body sensors in the SVV task (wHI) at 90° tilt ranges between 0.19 (S4) and 0.53 (S6). 
+
+\subsection{Model evaluation}
+ 
+To test whether the assumption of indirect pathways in the model is warranted, we compared its performance with a reduced version with only direct pathways (see Materials and Methods). With this in mind, we performed a likelihood ratio test of the complete model fit (with direct and indirect pathways) versus the fit of a model with direct pathways only [i.e., SVV just based on head sensors (the otoliths), the SBT just based on body sensors]. The results are shown in Table 2. For each subject, the complete model provided a significantly better account of the data than the reduced model without multisensory integration through the indirect pathways. In other words, head, neck and body sensors all contribute to both SBT and SVV. 
+
+% Table 2
+
+
+We also compared our model, which provides a mechanistic explanation of the full dataset, with the pure descriptive account of the data as obtained by fitting separate psychometric curves to the data for the five SBT angles and nine SVV angles (Eq. 1, Fig. 3, and Materials and Materials and Methods, Model evaluation). Maximum-likelihood estimates were calculated and corrected for the number of free parameters using the BIC. As shown in Table 2, we found the lowest BIC values, indicating a better model, for the Bayesian model in all subjects, except S3. One might argue that the mean corrections before fitting the Bayesian model added another nine parameters that should be taken into account when comparing the models, even though these parameters were not fitted by the model. However, even for the worst-case scenario of 16 parameters, our Bayesian model still outperformed the individual psychometric fits (BICmechanistic = 3583 < BICpsychometric = 3910). 
+
+\subsection{Model validation}
+ 
+To further validate the model, we independently tested one of its predictions that can be assessed experimentally in isolation: head-on-body variance. In supine position, subjects judged their head orientation (CW/CCW) relative to the body midline after it had been passively roll-rotated with speeds subthreshold for the canals to various angles (see Materials and Methods, Model validation: independent test of neck noise). Psychometric fits indicate no systematic bias in these head-on-body percepts (data not shown). Figure 6 depicts the experimental noise levels derived from these psychometric fits and the predicted values provided by the model, including their 95\% confidence intervals. Because the variance of the estimates increases with the average head-on-body percept, we performed a regression on the log-transformed data \cite{hopkins2000}. The significant correlation between predicted and measured neck noise levels (slope, 1.03; intercept, -0.1; p = 0.04) provides an independent confirmation of the proposed model. 
+
+% Figure 6
+
+
+\section{Discussion}
+
+In this study, we made intrasubject comparisons of the accuracy (bias) and precision (inverse variance) characteristics in two spatial orientation tasks: SBT and SVV. The main experimental findings were as follows: (1) the SBT is more accurate than the SVV, (2) the SBT is less precise than the SVV, and (3) both SBT and SVV precision are smaller in tilted conditions than near upright. Under the assumption of optimality, a Bayesian model of sensory integration could account very well for these findings. Independent measurements, in supine subjects, of head-on-body variance confirmed the predicted value. 
+
+
+\subsection{Comparison with previous work}
+ 
+A world-vertical visual line appears tilted in space when the head is tilted in a darkened room (Aubert, 1861). Mittelstaedt (1983) was the first to emphasize that this phenomenon cannot be explained by errors in the body-tilt percept. He showed that subjects could accurately adjust themselves to a horizontal position, but, once in this position, made substantial systematic errors in the perception of visual verticality. Later, combined tests confirmed the discrepancy between SVV and SBT accuracy \cite{mast1996, jarchow1999, vanbeuzekom2000, vanbeuzekom2001, kaptein2004, vingerhoets2008}. The present study is consistent with these findings, showing substantial systematic SVV errors at tilts =60° and fairly accurate SBT performance. 
+
+Compared with the abundant literature on SBT and SVV accuracy, data on their perceptual variability are scarce. In contrast to Mittelstaedt's observation (1983), Mast and Jarchow (1996) found that the SBT was much more variable than the SVV. The present study, the first to measure both SVV and SBT precision using an extensive psychometric approach, has clearly established that SBT variability is consistently higher than SVV variability, both in the upright and in the horizontal (90°) tilt position. 
+
+Furthermore, although various studies have noted that SVV variability increased at larger tilts \cite{schone1964, schone1968, udodehaes1970, vanbeuzekom2001, devrijer2008}, little is known about SBT variability as a function of tilt angle. Nelson (1968) showed that subjects were more variable when adjusting themselves to a horizontal position than to a vertical (upright) position. The present findings are consistent with these early observations. 
+
+
+\subsection{Implications of the model}
+ 
+After earlier indications that both the otoliths and body sensors contribute to the SBT (e.g., Clark and Graybiel, 1963, 1964; Nelson, 1968), Mittelstaedt (1997) made a quantitative assessment of their impact, using an ingeniously designed experiment. Subjects lay on their side in a horizontal centrifuge. The crux of the experiment was to vary the distance between the rotation axis and the interaural axis to equalize the opposite contributions from the otoliths and the body sensors so that the subject felt horizontal. By testing normal, paraplegic, and nephrectomized subjects, Mittelstaedt inferred how much each sensory system contributes to body-tilt perception. It was shown that, apart from the otoliths, also internal ``graviceptors'' in the trunk (such as the viscera) participate in the computation of the SBT. Later, some related studies provided evidence that the distribution of blood in the body also affects postural perception \cite{vaitl1997, vaitl2002}. According to Mittelstaedt (1998), the weight of the somatic graviceptors to estimate horizontal body orientation in healthy subjects is ~0.6 on average, with considerable intersubject variability. His estimate seems quite compatible with our wBD values at 90° tilt, which range between 0.35 (S5) and 0.93 (S6) (Fig. 5). 
+
+Previous attempts to identify the separate contributions of the otoliths, neck, and body sensors on the SVV have yielded mixed results. Whereas Mittelstaedt (1998) found no evidence that the SVV was affected by the body sensors in his centrifuge experiment, other studies indicate that neck- and trunk-tilt aftereffects \cite{wade1968}, neck muscle vibration \cite{mckenna2004}, and manipulation of tactile and interoceptive body cues \cite{trousselard2004} can affect the SVV. In other words, even in the absence of direct head-in-space information from the otoliths, the brain can still obtain an estimate of head orientation in space through the indirect sensory pathway. These findings suggest that these modalities operate together with the otoliths in the computation of the SVV, consistent with our model. 
+
+
+\subsection{Model evaluation}
+ 
+The architecture of the model, as far as the reference frame transformations and the sensory integration is concerned, follows entirely from the principles of Bayesian inference. However, to account for our major findings and intersubject differences, we made two less straightforward assumptions. First, to explain the increased variability in both tasks at 90° tilt, we allowed for the possibility that the otoliths become more noisy with increases in tilt. Second, we hypothesized that prior knowledge is used in the visual vertical but not in body-tilt perception. Can these assumptions be justified on physiological and rational grounds? 
+
+One reason to assume that otolith noise depends on tilt angle is based on the fact that the utricle contains considerably more hair cells than the saccule (Rosenhall, 1972, 1974). Because the utricle is most sensitive to tilts of ~0°, whereas the saccule is most sensitive at ~90° tilt \cite{jaeger2008}, this may well cause the proposed increase of otolith noise with tilt angle (Tarnutzer et al., 2010). A tilt-dependent noise level of the otoliths would also help to explain why the perturbing effect of roll-optokinetic stimulation on the SVV (Dichgans et al., 1974; Fernández and Goldberg, 1976) and on the SBT \cite{young1975} is more pronounced at larger tilt angles and why the SVV is more strongly influenced by residual canal signals at larger tilt angles, after prolonged roll rotations \cite{lorincz2008}.
+
+In the SVV literature, it is widely assumed that the visual vertical is determined by a weighted combination of a sensory head-tilt signal and a head-fixed reference, denoted as the idiotropic vector \cite{mittelstaedt1983}. Recently, this idiotropic vector has been reinterpreted in terms of a Bayesian prior \cite{eggert1998, macneilage2007, devrijer2008}, with which it is mathematically equivalent. Interestingly, when tested in gravity-free conditions, subjects still retain a sense of visual vertical, always aligned with their long-body axis, compatible with the idea of head-fixed prior \cite{mittelstaedt1983}. Vingerhoets et al. (2008) recently found a similar phenomenon in the SVV during multiple-cycle dynamic roll rotation in normal gravity. Remarkably, when the same subjects were tested in a comparable dynamic SBT experiment, their responses showed very little bias on average, indicating that a prior is used only in the SVV and not for body-tilt estimation. To explain how this difference in computational approach might make sense, Vingerhoets et al. (2008) speculated that precision is more important than accuracy for the visual system, for reasons of visual stability. Combining the sensory tilt signal with prior knowledge yields a more stable percept of visual space than can be derived from the sensory signal alone. In a recent study, Bortolami et al. (2006) report virtually no bias in the haptically indicated vertical, which would be consistent with the suggestion that the prior plays primarily a role in visual processing. Likewise, for body-tilt perception, for which it might be less important to be precise and more useful to be accurate, the prior does not take part in this process. 
+
+\subsection{Clinical implications}
+ 
+According to our model, statistically optimal performance requires the use of information from both direct and indirect pathways to estimate body and head orientation in space (Fig. 1). Thus, if one of the sensory inputs is lost or severely disrupted, SBT and SVV performance will deteriorate, but should not completely break down due to their multimodality dependence. By setting the appropriate parameter values of the model to infinity, we simulated the model to predict SVV and SBT performance in two patient groups: bilateral vestibular patients (noise level of the otoliths set to infinity) and patients with somatosensory loss (noise level of the body sensors set to infinity). Figure 7 shows the results of these simulations. 
+
+% Figure 7
+
+When the otolith signal is lost (vestibular patient), the model predicts increased but constant noise levels in both the SBT and SVV, regardless of tilt angle. From the perspective of our model, the increased SBT variability can be attributed to the loss of the otolith contribution through the indirect body-in-space pathway. The increased bias in the SVV, predicted by the model, can also be understood: as the sensory-derived head-tilt estimate becomes noisier, the effect of the prior becomes more noticeable. Although there are no accuracy and variance measurements across the entire tilt range in these patients, the few previously published deficits are consistent with these predictions. Bisdorff et al. (1996) have shown that bilateral vestibular patients performed quite accurately in the SBT at upright, but were ~40\% more variable than normal subjects. Bronstein et al. (1996) showed that vestibular patients still compensated for their tilt angle when testing the SVV at 90°, but with a bias about twice as large as in normal subjects, consistent with our simulations. 
+
+The right column of Figure 7 depicts a simulation of the SBT and SVV in a patient with loss of somatosensory information (somatosensory patient). In this case, the SBT depends solely on otolith information mediated through the indirect pathway. Although this signal is still accurate, it is spoiled by the larger variability of the neck signal, needed to perform the appropriate reference frame transformation. The model also predicts larger errors in the SVV in these patients than in normal subjects. Although there are no reports containing measurements of bias and variance in the SBT and SVV, paraplegic patients show that along with the otoliths, internal body sensors also contribute to the SBT if lesions are below the 12th thoracic segment \cite{mittelstaedt1997}. This evidence supports the design of our model. 
+
+In conclusion, we have tested the performance of healthy subjects in two psychophysical tasks that probe two spatial orientation estimates---SBT and SVV---and show that perceptual accuracy and precision in these tasks can be linked to the reference-frame-dependent weighting of sensory signals. We verified our theoretical framework by independent measurements of neck noise levels and by showing that it can account for the stereotypical performance of two patient groups. In this respect, our reverse-engineering approach also provides a new tool to establish diagnostic and prognostic markers of the quality of the signals involved in spatial orientation in neurological disease. 
+
+\section{Appendix}
+
+Here we provide further explanation about the Bayesian computations underlying the SVV as expressed in Equations 6 and 10 in Materials and Methods. Figure 8 illustrates graphically that the variance of the posterior distribution in a single trial (sH~S2) is not simply the same as the variance in its peak location in multiple trials, s2(H~S). In a single trial (Fig. 8A-C), the optimal estimate of head tilt is based on the likelihood (Fig. 8B, green curve) associated with the combined sensory input from the direct and the indirect pathway (Fig. 8A, green line, HS) and the prior (Fig. 8B, blue curve), by multiplication of the two probability distributions. The prior distribution is a Gaussian with mean HSP and variance sHSP2. The peak of the resulting posterior distribution (Fig. 8B, orange curve) is used as the optimal estimate of head tilt (H~S), given by the following: 
+
+% Equation 13
+
+with
+
+% Equation 14 
+
+and
+
+% Equation 15
+
+in which sHS denotes the noise in the sensory signal, known to the observer, and wHS and wHP represent the relative weights of the sensory signal and the prior, respectively. Note that Equation 13 is equivalent to Equation 1 in Materials and Methods. The variance of the posterior distribution in a single trial is given by the following: 
+
+% Equation 16
+
+and is reflected by the width of the orange curve in Figure 8B. Figure 8D-F illustrates performance in multiple trials, in which the posterior distributions vary due to sensory noise (sHS), whereas the prior remains fixed. The variance of each posterior distribution is fixed and is given by Equation 16. 
+
+% Figure 8
+
+That the variance of the peak locations across multiple trials, s2(H~S), is smaller can be shown by applying the rules of noise propagation to Equation 13. 
+
+% Equation 17
+
+which is equivalent to Equation 10 in Materials and Methods. Corresponding panels G-I (Fig. 8) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. Figure 8I illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (Fig. 8B), which follows from the comparison of Equations 16 and 17, respectively. 
+
