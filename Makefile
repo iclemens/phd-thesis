@@ -6,7 +6,7 @@ BIBTEX_CMD=bibtex
 all: thesis.pdf	
 
 thesis.pdf:
-	cp src/refs.bib src/plain_custom.bst build
+	cp src/refs.bib src/*_custom.bst build
 	$(LATEX_CMD) $(LATEX_ARGS) src/thesis.tex
 	cd build; bibtex thesis
 	$(LATEX_CMD) $(LATEX_ARGS) src/thesis.tex
