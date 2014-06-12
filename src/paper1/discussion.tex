@@ -44,12 +44,13 @@ The right column of Figure 7 depicts a simulation of the SBT and SVV in a patien
 In conclusion, we have tested the performance of healthy subjects in two psychophysical tasks that probe two spatial orientation estimates---SBT and SVV---and show that perceptual accuracy and precision in these tasks can be linked to the reference-frame-dependent weighting of sensory signals. We verified our theoretical framework by independent measurements of neck noise levels and by showing that it can account for the stereotypical performance of two patient groups. In this respect, our reverse-engineering approach also provides a new tool to establish diagnostic and prognostic markers of the quality of the signals involved in spatial orientation in neurological disease. 
 
 \section{Appendix}
+\label{p1:sec:appendix}
 
 Here we provide further explanation about the Bayesian computations underlying the SVV as expressed in Equations 6 and 10 in Materials and Methods. Figure 8 illustrates graphically that the variance of the posterior distribution in a single trial (sH~S2) is not simply the same as the variance in its peak location in multiple trials, s2(H~S). In a single trial (Fig. 8A-C), the optimal estimate of head tilt is based on the likelihood (Fig. 8B, green curve) associated with the combined sensory input from the direct and the indirect pathway (Fig. 8A, green line, HS) and the prior (Fig. 8B, blue curve), by multiplication of the two probability distributions. The prior distribution is a Gaussian with mean HSP and variance sHSP2. The peak of the resulting posterior distribution (Fig. 8B, orange curve) is used as the optimal estimate of head tilt (H~S), given by the following: 
 
 % Equation 13
 \begin{equation}
-\label{p1eqn13}
+\label{p1:eqn13}
 \tilde{H}_S = w_{HS} \cdot \hat{H}_S + w_{HP} \cdot H_{SP},
 \end{equation}
 
@@ -57,7 +58,7 @@ with
 
 % Equation 14
 \begin{equation}
-\label{p1eqn14}
+\label{p1:eqn14}
 w_{HS} = \frac{1 / \sigma^2_{HS}}{1 / \sigma^2_{HS} + 1 / \sigma^2_{HSP}},
 \end{equation}
 
@@ -65,15 +66,15 @@ and
 
 % Equation 15
 \begin{equation}
-\label{p1eqn15}
+\label{p1:eqn15}
 w_{HP} = \frac{1 / \sigma^2_{HSP}}{1 / \sigma^2_{HS} + 1 / \sigma^2_{HSP}},
 \end{equation}
 
-in which sHS denotes the noise in the sensory signal, known to the observer, and wHS and wHP represent the relative weights of the sensory signal and the prior, respectively. Note that Equation 13 is equivalent to Equation 1 in Materials and Methods. The variance of the posterior distribution in a single trial is given by the following: 
+in which sHS denotes the noise in the sensory signal, known to the observer, and $w_{HS}$ and $w_{HP}$ represent the relative weights of the sensory signal and the prior, respectively. Note that Equation \ref{p1:eqn13} is equivalent to Equation \ref{p1:eqn1} in \nameref{p1:sec:methods}. The variance of the posterior distribution in a single trial is given by the following: 
 
 % Equation 16
 \begin{equation}
-\label{p1eqn16}
+\label{p1:eqn16}
 \sigma^2_{HS} = w_{HS} \cdot \sigma^2_{HS} \\
               = \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
 \end{equation}
@@ -86,7 +87,7 @@ and is reflected by the width of the orange curve in Figure 8B. Figure 8D-F illu
 %\end{figure}
 \end{wrapfigure}
 
-That the variance of the peak locations across multiple trials, $\sigma^2(\tilde{H}_S)$, is smaller can be shown by applying the rules of noise propagation to Equation 13. 
+That the variance of the peak locations across multiple trials, $\sigma^2(\tilde{H}_S)$, is smaller can be shown by applying the rules of noise propagation to Equation \ref{p1:eqn13}. 
 
 % Equation 17
 \begin{equation}
@@ -100,4 +101,4 @@ That the variance of the peak locations across multiple trials, $\sigma^2(\tilde
 	= \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
 \end{equation}
 
-which is equivalent to Equation 10 in Materials and Methods. Corresponding panels G-I (Fig. 8) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. Figure 8I illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (Fig. 8B), which follows from the comparison of Equations 16 and 17, respectively. 
+which is equivalent to Equation \ref{p1:eqn10} in Materials and Methods. Corresponding panels G-I (Fig. \ref{p1:fig8}) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. Figure 8I illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (Fig. 8B), which follows from the comparison of Equations 16 and 17, respectively. 
