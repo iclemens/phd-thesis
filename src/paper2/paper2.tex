@@ -21,49 +21,79 @@
 
 \section{Introduction}
 
-A typical characteristic of human vision is that the position of the retina is constantly changing due to eye, head, and/or body movements. Yet, even during such self-motion, we retain a sense of whether visual objects are stable or moving with respect to an earth-centric reference frame (see e.g. Wallach, 1987). This capability is essential for a correct percept of the world and the maintenance of visual stability. 
-Achieving visual stability is a complex process because visual signals are coded with respect to gaze, and not in an earth-fixed reference frame. When the visual scene lacks earth-centric landmarks, the brain should distinguish which changes in retinal input result from real world movement and which from eye movement. The usual view, dating back to Von Helmholtz (1867), is that this is achieved by subtracting the extraretinal signal of eye motion from the retinal image shifts \cite{wexler2005}.
+A typical characteristic of human vision is that the position of the retina is constantly changing due to eye, head, and/or body movements. Yet, even during such self-motion, we retain a sense of whether visual objects are stable or moving with respect to an earth-centric reference frame \cite<see e.g.>{wallach1987}. This capability is essential for a correct percept of the world and the maintenance of visual stability.
+
+Achieving visual stability is a complex process because visual signals are coded with respect to gaze, and not in an earth-fixed reference frame. When the visual scene lacks earth-centric landmarks, the brain should distinguish which changes in retinal input result from real world movement and which from eye movement. The usual view, dating back to Von Helmholtz \citeyear{vonhelmholtz1867}, is that this is achieved by subtracting the extraretinal signal of eye motion from the retinal image shifts \cite{wexler2005}.
+
 Visual stability experiments in which participants made head-fixed saccades suggest that efference copies of the outgoing motor commands serve this purpose. Neurons in the frontal eye fields and the lateral intraparietal area demonstrate pre-saccadic shifts of receptive fields, elicited by an efference copy \cite{duhamel1992, kusunoki2003}. These gaze-centered shifts could allow the brain to anticipate and cancel out the changes in retinal input due to the saccade \cite{sommer2006}. Also, fMRI studies have reported evidence for shifting receptive fields in the human brain \cite{medendorp2003a}. 
+
 Despite these important insights, head-fixed saccades are only one of a multitude of movements that are made in real life. Bringing the body in motion, like when driving a car, puts severe challenges on the mechanism underlying visual stability. In this case, when the body is translated passively, vestibular feedback informs the brain about the motion. This information must be combined with efference copies of orbital eye movements to interpret the changes in retinal input. Solving this problem is geometrically complicated because, during eye and body motion, the changes in retinal input depend nonlinearly on the depth and direction of objects that make up the retinal image, as in motion parallax \cite{medendorp2003b}.
-Recent studies have reported fairly accurate reach or gaze responses to memorized target locations, presented prior to whole-body translations (see for review: Klier and Angelaki, 2008; Medendorp, 2011). However, such studies do not map one-to-one to the mechanisms of visual stability. First, the requirement of a motor response may invoke different processing mechanisms, which may be subject to different constraints. Second, motor response studies probe the system after the limb or eye movement, thereby revealing the combined result of all intervening spatial computations and transformations needed to guide the action. 
+
+Recent studies have reported fairly accurate reach or gaze responses to memorized target locations, presented prior to whole-body translations \cite<see for review:>{klier2008, medendorp2011}. However, such studies do not map one-to-one to the mechanisms of visual stability. First, the requirement of a motor response may invoke different processing mechanisms, which may be subject to different constraints. Second, motor response studies probe the system after the limb or eye movement, thereby revealing the combined result of all intervening spatial computations and transformations needed to guide the action.
+
 In the present study, we investigate visual stability across simultaneous eye and whole-body motion without involving the motor system. To this end, we used a two-alternative forced choice (2-AFC) psychophysical approach in combination with a visual updating paradigm. Participants had to retain object locations during sinusoidal whole-body motion, while keeping their gaze fixed on a world stationary point either in front of or behind the object.
+
 By systematically manipulating the parameters of retinal and extraretinal signals related to body translation, binocular fixation, and object location, we test how the brain integrates these signals for the maintenance of visual stability. Our results show consistent errors in visual stability, which strongly depend on the location of the object relative to gaze. Using a modeling approach, we explore possible causes underlying these gaze-centered updating errors.
 
 
 \section{Methods}
+\label{p2:sec:methods}
 
 \subsection{Participants}
 
-Eight participants (4 male, 4 female), aged between 22 and 41 years, provided written informed consent to participate in the experiment. All participants were free of any known vestibular or neurological disorder and had normal or corrected-to-normal visual acuity. Three participants (the authors) were knowledgeable about the purpose of the experiment, but their results did not differ from the five naïve subjects. Participants never received any feedback about their performance.
+Eight participants (4 male, 4 female), aged between 22 and 41 years, provided written informed consent to participate in the experiment. All participants were free of any known vestibular or neurological disorder and had normal or corrected-to-normal visual acuity. Three participants (the authors) were knowledgeable about the purpose of the experiment, but their results did not differ from the five na\"ive subjects. Participants never received any feedback about their performance.
 
 \subsection{Setup}
 
-A linear sled on a 800mm track was used to laterally translate participants. The sled, powered by a linear motor (TB15N, Technotion, Almelo, The Netherlands), was controlled by a Kollmorgen S700 (Danaher, Washington DC, USA) drive. The kinematics of the sled were controlled with an accuracy better than 34 ?m, 2 mm/s, and 150 mm/s2. The sled was configured such that participants were seated on the sled with the interaural axis aligned with the motion axis. Participants were restrained using a 5-point seat belt and a chin rest. In addition, the head was firmly held in place using an ear-fixed mold.  Emergency buttons at both sides of the sled chair enabled subjects to stop the sled motion immediately if needed. Eye movements were recorded using an EyeLink II (SR Research, Kanata, Canada) eye tracking system. Its camera system, which was mounted to the sled, remained stable with respect to the head during the entire experiment. Eye positions were calibrated based on the visual fixations during the experiment, under the assumption that these fixations were accurate.
+A linear sled on a 800mm track was used to laterally translate participants. The sled, powered by a linear motor (TB15N, Technotion, Almelo, The Netherlands), was controlled by a Kollmorgen S700 (Danaher, Washington DC, USA) drive. The kinematics of the sled were controlled with an accuracy better than 34 $\mu$m, 2 mm/s, and 150 mm/$\text{s}^2$. The sled was configured such that participants were seated on the sled with the interaural axis aligned with the motion axis. Participants were restrained using a 5-point seat belt and a chin rest. In addition, the head was firmly held in place using an ear-fixed mold.  Emergency buttons at both sides of the sled chair enabled subjects to stop the sled motion immediately if needed. Eye movements were recorded using an EyeLink II (SR Research, Kanata, Canada) eye tracking system. Its camera system, which was mounted to the sled, remained stable with respect to the head during the entire experiment. Eye positions were calibrated based on the visual fixations during the experiment, under the assumption that these fixations were accurate.
 
 \subsection{Visual stimuli}
 
-Participants had to memorize the location of a earth-centric visual target (reference, R) during half a period of sinusoidal body translation. We tested the quality of this memory by asking them to judge and report the position of a probe stimulus (P) relative to that memorized location, following a psychophysical procedure. The reference and probe stimuli were both presented using a one-dimensional 450mm wide array, consisting of 180 red light emitting diodes (LEDs), with a spatial separation of 2.5 mm between neighboring LEDs. The LED array was oriented in parallel with the motion direction of the sled, centered w.r.t. the sled's trajectory and at the same vertical level as the participant's eyes. It was positioned with an accuracy better than 5 mm, at one of five different distances (850, 1050, 1200, 1400, or 2070 mm) from the participant's eyes in front of the sled. We further positioned an LED at either 850, 1050, 1200, 1400, or 2070 mm in front of the participant, on a virtual line orthogonal to the sled's motion direction and crossing the center of the LED array. These latter LEDs served as earth-stationary gaze fixation points (FP) during the experiment, so that gaze was directed either behind or in front of the stimulus array. The fixation points were displaced vertically by a few mm, such that the fixation point and the LED array did not occlude each other.
+Participants had to memorize the location of a earth-centric visual target (reference, $R$) during half a period of sinusoidal body translation. We tested the quality of this memory by asking them to judge and report the position of a probe stimulus ($P$) relative to that memorized location, following a psychophysical procedure. The reference and probe stimuli were both presented using a one-dimensional 450mm wide array, consisting of 180 red light emitting diodes (LEDs), with a spatial separation of 2.5 mm between neighboring LEDs. The LED array was oriented in parallel with the motion direction of the sled, centered w.r.t. the sled's trajectory and at the same vertical level as the participant's eyes. It was positioned with an accuracy better than 5 mm, at one of five different distances (850, 1050, 1200, 1400, or 2070 mm) from the participant's eyes in front of the sled. We further positioned an LED at either 850, 1050, 1200, 1400, or 2070 mm in front of the participant, on a virtual line orthogonal to the sled's motion direction and crossing the center of the LED array. These latter LEDs served as earth-stationary gaze fixation points ($FP$) during the experiment, so that gaze was directed either behind or in front of the stimulus array. The fixation points were displaced vertically by a few mm, such that the fixation point and the LED array did not occlude each other.
 
 \subsection{Paradigm}
 
-The experiments employed a paradigm that studies the constancy of spatial locations during 0.63 Hz sinusoidal whole-body motion in the lateral direction (left-right motion). We tested the effects of body translation (T, 150 or 300 mm peak-to-peak amplitude), fixation depth (FP, four spatial locations), and depth of the reference target (R, four spatial locations) on the quality of perceptual stability. These quantitative data will be interpreted using the geometric framework outlined in the subsection Model below.
+The experiments employed a paradigm that studies the constancy of spatial locations during 0.63 Hz sinusoidal whole-body motion in the lateral direction (left-right motion). We tested the effects of body translation (T, 150 or 300 mm peak-to-peak amplitude), fixation depth ($FP$, four spatial locations), and depth of the reference target ($R$, four spatial locations) on the quality of perceptual stability. These quantitative data will be interpreted using the geometric framework outlined in the subsection \nameref{p2:sec:model} below.
 
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{src/paper2/figure1.pdf}
+	
+	\caption{(A) Top-view illustrating three key events within the experiment. Left panel: At the extreme right position, the reference target (R) is flashed. Middle panel: The participant moves while keeping fixation on the fixation point (FP). Right panel: At the left most position, one of the probe locations (P) is flashed. (B) Timing of key events. Within a run of sinusoidal sled motion, participants always fixated the fixation point. At the rightmost point, the reference (R) was flashed for 50 ms. Then, at the extreme left position, a probe (P) was shown for 50 ms. Participants responded whether the probe was presented to the left or right of the reference using a joystick. (C) Locations of fixation points (plus signs) and reference/probe locations (bars) used in our experiment (see also Table \ref{p2:tab1}).}
+	
+	\label{p2:fig1}
 \end{figure}
 
-Figure 1, panels A and B, illustrate the paradigm in detail; Figure 1C provides an overview of the experimental conditions. The experiment consisted of runs of either 30 or 15 trials. Each run started with the onset of a FP, to be fixated for the entire duration of the run. To avoid discontinuous acceleration at motion onset, sled velocity was linearly increased over one sinusoidal cycle (see Merfeld, Park, Gianna-Poulin, Black, and Wood, 2005 for a similar approach). Once the steady-state sinusoidal motion was reached, participants were tested using a visual updating task (Figure 1A). More specifically, at the most rightward position, when the body motion reversed direction, the reference R (here, the center LED) was presented for 50 ms. When the sled reached the left-most position, again during motion reversal, the participant's estimate for the location of R was tested by displaying another LED, the probe P, for 50 ms. The participant then had to report the location of this probe relative to R in a two-alternative forced choice (leftward, rightward) using a joystick. While we asked participants to respond in a timely manner, we did not explicitly constrain response time. Therefore, the next trial was only presented after a response was given. In practice, most responses were given within half a cycle (RT ±SD = 0.59s ±0.09, across participants). We used an adaptive algorithm to vary the spatial separation between reference and probe target from trial to trial \cite{kontsevich1999}, mapping out psychometrically the bias and precision of visual stability across whole-body motion. 
-Participants were tested in 16 conditions, each comprising a unique combination of translation amplitude (T), visual fixation point (FP), and reference (R) position (see Fig 1C). The values used in this experiment are shown in Table 1. For each condition we presented 135 trials, which were divided into 4 runs of 30 trials and one run of 15 trials. In every condition 70 out of 135 trials were normal trials, that is, the central LED was used as reference. The other 65 trials in each condition were catch trials, of which 25 trials had the reference location shifted 36 mm to the left of the central led; another 25 had the reference location 36 mm rightward, and in 15 trials a random LED in the stimulus array was taken as the reference location. The catch trials were to prevent participants from simply making repeated stereotypic responses. After each run, the lights were turned on. Following a 30 s break, the experiment resumed automatically. The total experiment was divided into three sessions, tested on different days.  Each participant was tested on a total of 2160 trials.
+Figure \ref{p2:fig1}, panels A and B, illustrate the paradigm in detail; Figure \ref{p2:fig1}C provides an overview of the experimental conditions. The experiment consisted of runs of either 30 or 15 trials. Each run started with the onset of a FP, to be fixated for the entire duration of the run. To avoid discontinuous acceleration at motion onset, sled velocity was linearly increased over one sinusoidal cycle (see Merfeld, Park, Gianna-Poulin, Black, and Wood, 2005 for a similar approach). Once the steady-state sinusoidal motion was reached, participants were tested using a visual updating task (Figure \ref{p2:fig1}A). More specifically, at the most rightward position, when the body motion reversed direction, the reference R (here, the center LED) was presented for 50 ms. When the sled reached the left-most position, again during motion reversal, the participant's estimate for the location of R was tested by displaying another LED, the probe P, for 50 ms. The participant then had to report the location of this probe relative to R in a two-alternative forced choice (leftward, rightward) using a joystick. While we asked participants to respond in a timely manner, we did not explicitly constrain response time. Therefore, the next trial was only presented after a response was given. In practice, most responses were given within half a cycle (RT {\textpm}SD = 0.59s \textpm0.09, across participants). We used an adaptive algorithm to vary the spatial separation between reference and probe target from trial to trial \cite{kontsevich1999}, mapping out psychometrically the bias and precision of visual stability across whole-body motion. 
 
-% Table 1
+Participants were tested in 16 conditions, each comprising a unique combination of translation amplitude (T), visual fixation point (FP), and reference (R) position (see Fig \ref{p2:fig1}C). The values used in this experiment are shown in Table \ref{p2:tab1}. For each condition we presented 135 trials, which were divided into 4 runs of 30 trials and one run of 15 trials. In every condition 70 out of 135 trials were normal trials, that is, the central LED was used as reference. The other 65 trials in each condition were catch trials, of which 25 trials had the reference location shifted 36 mm to the left of the central led; another 25 had the reference location 36 mm rightward, and in 15 trials a random LED in the stimulus array was taken as the reference location. The catch trials were to prevent participants from simply making repeated stereotypic responses. After each run, the lights were turned on. Following a 30 s break, the experiment resumed automatically. The total experiment was divided into three sessions, tested on different days.  Each participant was tested on a total of 2160 trials.
+
+\begin{table}    
+    \begin{tabular}{lll}
+    $FP$ (mm) & $R/P$ & $T$ (mm) \\
+    \hline
+    1200 & 850 & 75 and 150 \\
+    1200 & 1050 & 75 and 150 \\
+    1200 & 1400 & 75 and 150 \\
+    1200 & 2070 & 75 and 150 \\
+    850 & 1200 & 75 and 150 \\    
+    1050 & 1200 & 75 and 150 \\
+    1400 & 1200 & 75 and 150 \\
+    2070 & 1200 & 75 and 150 \\
+    \end{tabular}
+    
+    \caption{Fixation distance (FP), distance to reference and probe targets (R/P) and translation amplitude for each of the 16 unique visual updating conditions.}
+    
+    \label{p2:tab1}
+\end{table}
 
 \subsection{Data analysis}
 
-To prevent effects caused by vergence and/or version eye-movements, we excluded trials in which participants did not maintain fixation within a 3 degree interval around FP, during the time interval starting 100ms before presenting the reference target and ending 100ms after cueing the probe. Overall, 6.4\% ±1.7\% ({\textpm}SD) of all trials were discarded per participant based on these eye movement criteria. 
+To prevent effects caused by vergence and/or version eye-movements, we excluded trials in which participants did not maintain fixation within a 3 degree interval around FP, during the time interval starting 100ms before presenting the reference target and ending 100ms after cueing the probe. Overall, 6.4\% \textpm1.7\% ({\textpm}SD) of all trials were discarded per participant based on these eye movement criteria. 
+
 For each condition, we quantified performance by calculating the probability of a rightward response as a function of the location of the probe relative to reference location. We used a maximum likelihood fit of a cumulative Gaussian function to summarize the psychometric data:
 
 \begin{equation}
-\label{p1psych}
+\label{p2:eq1}
 P(x) = \lambda + (1 - 2\lambda) \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{x}{e^{-(y-\mu)^2 / 2\sigma^2}}dy,
 \end{equation}
 
@@ -71,10 +101,12 @@ in which x represents the size of probe displacement. The mean of the Gaussian, 
 
 
 \subsection{Model}
+\label{p2:sec:model}
 
-We investigated whether the observed bias can be explained by allowing a gain factor in the processing of the lateral translation by the vestibular system. That is, we assume that $\tilde{T} = {\alpha}T$, where $\tilde{T}$ is the perceived and $T$ the actual translation (Medendorp, Van Asselt, and Gielen, 1999). If the spatial update is performed entirely in a head-centered system, the effect of this gain would be straightforward. The reference flash $R$ is presented when the sled is in the rightmost position and the following translation of the sled by $T$ mm to the left in world coordinates amounts to a translation of the world, including the reference point, by $T$ mm to the right in head-coordinates. Due to the gain of the vestibular system the perceived translation equals ${\alpha}T$ mm to the right, leading to a predicted bias of
+We investigated whether the observed bias can be explained by allowing a gain factor in the processing of the lateral translation by the vestibular system. That is, we assume that $\tilde{T} = {\alpha}T$, where $\tilde{T}$ is the perceived and $T$ the actual translation \cite{medendorp1999}. If the spatial update is performed entirely in a head-centered system, the effect of this gain would be straightforward. The reference flash $R$ is presented when the sled is in the rightmost position and the following translation of the sled by $T$ mm to the left in world coordinates amounts to a translation of the world, including the reference point, by $T$ mm to the right in head-coordinates. Due to the gain of the vestibular system the perceived translation equals ${\alpha}T$ mm to the right, leading to a predicted bias of
 
 \begin{equation}
+\label{p2:eq2}
 \mu = \tilde{T} - T = (\alpha - 1) T
 \end{equation}
 
@@ -82,24 +114,28 @@ in mm on the LED array. Thus, when processed in a head-centered system, the bias
 Previous experiments \cite{vanpelt2007} have shown that reach targets are updated not in head-centered coordinates, but rather within a gaze-dependent frame of reference. Following up on this, we also model the effect of the translation gain in a gaze-centered system. Let OF be the vector from the cyclopean eye to the fixation point and, similarly, $OR$ the vector to the reference point. The translation by $T$ mm to the left in world coordinates is in head-coordinates well approximated by a rotation of OF by $T/|OF|$ radians to the right and a rotation of OR by $T/|OR|$ radians to the right. (The approximation is good, since both $T<<|OF|$ and $T<<|OR|$. To express the gist of the prediction of the gaze-dependent model, this first-order approximation is very useful; in the actual calculations the precise geometry was used, without noticeable differences.)  Consequently, in gaze-centered coordinates (i.e., OF fixed straight ahead) the vector OR rotates by an angle of 
 
 \begin{equation}
+\label{p2:eq3}
 \phi \approx T (\frac{1}{|OR|} - \frac{1}{|OF|})
 \end{equation}
 
 radians to the right. In modeling the perceived rotation angle $\tilde{\phi}$ we again replace $T$ by $\tilde{T} = {\alpha}T$, but we also have to consider possible biases in the perception of $|OR|$ and $|OF|$. Following previous literature \cite{gogel1977, medendorp2003b}, we assume that the depth of the constantly visible fixation point is perceived accurately, i.e., $|\tilde{OF}| = |OF|$, but we allow that the perceived depth of the 50 ms flashed reference stimulus, $|\tilde{OR}|$, is biased towards this fixation point depth. Since the depth signals available in this experiment (vergence angle and disparity) express more directly in terms of inverse depth than depth itself. The simplest way to implement such a bias is to model the perceived reference depth as a weighted harmonic mean of the actual reference and fixation depths:
 
 \begin{equation}
+\label{p2:eq4}
 \frac{1}{|\tilde{OR}|} = \beta \frac{1}{|OR|} + (1 - \beta) \frac{1}{|OF|}
 \end{equation}
 
 where $\beta = 1$ represents the limiting case of accurate depth perception of the reference stimulus (no bias) and $\beta = 0$ the limiting case of full "assimilation" to fixation point depth. In total this leads to a perceived rotation angle of
 
 \begin{equation}
+\label{p2:eq5}
 \tilde{\phi} = {\alpha}T \cdot \beta(\frac{1}{|OR|} - \frac{1}{|OF|})
 \end{equation}
 
-radians to the right. Comparing Eq. 5 with Eq. 3 shows that our assumptions amount to a total gain of $\alpha\beta$ on the rotation angle, with freely interchangeable contributions of the parameters $\alpha$ and $\beta$. We substitute $\gamma = \alpha\beta$ and note that the resulting bias in angle, $\tilde{\phi} - \phi$, is observed as a bias in mm on the LED array at a distance $|OR|$:
+radians to the right. Comparing Eq. \ref{p2:eq5} with Eq. \ref{p2:eq3} shows that our assumptions amount to a total gain of $\alpha\beta$ on the rotation angle, with freely interchangeable contributions of the parameters $\alpha$ and $\beta$. We substitute $\gamma = \alpha\beta$ and note that the resulting bias in angle, $\tilde{\phi} - \phi$, is observed as a bias in mm on the LED array at a distance $|OR|$:
 
 \begin{equation}
+\label{p2:eq6}
 \mu = (\tilde{\phi} - \phi)|OR| = (\gamma - 1)T(1 - \frac{|OR|}{|OF|})
 \end{equation}
 
@@ -109,28 +145,59 @@ Thus, in the gaze-centered model the bias is again proportional to translation a
 
 Participants were tested in an experimental paradigm that studies the stability of spatial locations across combined eye and body motion. The task, illustrated in Figure 1, requires that subjects fixate an earth-stationary central fixation point, FP, which is visible throughout the run. At two successive reversals of motion direction, at the right and left excursion point of the sinusoidal motion, a reference (R) and a probe (P) target are briefly flashed. In a two-alternative forced choice task, the participant has to indicate whether the probe location was to the left or to the right of the reference location. The resulting psychometric data provide a quantitative assessment of the bias ($\mu$) and precision ($\sigma^{-2}$) of visual stability across self-motion (see Methods for details). Depending on the stimulus conditions (FP, R, and T), participants may erroneously judge the location of R, and hence provide biased responses.
 
-Figure 2 shows the results of a typical participant, plotting the fraction of rightward responses (indicated by the circles) as a function of horizontal probe location relative to the reference. The 16 conditions are split into 4 panels according to the manipulated variable: FP distance (top panels), reference distance (bottom panels) and translation amplitude (left vs. right panels). Data for all individual probes are presented (circles). In an ideal observer, all psychometric functions would constitute a step response centered at zero, indicating no bias and no uncertainty. However, the actual data show consistent biases and non-zero variance.
+Figure \ref{p2:fig2} shows the results of a typical participant, plotting the fraction of rightward responses (indicated by the circles) as a function of horizontal probe location relative to the reference. The 16 conditions are split into 4 panels according to the manipulated variable: FP distance (top panels), reference distance (bottom panels) and translation amplitude (left vs. right panels). Data for all individual probes are presented (circles). In an ideal observer, all psychometric functions would constitute a step response centered at zero, indicating no bias and no uncertainty. However, the actual data show consistent biases and non-zero variance.
+
 When FP was behind R, we observed a leftward bias (top panels; red and purple curves), that increased when fixation was further away from the reference location (red vs. purple dots). When FP was in front of R (green and blue dots), the opposite pattern was seen. Furthermore, as T increases, psychometric curves move away from zero (t-test; $t(63) = -4.55$, $p < 0.05$) and become less steep (t-test; $t(63) = -4.64$, $p < 0.05$), a sign that there is decay in both accuracy and precision (compare left and right panels). Similar biases are observed when keeping FP constant, and varying the location of R, as demonstrated by the bottom panels. We derived estimates of the bias ($\mu$) and corresponding standard deviation ($\sigma$) values in each of the 16 conditions, for all subjects.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/paper2/figure2.pdf}
+    
+    \caption{Performance in one subject (S1). The proportion of rightward responses is plotted against probe location relative to the reference. Size of a data point represents the number of trials tested. Solid lines, best-fit cumulative Gaussians, characterized by bias (l) and standard deviation (r). (A) Constant reference depth, variable fixation depth, 150 mm translation. (B) Constant reference depth, variable fixation depth, 300 mm translation. (C) Variable reference depth, constant fixation depth, 150 mm translation. (D) Variable reference depth, constant fixation depth, 300 mm translation.}
+    
+    \label{p2:fig2}
 \end{figure}
 
-Figure 3 depicts the bias ($\mu$) for each subject (dots), together with the mean bias {\textpm}SD across subjects (error bars), in top-view panels. This shows that the pattern in Figure 2 holds across all participants, with biases ranging between -126 and 212 mm. Clearly, the bias in updating of the central target increases with T and depends on FP, reversing for gaze fixation behind versus in front of the R (two top panels). Likewise, when FP was kept constant, the updating bias is not only larger for the larger T, but also depends on the location of R, with the bias in opposite directions for targets presented in front versus behind fixation (two bottom panels). Taken together, these observations suggest that the location of R relative to gaze, rather than the head-centric locations of FP or R, is a crucial factor in determining the updating bias. 
+Figure \ref{p2:fig3} depicts the bias ($\mu$) for each subject (dots), together with the mean bias {\textpm}SD across subjects (error bars), in top-view panels. This shows that the pattern in Figure \ref{p2:fig2} holds across all participants, with biases ranging between -126 and 212 mm. Clearly, the bias in updating of the central target increases with T and depends on FP, reversing for gaze fixation behind versus in front of the R (two top panels). Likewise, when FP was kept constant, the updating bias is not only larger for the larger T, but also depends on the location of R, with the bias in opposite directions for targets presented in front versus behind fixation (two bottom panels). Taken together, these observations suggest that the location of R relative to gaze, rather than the head-centric locations of FP or R, is a crucial factor in determining the updating bias. 
 
 \begin{figure}
     \includegraphics[width=0.75\textwidth]{src/paper2/figure3.pdf}
+    
+    \caption{Top view of the updating biases ($\mu$). Dots, individual bias values; error bars, averages (\textpm SD) across participants; +, fixation point. (A), (B), (C), (D): Conditions as in Figure \ref{p2:fig2}.}
+    
+    \label{p2:fig3}
 \end{figure}
 
 To further analyze these observations, Figure 4 plots the bias values ({\textpm}SE across participants) as a function of gaze fixation FP (panel A), target location R (panel B) and reference location relative to gaze fixation FP - R (panel C). Both the location of FP and R, as well as the bias are expressed in units of degrees instead of millimeters because the former is more closely associated with native visual coordinates. (In practice, however, because of the large distance, visual angles are about proportional to the associated horizontal distances). While in panel A no clear relationship is observed ($R^2 = 0.09$, $F(1,14) = 1.32$; $p > 0.05$), panel B reveals only a weak linear relationship ($R^2 = 0.25$, $F(1,14) = 4.71$; $p < 0.05$). However, in panel C the data for all conditions are rearranged such that they fall into a single response curve. A linear fit shows a very strong correlation in this case ($R^2 = 0.97$, $F(1,14) = 483$, $p < 0.05$). This suggests that the observed errors almost solely depend on the location of R relative to gaze.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/paper2/figure4.pdf}
+    
+    \caption{Head- versus gaze-centered effects in updating bias (l). (A) Average bias (6 SE) across participants plotted against head- centric version angle of fixation point, for each of the 16 conditions. (B) Same data plotted as a function of head-centric angle to the reference location. (C) Same data plotted against the gaze-centric location of the reference target. Open symbols, 150 mm translation. Closed symbols, 300 mm translation. Circles, constant fixation depth. Squares, constant reference depth. Color scheme as in Figure \ref{p2:fig1}C.}
+    
+    \label{p2:fig4}
 \end{figure}
 
-To validate this notion, we fit two different models to explain the updating biases: a head- and gaze-centered model (see Eqs. 2 and 6 respectively, in Methods). Because the updating bias systematically depends on gaze, we expect the gaze-centered model to outperform the head-centered model. Indeed, the RMSE of the gaze-centered model was significantly lower (t-test; $t(7) = -3.68$, $p < 0.05$) than that of the head-centered model. Table 2 presents the RMSE values for both models and the fit-results of the gaze-centered model for each participant. According to this latter model, the best-fit value of the gain $\gamma$ (mean 0.25 \textpm0.08 SE) is considerably lower than the ideal value of one. In the Discussion we will address the possible implications of this small value.
+To validate this notion, we fit two different models to explain the updating biases: a head- and gaze-centered model (see Eqs. \ref{p2:eq2} and \ref{p2:eq6} respectively, in \nameref{p2:sec:methods}). Because the updating bias systematically depends on gaze, we expect the gaze-centered model to outperform the head-centered model. Indeed, the RMSE of the gaze-centered model was significantly lower (t-test; $t(7) = -3.68$, $p < 0.05$) than that of the head-centered model. Table \ref{p2:tab2} presents the RMSE values for both models and the fit-results of the gaze-centered model for each participant. According to this latter model, the best-fit value of the gain $\gamma$ (mean 0.25 \textpm0.08 SE) is considerably lower than the ideal value of one. In the Discussion we will address the possible implications of this small value.
 
-% Table 2
+\begin{table}
+    \begin{tabular}{llll}
+    & Head-centered & FIX & ME \\
+    Participant & RMSE (\textdegree) & $\gamma$ & RMSE (\textdegree) \\
+    \hline
+    1 & 0.32 & 0.13 & 0.06 \\
+    2 & 0.29 & 0.17 & 0.05 \\
+    3 & 0.13 & 0.81 & 0.23 \\
+    4 & 0.64 & 0.29 & 0.59 \\
+    5 & 0.31 & 0.14 & 0.07 \\
+    6 & 0.31 & 0.16 & 0.11 \\
+    7 & 0.28 & 0.23 & 0.07 \\
+    8 & 0.33 & 0.07 & 0.10 \\
+    \end{tabular}
+
+    \caption{RMSE values for both models and best-fit values for the gaze-centered model parameter ($\gamma$, Equation \ref{p2:eq6}).}
+
+    \label{p2:tab2}
+\end{table}
 
 Finally, in addition to accuracy, we also quantified the precision of the updated R. Figure 5 shows the standard deviation ($\sigma$ {\textpm}SE across participants) of the psychometric functions as a function of either FP (panel A), the head-centered location of R (panel B) or the gaze-centered location of R (panel C), in the same format as Fig. 4. No significant effects can be observed in panels A and B ($R^2 = 0.18$, $F(1,14) = 3.14$, $p > 0.05$ and $R^2 = 0.00$, $F(1,14) = 0.03$, $p > 0.05$ respectively). Panel C shows a significant linear relationship ($R^2 = 0.41$, $F(1,14) = 9.68$, $p < 0.05$). From this, we conclude that precision decreases for targets that are further or nearer in depth relative to fixation, and therefore also more peripheral in gaze-coordinates.
 
