@@ -1,57 +1,6 @@
 \documentclass[10pt,b5paper,twoside]{book}
 
-\usepackage[dutch,british]{babel}
-\usepackage[nottoc]{tocbibind}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{gensymb}
-\usepackage{textcomp}
-\usepackage{hyperref}
-\usepackage{doi}
-\usepackage{xcolor}
-\usepackage{nameref}
-\usepackage{xspace}
-\usepackage{titlesec}
-\usepackage{floatrow}
-\usepackage{longtable}
-\usepackage{siunitx}
-\usepackage[outercaption]{sidecap}
-\usepackage{fancyhdr}
-\usepackage{wrapfig}
-\usepackage{lmodern}
-\usepackage[font={scriptsize, sf}, labelfont={sf,scriptsize,bf}]{caption}
-\usepackage{src/apacite_custom}
-%\usepackage{apacite}
-%\usepackage[Gray,squaren,thinqspace,thinspace]{SIunits}
-
-\floatsetup[table]{font={scriptsize, sf}}
-
-\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue}
-\setcounter{tocdepth}{2}
-
-% Do not add extra vertical space
-\raggedbottom
-
-% Indent paragraphs
-\setlength{\parindent}{1.0cm}
-
-%\bibliographystyle{plain_custom}
-\bibliographystyle{apacite_custom}
-
-\renewcommand{\baselinestretch}{1.2}
-\setlength{\parskip}{0ex plus 0.3ex minus 0.3ex}
-\newcommand{\npar}{\par}
-\newcommand{\mbet}{\par \vspace{1.5ex plus 0.02ex minus 0.02ex}}
-
-\newcommand{\eqnref}[1]{\hyperref[#1]{Equation }\ref{#1}}
-\newcommand{\figref}[1]{\hyperref[#1]{Figure }\ref{#1}}
-\newcommand{\tabref}[1]{\hyperref[#1]{Table }\ref{#1}}
-
-% Emphasize and insert into index
-\newcommand{\concept}[1]{\index{#1}\textbf{#1}\xspace}
-
+\input{src/common.tex}
 
 \hypersetup{
     pdfauthor = {Ivar Clemens},
@@ -59,31 +8,6 @@
     %pdfsubject = {Language production},
     %pdfkeywords = {language production; }
 }
-
-\newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
-\newcommand{\SBT}[1]{$\text{SBT}_\text{#1}$}
-
-%% For the Chapter title, etc.
-\newcommand{\bigrule}{\titlerule[0.5mm]}
-\titleformat{\chapter}[display]
-{\normalfont\filleft\bfseries\itshape}
-{%
- \vskip-3em
-\titlerule[1pt]%
-\vspace{1pt}%
-\titlerule
-\vspace{1pc}%
-\Large\MakeUppercase{\chaptertitlename} \thechapter}
-{1pc}
-{\titlerule
-\vspace{1pc}%
-\Huge}
-
-
-%%%%%%%%%%%
-% Document
-%%%%%%%%%%%
-
 
 \begin{document}
 

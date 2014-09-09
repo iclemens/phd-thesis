@@ -1,0 +1,23 @@
+\documentclass[10pt,b5paper,twoside]{book}
+
+\input{src/common.tex}
+
+\hypersetup{
+    pdfauthor = {Ivar Clemens},
+    %pdftitle = {Choosing our words},
+    %pdfsubject = {Language production},
+    %pdfkeywords = {language production; }
+}
+
+\begin{document}
+
+\selectlanguage{british}
+\input{src/paper3/paper3.tex}
+
+\bibliography{refs}{}
+
+\titleformat{\chapter}
+{\normalfont\Large\bfseries}{\thechapter}{0.2em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{10pt}
+
+\end{document}
