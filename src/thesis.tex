@@ -16,17 +16,19 @@
 \usepackage{titlesec}
 \usepackage{floatrow}
 \usepackage{longtable}
+\usepackage{siunitx}
 \usepackage[outercaption]{sidecap}
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 \usepackage{lmodern}
 \usepackage[font={scriptsize, sf}, labelfont={sf,scriptsize,bf}]{caption}
-\usepackage{apacite}
+\usepackage{src/apacite_custom}
+%\usepackage{apacite}
 %\usepackage[Gray,squaren,thinqspace,thinspace]{SIunits}
 
 \floatsetup[table]{font={scriptsize, sf}}
 
-\hypersetup{colorlinks=true, linkcolor=blue}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue}
 \setcounter{tocdepth}{2}
 
 % Do not add extra vertical space
@@ -42,6 +44,10 @@
 \setlength{\parskip}{0ex plus 0.3ex minus 0.3ex}
 \newcommand{\npar}{\par}
 \newcommand{\mbet}{\par \vspace{1.5ex plus 0.02ex minus 0.02ex}}
+
+\newcommand{\eqnref}[1]{\hyperref[#1]{Equation }\ref{#1}}
+\newcommand{\figref}[1]{\hyperref[#1]{Figure }\ref{#1}}
+\newcommand{\tabref}[1]{\hyperref[#1]{Table }\ref{#1}}
 
 % Emphasize and insert into index
 \newcommand{\concept}[1]{\index{#1}\textbf{#1}\xspace}
