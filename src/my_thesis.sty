@@ -1,0 +1,35 @@
+
+\usepackage{xstring}
+
+\newcommand{\npar}{\par}
+\newcommand{\mbet}{\par \vspace{1.5ex plus 0.02ex minus 0.02ex}}
+
+% Emphasize and insert into index
+\newcommand{\concept}[1]{\index{#1}\textbf{#1}\xspace}
+
+\newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
+\newcommand{\SBT}[1]{$\text{SBT}_\text{#1}$}
+
+\newcommand{\siang}[2][]{#2\degree#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Functions to reference tables, figures, and equations
+%
+% Both the text and the object number will be links
+% to the actual object.
+%
+
+\newcommand{\commonref}[3]{%
+	\IfSubStr{#3}{,}{%
+		#2s %
+	}{%
+		\hyperref[#3]{#2 }%
+	}%
+	\def\nextitem{\def\nextitem{#1}}%
+	\@for \el:=#3\do{\nextitem\ref{\el}}%
+}
+
+\newcommand{\figref}[2][ and ]{\commonref{#1}{Figure}{#2}}
+\newcommand{\tabref}[2][ and ]{\commonref{#1}{Table}{#2}}
+\newcommand{\eqnref}[2][ and ]{\commonref{#1}{Equation}{#2}}

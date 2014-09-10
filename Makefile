@@ -8,7 +8,7 @@ all: thesis.pdf	paper1.pdf paper2.pdf paper3.pdf
 %.pdf: src/%.tex
 	cp src/refs.bib src/*_custom.bst build
 	$(LATEX_CMD) $(LATEX_ARGS) -jobname $(*F) $<
-	cd build; bibtex thesis
+	cd build; bibtex $(*F)
 	$(LATEX_CMD) $(LATEX_ARGS) -jobname $(*F) $<
 	$(LATEX_CMD) $(LATEX_ARGS) -jobname $(*F) $<
 

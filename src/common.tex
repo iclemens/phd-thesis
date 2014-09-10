@@ -26,6 +26,8 @@
 \usepackage{lmodern}
 \usepackage[font={scriptsize, sf}, labelfont={sf,scriptsize,bf}]{caption}
 \usepackage{src/apacite_custom}
+\usepackage{src/my_thesis}
+
 %\usepackage{apacite}
 %\usepackage[Gray,squaren,thinqspace,thinspace]{SIunits}
 
@@ -45,18 +47,7 @@
 
 \renewcommand{\baselinestretch}{1.2}
 \setlength{\parskip}{0ex plus 0.3ex minus 0.3ex}
-\newcommand{\npar}{\par}
-\newcommand{\mbet}{\par \vspace{1.5ex plus 0.02ex minus 0.02ex}}
 
-\newcommand{\eqnref}[1]{\hyperref[#1]{Equation }\ref{#1}}
-\newcommand{\figref}[1]{\hyperref[#1]{Figure }\ref{#1}}
-\newcommand{\tabref}[1]{\hyperref[#1]{Table }\ref{#1}}
-
-% Emphasize and insert into index
-\newcommand{\concept}[1]{\index{#1}\textbf{#1}\xspace}
-
-\newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
-\newcommand{\SBT}[1]{$\text{SBT}_\text{#1}$}
 
 %% For the Chapter title, etc.
 \newcommand{\bigrule}{\titlerule[0.5mm]}
