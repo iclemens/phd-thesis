@@ -12,6 +12,14 @@
 
 \newcommand{\siang}[2][]{#2\degree#1}
 
+\newcommand{\panelref}[1]{\textbf{#1}}
+\newcommand{\ttest}[3]{\textit{t}(#1) = #2, p $<$ #3}
+
+\newcommand{\people}[2][, ]{%
+	\def\nextitem{\def\nextitem{#1}}%
+	\@for \el:=#2\do{\nextitem\person{\el}}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Functions to reference tables, figures, and equations
