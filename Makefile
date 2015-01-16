@@ -3,7 +3,7 @@ LATEX_CMD=pdflatex
 LATEX_ARGS=-output-directory build -file-line-error
 BIBTEX_CMD=bibtex
 
-all: thesis.pdf	paper1.pdf paper2.pdf paper3.pdf
+all: thesis.pdf	paper1.pdf paper2.pdf paper3.pdf paper4.pdf
 
 %.pdf: src/%.tex
 	cp src/refs.bib src/*_custom.bst build
