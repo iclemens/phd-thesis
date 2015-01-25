@@ -26,20 +26,20 @@ To answer this question, \figref{p4:fig3} illustrates psychophysical data on sel
 Similar results were obtained for all participants, as shown by the individual PSEs (right column of \figref{p4:fig3}). Statistical significance of the effects of fixation depth was evaluated by comparing PSEs for the two fixation depths using a paired t-test. PSEs were significantly different in world condition, $t(7) = 5.42$, $p < 0.01$ (\figref{p4:fig3}C), but not in the body condition, $t(7) = -1.17$, $p = 0.28$ (\figref{p4:fig3}D), confirming the single subject results (\figref{p4:fig3}A, B). Thus, increasing fixation depth does not influence self-motion perception during body fixed fixations, but causes self-motion to be perceived as shorter during world-fixed fixations.
 
 \begin{table}
-    \begin{tabular}{l|lll}
-	Participant & $\alpha_{50}$ & $\alpha_{200}$ & $\alpha$ \\
+    \begin{tabular}{l|lll|l}
+	Participant & $\alpha_{50}$ & $\alpha_{200}$ & $\frac{d_{200}}{d_{50}}$ & $\alpha$ \\
     \hline
-	1 & 0.37 & 0.25 & 0.27 \\
-	2 & 0.51 & 0.41 & 0.27 \\
-	3 & 0.36 & 0.30 & 0.35 \\
-	4 & 0.14 & 0.29 & 0.06 \\
-	5 & 0.11 & 0.04 & 0.13 \\
-	6 & 0.49 & 0.15 & 0.33 \\
-	7 & 0.40 & 0.53 & 0.58 \\
-	8 & 0.42 & 0.35 & 0.21 \\
+	1 & 0.37 & 0.25 & 1.46 & 0.27 \\
+	2 & 0.51 & 0.41 & 1.25 & 0.27 \\
+	3 & 0.36 & 0.30 & 1.22 & 0.35 \\
+	4 & 0.14 & 0.29 & 0.49 & 0.06 \\
+	5 & 0.11 & 0.04 & 2.79 & 0.13 \\
+	6 & 0.49 & 0.15 & 3.34 & 0.33\\
+	7 & 0.40 & 0.53 & 0.76 & 0.58 \\
+	8 & 0.42 & 0.35 & 1.25 & 0.21 \\
     \end{tabular}
 
-    \caption{.}
+    \caption{Best-fit parameter values for 50 and 200 \si{\centi\metre} fixation distances, $\alpha_{50}$ and $\alpha_{200}$ respectively (see \eqnref{p4:eq5}), and their ratio, $\frac{\alpha_{200}}{\alpha_{50}} = \frac{d_{200}}{d_{50}}$, for each participant. Best-fit parameter values, $\alpha$, from our previous paper \protect\cite{clemens2015a} are included for reference.}
 
     \label{p4:tab2}
 \end{table}
@@ -54,6 +54,11 @@ Similar results were obtained for all participants, as shown by the individual P
 In order to quantify how much fixation depth scales the eye movement as a linear self-motion cue, we used a simple linear model (see \nameref{p4:sec:methods}). This model explains the perceived translation distance as a weighted average of a vestibular estimate, equal to the actual translation, and an oculomotor-based estimate. 
 We used one weighting parameter, $\alpha$, per fixation depth, $\alpha_{50}$ and $\alpha_{200}$ (see \tabref{p4:tab2} for best-fit values). Using these parameters we predicted the PSEs, i.e. $m_p$ in \eqnref{p4:eq5}, and plotted it against the actually  observed PSEs in \figref{p4:fig4}. The positive correlation ($\rho = 0.xx$, $p < 0.01$) between observed and predicted PSEs shows that our simple model does reasonably well in predicting perceptual performance.
 
-%%%%
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{src/paper4/paper4_figure5.eps}
 
-As the weighing parameters encompassed both depth dependent as well as depth independent effects, it is possible to remove the depth independent effects by taking the ratio between the two parameters. The ratio between  and  is plotted per participant in Figure 5. In case there is no depth compensation, i.e. when , the expected ratio is one. Perfect compensation, that is when , the expected ratio is 4. While two participants show moderate compensation for depth, the majority of participants show no sign of such compensation.
+	\caption{}
+	\label{p4:fig5}
+\end{figure}
+
+By taking the ratio of these weighting parameters, any depth independent effects were removed. As this ratio contains only depth dependent effects, it is equal to the ratio of depths used for eye movement scaling. In case there is no depth scaling, i.e. when $d_{50} = d_{200}$, the expected ratio is one. Perfect compensation, that is when $d_{50} = 50  \wedge d_{200} = 200$, the expected ratio is $1/4$. The actual ratio between $d_{50}$ and $d_{20}$ is plotted for each participant in \figref{p4:fig5}. While two participants show moderate compensation for depth, the majority of participants show no sign of scaling of eye movements by fixation distance. This is consistent with the observation in the world condition that translations are perceived shorter with far compared to near fixations.
