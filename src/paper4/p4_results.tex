@@ -3,7 +3,7 @@
 In a recent study we have shown that eye movements serve as a cue in the perception of body translation, even in the absence of optic flow \cite{clemens2015a}. Because eye rotations must be weighed by target depth ($\varphi d = T$) to serve as an adequate translation cue, we tested the effect of near versus far fixation on self-motion perception. Participants were presented with two subsequent translation movements \figref{p4:fig1} and had to judge whether the second translation was perceived longer or shorter than the first. During each interval, participants fixated either a body- or world-fixed fixation point either nearby (50 cm) or far away (200 cm) from the participant.
 
 \begin{figure}
-    \includegraphics[width=1.0\textwidth]{src/paper4/paper4_figure2.eps}
+    \includegraphics[width=1.0\textwidth]{src/paper4/p4_figure2.pdf}
 
     \caption{A. Actual (solid lines) and ideal (dashed lines) eye movement traces of one participant in the body-fixed (brown and orange) and world-fixed conditions (purple and pink). Gaze was directed at a near (brown and purple) or far (orange and pink) target. All traces shown are for 10m reference movements. B. [Need to decide what to put here.]}
     \label{p4:fig2}
@@ -15,7 +15,7 @@ We compressed the eye movement data by taking the average ratio between the meas
 
 
 \begin{figure}
-    \includegraphics[width=1.0\textwidth]{src/paper4/paper4_figure3.eps}
+    \includegraphics[width=1.0\textwidth]{src/paper4/p4_figure3.pdf}
 
 	\caption{Psychometric curves (colored lines) and associated binned data (circles) for one participant. Circle size represents the amount of trials within the bin. Psychometric curves before collapsing across reference order are shown as gray lines. A.  Body-fixed condition while fixation was either near (brown) or far (orange). B. World-fixed condition while fixation was either near (purple) or far (pink).}
 	\label{p4:fig3}
@@ -44,21 +44,21 @@ Similar results were obtained for all participants, as shown by the individual P
     \label{p4:tab2}
 \end{table}
 
-\begin{figure}
-    \includegraphics[width=0.5\textwidth]{src/paper4/paper4_figure4.eps}
+\begin{wrapfigure}{l}[5pt]{0.5\textwidth}
+    \includegraphics[width=1.0\textwidth]{src/paper4/p4_figure4.pdf}
 
 	\caption{PSEs for all participants and the average \textpm SE. A.  Body-fixed condition while fixation was either near (brown) or far (orange). B. World-fixed condition while fixation was either near (purple) or far (pink).}
 	\label{p4:fig4}
-\end{figure}
+\end{wrapfigure}
 
 In order to quantify how much fixation depth scales the eye movement as a linear self-motion cue, we used a simple linear model (see \nameref{p4:sec:methods}). This model explains the perceived translation distance as a weighted average of a vestibular estimate, equal to the actual translation, and an oculomotor-based estimate. 
 We used one weighting parameter, $\alpha$, per fixation depth, $\alpha_{50}$ and $\alpha_{200}$ (see \tabref{p4:tab2} for best-fit values). Using these parameters we predicted the PSEs, i.e. $m_p$ in \eqnref{p4:eq5}, and plotted it against the actually  observed PSEs in \figref{p4:fig4}. The positive correlation ($\rho = 0.xx$, $p < 0.01$) between observed and predicted PSEs shows that our simple model does reasonably well in predicting perceptual performance.
 
-\begin{figure}
-    \includegraphics[width=0.5\textwidth]{src/paper4/paper4_figure5.eps}
+\begin{wrapfigure}{l}[5pt]{0.5\textwidth}
+    \includegraphics[width=1.0\textwidth]{src/paper4/p4_figure5.pdf}
 
 	\caption{}
 	\label{p4:fig5}
-\end{figure}
+\end{wrapfigure}
 
 By taking the ratio of these weighting parameters, any depth independent effects were removed. As this ratio contains only depth dependent effects, it is equal to the ratio of depths used for eye movement scaling. In case there is no depth scaling, i.e. when $d_{50} = d_{200}$, the expected ratio is one. Perfect compensation, that is when $d_{50} = 50  \wedge d_{200} = 200$, the expected ratio is $1/4$. The actual ratio between $d_{50}$ and $d_{20}$ is plotted for each participant in \figref{p4:fig5}. While two participants show moderate compensation for depth, the majority of participants show no sign of scaling of eye movements by fixation distance. This is consistent with the observation in the world condition that translations are perceived shorter with far compared to near fixations.
