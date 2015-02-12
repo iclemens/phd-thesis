@@ -1,0 +1,23 @@
+\documentclass[10pt,b5paper,twoside]{book}
+
+\input{src/common.tex}
+
+\hypersetup{
+    pdfauthor = {Ivar Clemens, Luc Selen, and Pieter Medendorp},
+    pdftitle = {Introduction},
+    %pdfsubject = {Language production},
+    %pdfkeywords = {language production; }
+}
+
+\begin{document}
+
+\selectlanguage{british}
+\input{src/intro/intro.tex}
+
+\bibliography{refs}{}
+
+\titleformat{\chapter}
+{\normalfont\Large\bfseries}{\thechapter}{0.2em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{10pt}
+
+\end{document}
