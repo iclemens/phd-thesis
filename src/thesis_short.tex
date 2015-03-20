@@ -1,0 +1,66 @@
+\documentclass[10pt,b5paper,twoside]{book}
+
+\newcommand{\thesistitle}{Multi-sensory integration in location and orientation perception}
+\newcommand{\thesissubtitle}{Replace with subtitle}
+
+\input{src/common.tex}
+
+\hypersetup{
+    pdfauthor = {Ivar Clemens},
+    pdftitle = {\thesistitle},
+    %pdfsubject = {Language production},
+    %pdfkeywords = {language production; }
+}
+
+\usepackage[parfill]{parskip}
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% Front matter
+
+\frontmatter
+\input{src/misc/f1_title.tex}
+
+% Table of contents
+\newpage
+\renewcommand{\baselinestretch}{1.08}
+\small\normalsize
+\tableofcontents
+\renewcommand{\baselinestretch}{1.2}
+\small\normalsize
+
+
+%%%%%%%%%%%%%%
+% Actual text
+
+\mainmatter
+\selectlanguage{british}
+\input{src/intro/intro.tex}
+\input{src/paper1/paper1.tex}
+\input{src/paper3/paper3.tex}
+\input{src/paper4/paper4.tex}
+\input{src/paper2/paper2.tex}
+\input{src/misc/s2_discussion.tex}
+
+
+%%%%%%%%%%%%%%
+% Back matter
+
+\backmatter
+
+\bibliography{refs}{}
+
+\titleformat{\chapter}
+{\normalfont\Large\bfseries}{\thechapter}{0.2em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{10pt}
+
+\selectlanguage{dutch}
+%\input{src/misc/s3_summary.tex}
+
+\selectlanguage{british}
+%\input{src/misc/s4_aboutme.tex}
+%\input{src/misc/s5_publications.tex}
+%\input{src/misc/s6_thanks.tex}
+%\input{src/misc/s7_series.tex}
+
+\end{document}
