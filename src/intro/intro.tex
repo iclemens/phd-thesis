@@ -3,18 +3,19 @@
 
 Life began about four billion years ago with the encapsulation of self-replicating RNA in a lipidic membrane \cite<e.g.>{orgel1968}. Simple as these probionts were, they did not have any means of locomotion and thus relied in full on the currents to deliver the nutrients required to replicate. As organisms evolved, they began to assert an increasing amount of control over their environment. A primitive example can be found in chemotaxis, where ciliae and flagellae, coupled with simple biochemical sensors allow the organism to follow biochemical gradients and thus actively gather nutrients.
 
-Because flagellar motion is limited to either tumbles - random reorientation movements - and runs, the pathway linking these flagella to the biochemical sensors consists of only two steps. With the advent of more advanced sensory and motoric systems, both the amount of information available to drive behaviour as well as the amount of possible behaviours available increased tremendously. As these simple biochemical links were no longer sufficient, simple neural network evolved to process the sensory signals into more abstract decisions about movement. As organisms became more complex, these networks evolved into the nervous system, culminating in the cerebral cortex.
+Because flagellar motion is limited to either tumbles – random reorientation movements – or runs, the pathway linking these flagella to the biochemical sensors consists of only a few steps. With the advent of more advanced sensory and motoric systems, both the amount of information available to drive behaviour as well as the amount of possible behaviours available increased tremendously. As direct biochemical links bewteen perception and action were no longer sufficient, simple neural network evolved to process the sensory signals allowing for abstract decisions about movement. As organisms became more complex, these networks evolved into a complete (central) nervous system, culminating in the cerebral cortex.
 
-In most higher organisms, including humans, the amount of data collected by the sensory organs is immense, the visual system alone generating about $10^9$ bits per second. The nervous system, and the cerebral cortex in particular, make use of probabilistic models to compress the incoming data. The principal idea behind these models being that they reduce redundancy in the input by the statistics of the natural world, and only transfer information that deviates from these statistics-based predictions to higher processing areas.
+In most higher organisms, including humans, the amount of data collected by the sensory organs is enormous, the visual system alone generating between $10^7$ and $10^9$ bits per second \cite{koch2006,kelly1962}. The nervous system, and the cerebral cortex in particular, seem to use probabilistic models to compress the vast amount of the incoming sensory data \cite{zhaoping2006}. The principal idea behind these models being that they reduce redundancy in the input by knowledge about the statistics of the natural world.
 
-Predictive models, or maps, on the spatial organization of the environment are of particular interest to an organism, as they provide for example probable locations of food and predators. To use these maps, the brain needs to know both the location and orientation of the body within the environment. In this thesis, we will investigate how the brain processes the available sensory signals in the perception of gravity as well as travelled distance. The goal is to understand ...
+Predictive models, or maps, on the spatial organization of the environment are of particular interest to an organism, as they provide for example probable locations of food and predators. To use these maps, the brain needs to know both the location and orientation of the body within the environment. In this thesis, we will investigate how the brain processes the available sensory signals in the perception of gravity as well as in the internal estimation of self-motion. The goal is to build computational models and perform thorough psychometric testing in order to examine the constraints that physics and biology impose on the interaction between the vestibular and other sensory systems. 
 
-In the following section sensory sources for gravity and/or distance perception are considered in more detail. We then elaborate on how these signals are being used and integrated in the brain, and conclude with methods to study them.
+In the following section, sensory sources for gravity and self-motion perception are considered in more detail. We then elaborate on how these signals may be used and integrated in the brain, and conclude the chapter with methods for studying the processing of these signals. 
+ 
 
-\section{Sensory signals}
-The signals used for navigation, including gravity and distance perception, can be split in two broad categories: absolute signals and relative signals.  Absolute signals, such as landmarks, can be used to directly estimate the location and orientation of an animal while relative signals, such as acceleration, are first integrated (i.e. dead reckoning or path integration) and then used to update previous estimates.
-	
-While many sensory organs supply information used in navigation and spatial orientation, there is one system that evolved specifically for this purpose: the vestibular system (see \figref{intro:fig6}). Its two components, the semicircular canals and the otoliths, are housed in the labyrinth of the temporal bone in the inner ear and are sensitive to angular and linear acceleration, respectively.
+
+\section{Sensory signals for navigation}
+
+The signals used for self-motion and orientation perception, can be split in two broad categories: absolute signals and relative signals. Absolute signals, such as landmarks, can be used to directly estimate the location and orientation of an animal while relative signals, such as acceleration, first need to be (mathematically) integrated (i.e. dead reckoning or path integration) and then used to update previous estimates of position and orientation. While many sensory organs supply information used to estimate position and orientation, there is one sensory system that evolved specifically for this purpose: the vestibular system (see \figref{intro:fig6}). Its two components, the semicircular canals and the otoliths, are housed in the labyrinth of the temporal bone in the inner ear and are sensitive to angular velocity and linear acceleration, respectively.
 
 
 \subsection{Vestibular system}
@@ -27,9 +28,8 @@ While many sensory organs supply information used in navigation and spatial orie
 
 
 \subsubsection{Semicircular canals}
-The semicircular canals measure rotational acceleration  of the head. Each of the six  canals consists of a circular tube filled with a fluid known as endolymph (see \figref{intro:fig3}A). One part of the tube, the ampulla, is a bit thicker than the rest and contains a membrane, the cupula, that separates the fluid. When the head rotates, the fluid stays behind because of its inertia which in turn causes the membrane to deflect (see \figref{intro:fig3}B). Special hair cells, partly embedded in the cupula, measure this deflection and thus rotational acceleration.
 
-Each side of the head contains three orthogonally oriented semicircular canals, allowing rotation to be perceived in all three dimensions. Because they are only sensitive to rotation, that is change in orientation, they do not directly report on the static orientation of the head within the world. In addition, the canals are not sensitive to linear acceleration because of their circular nature.
+The semicircular canals measure the three-dimensional rotational velocity of the head. Each side of the head contains three orthogonally oriented canals allowing for rotation to be perceived in all three dimensions. Each of the six canals consists of a circular tube filled with a fluid known as endolymph (see \figref{intro:fig3}A). One part of the tube, the ampulla, is a bit thicker than the rest and contains a membrane, the cupula, that separates the fluid. When the head rotates, the fluid stays behind because of its inertia which in turn causes the membrane to deflect (see \figref{intro:fig3}B). While the inertial fluid motion suggests that the cupula should be sensitive to angular acceleration, reactive forces resulting from the fluid motion, such as endolymph viscosity and cupular elasticity,  cause the cupular deflection to reflect angular velocity instead \cite{goldberg2012}.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/intro/figures/Canals.png}
@@ -37,13 +37,15 @@ Each side of the head contains three orthogonally oriented semicircular canals, 
     \label{intro:fig3}
 \end{figure}
 
+The deflection of the cupula is transduced by special hair cells which are partially embedded in the cupula. These hair cells contain bundles of small protrusions, or hairs, on their apical surface. Each bundle contains several smaller stereocilia mechanically linked to one larger kinocilium \cite{pickles1984}. When the stereocilia are stretched towards the kinocilium the links cause cation channels (mechanoelectric transducers or METs) to open and the membrane to depolarize. Glutamate is then released into the synapse and causes the afferent neuron to depolarize and, after sufficient depolarizations, to generate action potentials \cite{purves2012}. These action potentials transmit the angular velocity sensed by the canals to the central nervous system through the  vestibulocochlear nerve.
+
+Initially, the afferent signal closely follows rotational velocity, as opposed to acceleration. During sustained rotation, the elasticity of the cupula returns it to its resting position with causes the rotational signal to subside slowly. This is partly compensated for through velocity storage in the central nervous system. The canals are only sensitive to changes in orientation, as their circular nature makes them insensitive to the effects of linear acceleration and gravity \cite{goldberg2012}. 
+
 
 \subsubsection{Otoliths}
-Linear acceleration is measured by the otolith organs, the saccule and utricle. Each otolith consists of endolymph filled compartments filled with otoconia, calcium carbonate crystals which, due to their high inertia, fall behind when the body is accelerating and move ahead during deceleration. The otoconia are mounted on top of a polysaccaride gel in which the cilia of hair cells are bathed. These cells detect the movement of their hairs, and therefore the gel and otoconia, and are thus sensitive to linear acceleration.
+The linear acceleration and gravitational forces are measured by the four otolith organs, each side of the head containing a saccule and an utricule. Each otolith consists of an endolymph filled compartment containing calcium carbonate crystals known as otoconia. Due to their high inertia, these otoconia fall behind during linear acceleration, and move ahead during deceleration. In addition, they fall downward as a result of the graviational field. The otoconia are mounted on top of a flexible polysaccharide gel, in which hair cells, similar to those found in the semicircular canals, are partly embedded \cite{goldberg2012}.  
 
-Because gravity also affects the otoconia, the vertically oriented ones are always deflected downward. It is therefore impossible to differentiate the linear acceleration from gravity based on the otolith signal alone . While various theories  have been proposed to differentiate these stimuli, recent research favours the canal-otolith interaction theory as first proposed by Merfield and Zupan \textbf{(check the year)}. In short, they state that the relative canal signal is used to update the direction of gravity and that this estimate of gravity is then subtracted from the otolith signal in order to obtain an estimate for linear acceleration.
-
-While the semicircular canals are able to sense rotation in three dimensions due to their orthogonal organization, there are only two otoliths on each side of the head. Because the surfaces of both otoliths, the horizontally oriented utricle and the vertically oriented saccule are curved, the orientation of the haircells determines direction sensitivity, and thus accelerations in all directions.
+However, Einstein's equivalence principle states that  it is not possible to measure forces caused by linear acceleartion and by gravity independently. The signal coming from the otoliths is therefore proportional to the combination of these forces \cite{fernandez1976b}, which is commonly referred to as the gravitoinertial force (GIF). Compared to the three semicircular canals, which are able to sense rotation in three dimensions due to their orthogonal organization, either side of the head only contains two otolith organs. It is still possible to sense the gravitoinertial force in three dimensions because the otolith organs are curved, and the orientation of the hair cells determined the direction of sensitivity \cite{goldberg2012}.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/intro/figures/Otoliths.png}
@@ -51,23 +53,24 @@ While the semicircular canals are able to sense rotation in three dimensions due
     \label{intro:fig7}
 \end{figure}
 
+For many actions, the brain needs to disentangle the contributions of gravity and linear acceleration to the gravitointertial force. For example, the linear vestibuloocular reflex (LVOR) that stabilizes gaze during translation should be sensitive to translation while ignoring gravity. Under normal circumstances, the brain is able to perform this task well \cite{merfeld1995}, but during extreme conditions such as in airplanes or space flight errors might occur. The somatogravic illusion \cite{glasauer1995} is an example of such error. In this illusion an airplane accelerates forward which causes an inertial force in the opposite direction, the resulting GIF will therefore be in between gravity (downward) and the intertial force (backward). The brain erroneously interprets the (majority of the) GIF as being caused by gravity, leading to the perception of "nose-up" pitch tilt.
+
+Various theories have been proposed as to how the brain might solve the tilt-translation ambiguity. The freuency segregation hypothesis, for example, makes use of the fact that when stationary, the only force we experience is gravity. In this case, sustained (low frequency) accelerations should be  attributed to gravity, while the high frequency components should be attributed to translation \cite{paige1991, telford1997}. Other models keep track of the expected direction of gravity by mathematically integrating the rotational signal from the semi-circular canals, subtracting that signal from the otolith signal to obtain an estimate of translation. Because the semi-circular canals play a  crucial role in these models, they are known as multisensory integration models \cite{mayne1974,ormsby1977}. Merfeld and Zupan \citeyear{merfeld1995,merfeld2002} further refined the multisensory integration model by explicitly stating that the brain uses an (internal) model of the physical world to resolve the tilt-translation ambiguity.
+
+The disambiguation of linear acceleration and gravity is not solely based on vestibular inputs, but also takes the  range of  possible movements into account. For example when seated on a linear sled, the probability of a participant perceiving tilt is greatly reduced \cite{wertheim2001}, indicating that cognitive processes also influence disambiguation.
+
 
 \subsection{Somatosensory}
-The gravito-intertial force (GIF) caused by a combination of gravity or and other linear acceleration influences not only the vestibular system, but also all other organsother sensory systems, such as somatosensory and touch receptors, as well visceral organs like the stomach and liver  and can be used for both perception and action. The first evidence that non-vestibular sources were used by the brain came from DeKleyn and Versteegh \citeyear{dekleyn1933} who showed that intertial reflexes still occurred after removal of the otolith organs.
+The gravito-inertial force (GIF) caused by a combination of gravity and linear acceleration is not only detected by the vestibular system, but also sensed by other sensory systems. Early evidence that non-vestibular sources were used by the brain came from DeKleyn and Versteegh \citeyear{dekleyn1933} who showed that inertial reflexes still occurred after removal of the otolith organs.
 
-Since then, the contribution of specific organs to GIF perception has been demonstrated. When the stomach is full, for example, performance on the subjective visual vertical (SVV) task, that is orienting a visual line with gravity, improves compared to when it's empty. This suggests that signals from the stomach are used in the perception of vertical \cite{trousselard2004}. Furthermore, SVV performance was shown to decrease when a body-cast was applied. As the cast attentuates skin pressure, this result suggests that skin pressure is also an important cue \cite{trousselard2004}. Similar results were obtained for many other organs, such as the blood vessels \cite{vaitl2002}, kidneys and spinal axis fluid \cite{vaitl1997}.
+Since then, the contribution of specific organs to GIF perception has been demonstrated. In 1992, \citeauthor{mittelstaedt1992} rotated suppine participans along  their naso-occipital axis,  causing  the centrifugal force to act on somatic GIF sensors  but not on the otoliths. In nephrectomized participants, the perceived direction of gravity relied less on the centrifugal force compared to controls, suggesting that the kidneys play a crucial role in perception of the gravitointertial force. Further evidence came from Trousselard \citeyear{trousselard2004}, who showed that the perception of gravity in a tilted position depends on whether the stomach is full or empty. In addition, reducing somatosensory cues, by applying a body cast, also affects the perception of gravity \cite{trousselard2004}.  Similar results have been obtained for many other visceral factors, such as the blood vessels \cite{vaitl2002}, and spinal axis fluid \cite{vaitl1997}.
 
-While these studies have only shown that these signals are used in the perception of gravity, it is not possible for these organs to distinguish between gravity and linear acceleration. As the signal is therefore a combination of both, it is only logical to assume that they also play a role in the perception of linear acceleration.
 
 \subsection{Visual}
-Even though the vestibular and somatosensory systems directly measure the gravito-intertial force, orientation and navigational information can also be extracted from the visual system. In many cases, especially when the low latency of the vestibular signal is not required, the visual signal even overshadows the vestibular one (reference).
+Even though the vestibular and somatosensory systems directly measure the gravito-inertial force, orientation and navigational information can also be extracted from the visual system. In many cases, especially when the low latency of the vestibular signal is not required, the visual signal even overshadows the vestibular one \cite{wright2005,gaerlan2012} (Gaerlan et al., 2012; Wright, DiZio, Lackner, 2005).
 
 \subsubsection{Vection}
-When we move through the environment, the image of the world on our retina shifts. This large-field shift pattern, also known as optic flow, depends on the movement being made. Lateral translation (\figref{intro:fig2}A) for example causes a different pattern from roll rotation (\figref{intro:fig2}B). At the turn of the 19th century von Helmholtz \citeyear{vonhelmholtz1867} recognized the importance of these flow signals for self-motion perception. In some cases the vection signal is so strong, it causes a percept of self-motion in stationary participants. This happens, for example, when sitting in a train and the neighboring train starts to move. This effect is much less likely to occur when e.g. on the platform, suggesting that the vection signal is integrated with prior knowledge about the environment before causing self-motion perception (reference).
-
-Similar retinal shifts are also observed during movement of the eyes or head as well as motion of the environment. When interpreting optic flow the brain needs to distinguish object- from self-motion.
-
-% MORE ABOUT DISTINGUISHING OBJECT FROM SELF-MOTION
+When we move through the environment, the image of the world on our retina shifts. This large-field shift pattern, also known as optic flow, depends on the movement being made. Lateral translation (\figref{intro:fig2}A) for example causes a different pattern from roll rotation (\figref{intro:fig2}B). At the turn of the 19th century von Helmholtz \citeyear{vonhelmholtz1867} recognized the importance of these flow signals for self-motion perception. In some cases the optic flow signal is so strong that it causes a percept of self-motion in stationary participants, called vection \cite{dichgans1978}. This is experienced, for example, when on the train when a neighboring train starts to move. This effect is much less likely to occur when e.g. on the platform, suggesting that the vection signal is integrated with prior knowledge about the environment before causing self-motion perception \cite{andersen1985,lepecq1995}
 
 
 \begin{figure}
@@ -77,8 +80,12 @@ Similar retinal shifts are also observed during movement of the eyes or head as 
     \label{intro:fig2}
 \end{figure}
 
+Similar retinal shifts are also observed during movement of the eyes or head as well as motion of the environment. When interpreting optic flow the brain needs to distinguish object- from self-motion, this process is called optic flow parsing. One strategy is to use extra-retinal cues such as the vestibular, and somatosensory cues to self-motion described above, to subtract the retinal movement due to self-motion \cite{wertheim1994,wexler2001,macneilage2012}. While this strategy does accomplish the goal of disambiguation object- from self-motion, it does not produce any additional information about self-motion.
+
+While the extra-retinal information does contribute to optic flow parsing, the existence of vection \cite{dichgans1978} suggests that the brain can parse optic flow using a purely visual approach \cite{rushton2005,warren2007}. Warren and Rushton \citeyear{warren2009} have shown that the brain indeed uses the global pattern of retinal motion caused by self-motion to parse optic flow. Even though global retinal flow patterns are used to disambiguate between object- and self-motion, it does not mean that a percept of self-motion, i.e. vection, exists. Research has shown that vection can take up to 30s to establish, but that purely visual optic flow parsing occurs within 1s \cite{warren2009}.
+
 \subsubsection{Landmarks}
-In addition to relative cues, the brain also uses absolute cues in both the perception of gravity as well as our location, and thus displacement. For the perception of gravity, it makes use of the fact that many lines within the world are aligned with either the horizon or gravity. Straight lines therefore acts as a priors attracting the perceived direction of gravity torwards them. A special case is the rod-and-frame illusion (\figref{intro:fig9}), where the perceived angle of a rod relative to gravity is affected by the orientation of the frame that contains it (reference).
+In addition to relative cues, the brain also uses absolute cues in both the perception of gravity as well as our location, and thus displacement. For the perception of gravity, it makes use of the fact that many lines within the world are aligned with either the horizon or gravity. Straight lines therefore acts as a priors attracting the perceived direction of gravity towards them. A special case is the rod-and-frame illusion (\figref{intro:fig9}), where the perceived angle of a rod relative to gravity is affected by the orientation of the frame that contains it \cite{witkin1948}. 
 
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{src/intro/figures/RodFrame.png}
@@ -86,7 +93,7 @@ In addition to relative cues, the brain also uses absolute cues in both the perc
 	\label{intro:fig9}
 \end{figure}
 
-Similarly, our absolute position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. \figref{intro:fig1}) with our knowledge of the enviroment we can determine our location (in this case Grand Canyon). Because the experiments outlined in this thesis were performed in near darkness, these absolute  navigational cues are less relevant.
+Similarly, our absolute position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. \figref{intro:fig1}) with our knowledge about the environment we can determine our location (in this case Grand Canyon). Because the experiments outlined in this thesis were performed in near darkness, these absolute navigational cues are less relevant. 
 
 % Why not use redwood forest instead? It has lots of vertical trees.
 \begin{figure}
@@ -98,8 +105,33 @@ Similarly, our absolute position within the world can be established using world
 
 
 \subsubsection{Oculomotor}
-While retinal information plays an important role in orientation and navigation, other, extra-retinal, visual signals are also informative. Eye movements, for example, are known to increase postural sway in darkness \cite{glasauer2005}. The increased sway is likely compensation for perceived self-motion caused by these eye movements. Such percept could be a remnant of optic flow processing, even though there is no optic flow in darkness, the eye movement signal still reaches the neural network responsible for compensating optic flow for eye movements and as such leak into self-motion perception. Evidence for this can be found in the fact that postural sway decreases when a stable background is presented \cite{glasauer2005,rodrigues2015}, where the  flow during eye movements balances the eye movement signal itself.
+While retinal information plays an important role in orientation and navigation, extra-retinal ocular signals are also informative. For example, the eye movements that usually accompany self-motion to improve dynamic visual acuity and reduce retinal slip could serve as self-motion cues themselves. 
 
+In 1963, \citeauthor{guedry1963} reported a substantial underestimation of displacement when their observers watched a small body-fixed target compared to displacements in the dark. Because of the VOR, eye movement in darkness are larger than those in the body-fixed condition. The underestimation in the body-fixed condition can therefore be seen as the first hint about the involvement of eye movements. Further evidence came from studies on postural sway, which occurs to stabilize the body after (minor) self-motion. Making eye movements causes postural sway to increase, suggesting that eye movements influence self-motion perception \cite{glasauer2005,rodrigues2015}.
+
+The relationship between eye movements and self-motion perception is non-trivial, in part because of the influence of fixation depth on the magnitude of eye movements. We will briefly discuss the eye movements made during linear acceleration. Suppose an observer at position $S_0$ translates by $T$ to new position $S_1$ (see Figure Z). During this translation, the participant is fixating point $S$. We would like to know angle $\alpha$ the eyes move through during this translation.  
+
+[Add figure here]
+
+To find this angle, we simplify the problem by breaking up the translation into two parts ($T = T_1 + T_2$), the first going from $S_0$ to the point where fixation point $F$ is perpendicular to the participant and the second from that perpendicular point to $S_1$. Because of the right angle between $T$ and $S’F$ in these two translations, we can compute the expected eye movement, $\alpha_i$, for both parts:
+
+\begin{equation}
+\alpha_i = atan(\frac{T_i}{|S'F|})
+\end{equation}
+
+where $|S'F|$ is the fixation depth, $d$, Assuming $d >> T_i$ we can simplify this to:
+
+\begin{equation}
+\alpha_i \approx \frac{T_i}{d}
+\end{equation}
+
+To find the eye movement angle for the entire translation
+
+\begin{equation}
+\alpha \approx \frac{T_1}{d} + \frac{T_2}{d} = \frac{T}{d}
+\end{equation}
+
+showing that the eye movement is approximately proportional to the translated distance, and inversely proportional to fixation depth.
 
 \section{Reflexive uses for the self-motion}
 While vection is an ideal cue in self-motion perception, it can cause the image on the fovea to blur which hampers visual perception. Several reflexive mechanisms attempt to keep fixation on target during self-motion. Two examples are the vestibulo-ocular reflex, the VOR, where the low-latency vestibular signal drives the reflex and the optokinetic reflex, the OKR, where optic flow acts as the source signal.
@@ -114,14 +146,71 @@ In both the OKR and the VOR the eye movements made consist of two parts, the smo
 
 
 \section{Integration of signals for action and perception}
-While reflexes depend on minimally processed sensory signals by definition, higher animal functions can rely on more elaborate processing. One such step is multi-sensory integration, combining multiple sensory signals into one abstract percept. Before such integration can occur, the brain first establishes that the available cues are in accordance with each other. If that is the case, fusion of the cues occurs, if not only one signal dominates self-motion perception while the other cues are either ignored or interpreted as object motion.
 
-In conflicting situations where visual cues contradict vestibular and proprioceptive ones a dominance of vision is observed \cite{berthoz1975}.
+While reflexes depend on minimally processed sensory signals by definition, higher animal functions can rely on more elaborate processing. One such processing step is determining the underlying physical cause of a sensory signal. It has become clear that multiple sensory systems provide information about the same physical quantity. For example, both the visual and the vestibular system contribute to self-motion perception. A very naive approach to deal with these inout inputs would be to focus on the most reliable cue and ignore the others. A better solution, however, is to weight all available cues by their  relative reliabilities. This approach is known as statistically optimal, or Bayesian, integration, the latter referring to the use  of Bayes' inference. 
 
-In contrast, linear acceleration can change the perceived velocity of a moving visual scene, indicaing dominance of the vestibular over the visual signal \cite{pavard1977}. Mainly at low image velocities! At high image velocities the visual signal still dominates.
+We will now briefly explain optimal integration from a mathematical perspective.  In this example there is a physical stimulus, $x$, which is observed by multiple sensory systems. We assume that each system adds independent Gaussian noise, $\sigma_i^2$, to its observation. The probability of the observations, $x_i$, given the stimulus $x$, is therefore:
 
-As we have seen, multiple sensory systems provide information about both position and orientation at the same time. While the brain could take estimates from the most reliable system and ignore the rest, this is not what commonly happens.
-Instead, the brain tends to integrate all available evidence in what is called statistically optimal integration. In some cases prior knowledge, for example the fact that we stand mostly upright, is also taken into account. When this is the case, we talk about bayesian integration.
+\begin{equation}
+P(x_i|x)= \mathcal{N}(x_i, \sigma_i^2)
+\end{equation}
+
+From the point of view of the brain, the outcomes, $x_i$, are given while the stimulus, $x$, has to be inferred. In this case, probability $P(x_i│x)$ is referred to as the likelihood of  the  stimulus given the observations, or $\mathcal{L}(x|x_i)$. Given multiple sensory observations, $x_1,...,x_n$, we can now compute the likelihood of the stimulus:
+
+\begin{equation}
+\mathcal{L}(x|x_1,...,x_n) = P(x_1,...,x_n|x) = \prod_i P(x_i|x)
+\end{equation}
+
+Making use of Bayes' rule, the  brain can infer the probability of the stimulus given its observations:
+
+\begin{equation}
+P(x|x_1,...,x_n) = \frac{P(x_1,...,x_n)P(x)}{P(x_1,...,x_n)}
+\end{equation}
+
+In this equation, $P(x)$ represents the prior probability of the stimulus, that is the probability of the stimulus occurring without taking the sensory input into account. The left-hand side of the equation, $P(x│x_1,..,x_n$, is commonly referred to as the posterior probability.
+
+The  most likely stimulus given the observations is  the one for which the posterior probability is largest. This method of finding the most optimal estimate (\eqnref{intro:eq:map}) is known maximum a posteriori estimation (MAP).
+
+\begin{equation}
+\hat{x} = argmax_x P(x_1,...,x_n|x)P(x)
+\label{intro:eq:map}
+\end{equation}
+
+When using a flat prior, that is when all stimuli are equally likely to occur, $P(x)=c$, \eqnref{intro:eq:map} can be simplified to
+
+\begin{equation}
+\hat{x} = argmax_x P(x_1,...,x_n|x)
+\label{intro:eq:mle}
+\end{equation}
+
+In this case, we refer to it as maximum  likelihood estimation (MLE). Assuming a flat prior, the solution for the  most likely stimulus, $\hat{x}$, is a weighted sum of the sensory inputs,
+
+\begin{equation}
+\hat{x}=\sum_i w_i x_i
+\end{equation}
+
+with weight, $w_i$,
+
+\begin{equation}
+w_i = \frac{1/\sigma^2_i}{\sum_j 1/\sigma^2_j}
+\end{equation}
+
+As the posterior is a distribution, it also provides us with an estimate of uncertainty in  the most likely stimulus value,
+
+\begin{equation}
+\hat{\sigma}^2_i = \frac{\prod_i \sigma^2_i}{\sum_i \sigma^2_i}
+\end{equation}
+
+%[Here I want to briefly discuss some articles that show that optimal integration indeed takes place, perhaps write a note about cases in which fusion/integration should / should not occur]
+
+%While reflexes depend on minimally processed sensory signals by definition, higher animal functions can rely on more elaborate processing. One such step is multi-sensory integration, combining multiple sensory signals into one abstract percept. Before such integration can occur, the brain first establishes that the available cues are in accordance with each other. If that is the case, fusion of the cues occurs, if not only one signal dominates self-motion perception while the other cues are either ignored or interpreted as object motion.
+
+%In conflicting situations where visual cues contradict vestibular and proprioceptive ones a dominance of vision is observed \cite{berthoz1975}.
+
+%In contrast, linear acceleration can change the perceived velocity of a moving visual scene, indicaing dominance of the vestibular over the visual signal \cite{pavard1977}. Mainly at low image velocities! At high image velocities the visual signal still dominates.
+
+%As we have seen, multiple sensory systems provide information about both position and orientation at the same time. While the brain could take estimates from the most reliable system and ignore the rest, this is not what commonly happens.
+%Instead, the brain tends to integrate all available evidence in what is called statistically optimal integration. In some cases prior knowledge, for example the fact that we stand mostly upright, is also taken into account. When this is the case, we talk about bayesian integration.
 
 
 \section{Reference frames and spatial updating}
@@ -175,6 +264,10 @@ The errors in spatial updating tell us something about ... [expand on this].
 
 
 \section{Outline of this thesis}
-In this thesis we take a closer look at the way vestibular and visual signals are used in orientation and navigation. We start in Chapter 2 where we compute statistical properties of somatosensory and vestibular signals based on reverse engineering and the differential optimal integration of these signals in the SVV and SBT tasks. Next, we move from a statically activated otolith system to one that is activated by linear acceleration in Chapter 3. We show that eye movements, in the absence of visual input, are combined with this acceleration signal to provide an estimate of self-motion. Chapter 4 tentatively shows that the depth is only partially taken into account when processing this oculomotor signal. In Chapter 5 we show that gaze centered effects are present in spatial updating, and that underestimation of self-motion is a possible cause of these effects.
+Multiple sensory signals provide information about both body orientaiton as well as self-motion. This thesis explores the how the brain integrates these signals to form coherent percepts, and how it uses them to keep track of previously seen objects.
 
-In summary ...
+We start with Chapter 2 where we investigate whether the visual, somatosensory, and vestibular cues to body orientation are integrated in a statistically optimal fashion. Because studing the contributions of these signals in isolation is not possible, we adopted an inverse approach where we assumed statistical optimality and attempted to compute the statistical properties of individual sensors. To this end, we fitted an optimal integration model to two physophyisical tasks, one gauging head-in-space orientation (SVV) and the other body-in-space orientation (SBT). Predictions based on these noise properties were consistent with previously published deficits of various patient groups, further strengthening the idea that human spatial orientation is statistically optimal.
+
+In Chapter 3 we move on to the dynamic aspects of vestibular integration, investigating whether eye movements contribute to the perception of whole-body translation. Using a psychophysical task, we first shows that translations in which the eyes fixate a body-fixed target are perceived as shorter than those in which the eyes fixate make pursuit movements by fixating a world-fixed target. We then go on an show that this result does not depend on the presence of the fixation point by including an unconstrained eye movement condition. Becase fixation distance influences the magnitude of pursuit eye movements, we fixed the distance of the fixation point in Chapter 3. To investigate whether the brain takes fixation distance into account, we compared self-motion perception during near and far world-fixed targets in Chapter 4. Our results suggest that translation is not properly accounted for, indicating that raw eye movements augment self-motion perception.
+
+We conclude this thesis with Chapter 5, where we investigate how these self-motion signals are used to track previously seen objects across translation. First, we show that the errors made during spatial updating do not only depend on the location of the previously seen object, but also on the location of gaze. This is consistent with spatial updating in a gaze-centered reference frame. We further show that the underestimation of self-motion is a possible cause of the errors found.

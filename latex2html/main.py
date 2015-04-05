@@ -17,12 +17,15 @@
 
 import re
 
+
 baseDirectory = '../'
 source = """
-	\input{src/paper1/paper1.tex}
-	\input{src/paper2/paper2.tex}
-	\input{src/paper3/paper3.tex}
-	\input{src/paper4/paper4.tex}"""
+	\input{src/intro/intro.tex}"""
+	
+#	\input{src/paper1/paper1.tex}
+	#\input{src/paper2/paper2.tex}
+	#\input{src/paper3/paper3.tex}
+	#\input{src/paper4/paper4.tex}"""
 
 
 #
@@ -45,6 +48,15 @@ def resolveInputs(source):
 
 
 source = resolveInputs(source)
+
+
+#
+# Remove comments
+#
+
+source = re.sub("\\\\%", "__PERCENT__", source)
+source = re.sub("%(.*?)\n", "", source)
+source = re.sub("__PERCENT__", "%", source)
 
 
 #
@@ -75,7 +87,7 @@ def subsubsectionHTMLGroup(match):
 	return "<h4 name=\"" + match.group(2) + "\">" + match.group(1) + "</h4>"
 
 def subsubsectionHTML(match):
-	return "<h4>" + match.group(1) + "</h4>"	
+	return "<h4>" + match.group(1) + "</h4>"
 	
 def resolveChapters(source):
 	source = re.sub("\\\\chapter{([^}]*)}", chapterHTML, source, flags = re.MULTILINE)
@@ -112,7 +124,9 @@ def equationHTML(match):
 	eqns[label] = str(eqnc[0])
 	
 	equation = re.sub("\\\\label{(.*?)}", "", match.group(1))
-	return "\[" + equation + "\]<p><b>Equation " + str(eqnc[0]) + "</b></p>"
+	#return "\[" + equation + "\]<p><b>Equation " + str(eqnc[0]) + "</b></p>"
+	return "<p style='font-weight: bold'>Equation " + str(eqnc[0]) + " about here</p>"
+	
 
 def resolveEquations(source):
 	source = re.sub("\\\\begin{equation}([\s\S]*?)\\\\end{equation}", equationHTML, source, flags = re.MULTILINE)
@@ -121,26 +135,95 @@ def resolveEquations(source):
 	
 source = resolveEquations(source)
 
+
+#
+# Replace figures
+#
+
+figs = dict()
+figc = [0]
+
+def figureHTML(match):
+	tmp = re.search("\\\\label{(.*?)}", match.group(1))
+	
+	if tmp is None:
+		label = "No label"
+	else:
+		label = tmp.group(1)
+	
+	figc[0] = figc[0] + 1 
+	figs[label] = str(figc[0])
+	
+	return "<p style='font-weight: bold'>Figure " + str(figc[0]) + " about here</p>"
+
+def resolveFigures(source):
+	source = re.sub("\\\\begin{figure}([\s\S]*?)\\\\end{figure}", figureHTML, source, flags = re.MULTILINE)
+	return source
+
+source = resolveFigures(source)
+
+
+#
+# Replace figures
+#
+
+tabs = dict()
+tabc = [0]
+
+def tableHTML(match):
+	tmp = re.search("\\\\label{(.*?)}", match.group(1))
+	
+	if tmp is None:
+		label = "No label"
+	else:
+		label = tmp.group(1)
+	
+	tabc[0] = tabc[0] + 1 
+	tabs[label] = str(tabc[0])
+	
+	return "<p style='font-weight: bold'>Table " + str(tabc[0]) + " about here</p>"
+
+def resolveTables(source):
+	source = re.sub("\\\\begin{table}([\s\S]*?)\\\\end{table}", tableHTML, source, flags = re.MULTILINE)
+	return source
+
+source = resolveTables(source)
+
+
 #
 # Replace name references
 #
 
 def nameRefHTML(match):
 	if not match.group(1) in namerefs:
-		return "<a href=\"#\">Undefined label</a>"
+		return "<a href=\"#\">Undefined section label</a>"
 	return "<a href=\"#" + match.group(1) + "\">" + namerefs[match.group(1)] + "</a>"
 
 def eqnRefHTML(match):
 	if not match.group(1) in eqns:
-		return "<a href=\"#\">Undefined label</a>"
+		return "<a href=\"#\">Undefined equation label</a>"
 	return "<a href=\"#" + match.group(1) + "\">Equation " + eqns[match.group(1)] + "</a>"	
+
+def figRefHTML(match):
+	if not match.group(1) in figs:
+		return "<a href=\"#\">Undefined figure label</a>"
+	return "<a href=\"#" + match.group(1) + "\">Figure " + figs[match.group(1)] + "</a>"	
+
+def tabRefHTML(match):
+	if not match.group(1) in tabs:
+		return "<a href=\"#\">Undefined table label</a>"
+	return "<a href=\"#" + match.group(1) + "\">Table " + tabs[match.group(1)] + "</a>"	
+
 	
 def resolveRefs(source):
 	source = re.sub("\\\\nameref{([^}]*?)}", nameRefHTML, source, flags = re.MULTILINE)
 	source = re.sub("\\\\eqnref{([^}]*?)}", eqnRefHTML, source, flags = re.MULTILINE)
+	source = re.sub("\\\\figref{([^}]*?)}", figRefHTML, source, flags = re.MULTILINE)
+	source = re.sub("\\\\tabref{([^}]*?)}", tabRefHTML, source, flags = re.MULTILINE)
 	return source
 
 source = resolveRefs(source)
+
 
 
 title = ""
@@ -152,14 +235,26 @@ print """
 					<title>""" + title + """</title>
 	
 					<meta charset="utf8" />
-	
-					<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-					
+						
 					<script type="text/x-mathjax-config">
-					</script>					
+					</script>
+					<style>
+						body {
+							font-family: calibri
+						}
+					</style>
 				</head>
 			<body>"""
 
-print source
+for line in source.split("\n"):
+	line = line.strip()
+	
+	if len(line) == 0:
+		continue
+	c = line[0]
+	if c == "&" or c == "\\" or c == "<":
+		print line
+	else:
+		print "<p>" + line + "</p>"
 
 print "</body></html>"
