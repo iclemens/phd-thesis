@@ -15,17 +15,16 @@
 
 # Go through page and emit HTML
 
-import re
+import re, sys
 
 
-baseDirectory = '../'
-source = """
-	\input{src/intro/intro.tex}"""
-	
-#	\input{src/paper1/paper1.tex}
-	#\input{src/paper2/paper2.tex}
-	#\input{src/paper3/paper3.tex}
-	#\input{src/paper4/paper4.tex}"""
+baseDirectory = ''
+source = ""
+
+del sys.argv[0]
+
+for file in sys.argv:
+	source += "\\input{src/" + file + "}\n"
 
 
 #

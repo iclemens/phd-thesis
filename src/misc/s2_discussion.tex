@@ -1,41 +1,49 @@
 \chapter{Summary and discussion}
 
-%%%%%%%%%%
-% Introduction
+Navigating through the environment evokes complex changes of visual, auditory, vestibular, tactile and
+motor inputs to the brain. Yet, despite this motion, we perceive the world as a stable reality, maintain an integrated sense of where we are, how we are oriented, and are able to track and act rather effortlessly upon surrounding objects.  How the ability comes about it one of the key questions in neuroscience and also studied in this research project. The objective was to build computational models and perform thorough psychometric testing in order to examine the physical and biological contrast that are placed on the interaction between the vestibular and other sensory systems for spatial orientation and self-motion perception. This resulted in the following contributions to the field:
 
-\section{Summary}
+\begin{enumerate}
+\item Statistical optimality can account for the way body somatosensory, neck proprioceptive and vestibular signals are integrated in spatial orientation perception. While these sensors cannot be examined in isolation, by using optimality as a starting point, their noise properties can be determined and linked to clinical deficits that are seen in particular patient groups.
+\item Oculomotor signals influence self-motion perception, even in the absence of optic flow or other visual stimulation, and even when in conflict with vestibular information. 
+\item This oculomotor signals should be regarded as rudimentary cue to self-motion perception; it is not veridically scaled by fixation distance in the perception of body translation. 
+\item Self-motion signals interact with the dynamic perception of external world.  Errors that arise in this process suggest the use of a gaze-centered reference frames in the underlying computations. 
+\end{enumerate}
 
-%%%%%%%%%%%%%
-% The idea is to concatenate the abstracts for all papers
-% and then smoothen the text out a bit.
-% Look at what Frank and Verena did in their Theses.
+In the following sections, we will provide a detailed summary of each result. 
 
-% 1st paper in thesis
-Most evidence that the brain uses Bayesian inference to integrate noisy sensory signals optimally has been obtained by showing that the noise levels in each modality separately can predict performance in combined conditions. Such a forward approach is difficult to implement when the various signals cannot be measured in isolation, as in spatial orientation, which involves the processing of visual, somatosensory, and vestibular cues. Instead, we applied an inverse probabilistic approach, based on optimal observer theory. Our goal was to investigate whether the perceptual differences found when probing two different states ---body-in-space and head-in-space orientation--- can be reconciled by a shared scheme using all available sensory signals. Using a psychometric approach, seven human subjects were tested on two orientation estimates at tilts \textless 120\textdegree: perception of body tilt [subjective body tilt (SBT)] and perception of visual vertical [subjective visual vertical (SVV)]. In all subjects, the SBT was more accurate than the SVV, which showed substantial systematic errors for tilt angles beyond 60\textdegree. Variability increased with tilt angle in both tasks, but was consistently lower in the SVV. The sensory integration model fitted both datasets very nicely. A further experiment, in which supine subjects judged their head orientation relative to the body, independently confirmed the predicted head-on-body noise by the model. Model predictions based on the derived noise properties from the various modalities were also consistent with previously published deficits in vestibular and somatosensory patients. We conclude that Bayesian computations can account for the typical differences in spatial orientation judgments associated with different task requirements.
+\section{Multisensory processing in spatial orientation}
+Many studies have shown that the brain tends to combine noisy sensory signals in a statistically optimal way. This is normally done by showing that the noise levels of each separate modality can predict performance in combined conditions. In spatial orientation it is difficult to measure sensory signals in isolation as multisensory integration always takes place. In Chapter 2 we therefore used a statistically optimal integration model as a starting point, and attempted to account for the perceptual differences found when probing head-in-space versus body-in-space orientation. Using a psychometric approach, we tested both the perception of body tilt (subjective body tilt; SBT) as well as the perception of visual vertical (subjective visual vertical; SVV) in seven participants. Our model was able to explain the results from both tests. Because one of sensory modalities used, the noise in the neck proprioceptors, can be measured in relative isolation, we used it to independently confirm the predicted head-on-body noise found by the model. We further validated our model by showing that predictions made by our model are consistent with previously published deficits in vestibular and somatosensory patients. We conclude that Bayesian computations can account for the typical differences in spatial orientation judgments associated with different task requirements.
 
-% 2nd paper in thesis
-Self-motion is typically accompanied by compensatory eye movements that help minimize retinal slip and maximize dynamic visual acuity. To date, it is unknown whether these eye movements also have a reversed role, serving as a cue for self-motion perception. To address this question, we had participants ($n=8$) judge self-motion during different eye movement conditions in the absence of full-field optic flow.  In a 2-AFC task, participants indicated whether the second of two successive, passive, lateral whole-body translations was longer or shorter than the first. Eye movements during each translation were world-stationary, body-stationary or free in an otherwise dark room. Results show that the perceived translations were shorter with body-fixed gaze compared to world-fixed gaze. Using a linear model, we estimated the vestibular and eye movement contributions to self-motion perception and found that eye movement signals contribute approximately 25 percent. The model was validated independently by predicting the effects of eye movements on self-motion perception during the free eye movement conditions, taking the inter-subject variation in oculomotor weight and eye movement patterns into account. We conclude that eye movement signals influence self-motion perception, even in the absence of visual stimulation, and even when oculomotor and vestibular estimates are in conflict, e.g. during body-fixed gaze. We hypothesize that adverse consequences of this seemingly inflexible arrangement are minimal under natural conditions because eye movements and self-motion are highly correlated, and because eye movements are most often accompanied by veridical optic flow cues to self-motion.
+\section{Eye movements influence self-motion perception}
+Eye movement typically accompany self-motion in order to minimize retinal slip and maximize dynamic visual acuity. In Chapter 3 we investigate whether these eye movements also have a reversed role, serving as a cue for self-motion perception. To address this question, we asked participants to compare perceived translation distance in two successive, passive, lateral whole-body translations. Eye movements during these translations were either world-stationary or body-stationary. Results show that translations were perceived shorter with body-fixed gaze compared to world-fixed gaze, indicating that eye movements indeed influence self-motion perception. Using a linear model, we estimated the relative contribution of the vestibular versus the eye movement signal, and found that eye movement signals contribute approximately 25 percent of the perceived motion. We independently validated the model by successfully predicting the effects of eye movements on self-motion perception during trails in which the eye movements were unconstrained. This further shows that eye movement signals influence self-motion perception, even in the absence of visual stimulation, and even when oculomotor and vestibular estimates are in conflict, e.g. during body-fixed gaze. We hypothesize that adverse consequences of this seemingly inflexible arrangement are minimal under natural conditions because eye movements and self-motion are highly correlated, and because eye movements are most often accompanied by veridical optic flow cues to self-motion.
 
-% 3rd paper in thesis (see paper 4)
+\section{Partial compensation for fixation depth in self-motion perception}
+The amplitude of these eye movements depend on the depth of fixation, when fixating  faraway they are smaller than when fixating nearby in the world. If these eye movements are used to augment self-motion perception, the effect of fixation depth has to be taken into account in order for self-motion perception to be veridical. In Chapter 4 we investigate whether the brain indeed compensates and takes fixation depth into account. Participants had to judge self-motion during different eye movement conditions in the absence of full-field optic flow. In a 2-AFC task, similar to the one used in Chapter 3, participants indicated whether the second of two successive passive lateral whole-body translations was longer or shorter than the first. During each translation, participants fixated either a nearby or far away target, which was either body- or world-stationary. Results show that the perceived translations were shorter for nearby world-fixed gaze compared to far away world-fixed gaze, indicating that eye movements are not properly scaled in self-motion perception. Together with the observation that self-motion perception is not affected by the depth of a body stationary fixation target, we conclude that eye movements are merely a rudimentary cue to self-motion, with a compensation for fixation depth that is partial at best.
 
-% 4th paper in thesis
-In order to maintain visual stability during self-motion, the brain needs to update any ego-centric spatial representations of the environment. Here, we use a novel psychophysical approach to investigate how, and to which extent, the brain integrates visual, extraocular, and vestibular signals pertaining to this spatial update. Participants were oscillated sideways at a frequency of 0.63 Hz while keeping gaze fixed on a stationary light. When the motion direction changed, a reference target was shown either in front or behind the fixation point. At the next reversal, half a cycle later, we tested updating of this reference location by asking participants to judge whether a briefly flashed probe was shown to the left or right of the memorized target. We show that updating is not only biased, but that the direction and magnitude of this bias depend on both gaze and object location, implying that a gaze-centered reference frame is involved. Using geometric modeling, we further show that the gaze-dependent errors can be caused by an underestimation of translation amplitude, by a bias of visually perceived objects towards the fovea (i.e., a foveal bias), or by a combination of both.
+\section{Gaze-dependent effects in spatial updating}
+The brain uses these self-motion signals to update ego-centric spatial representations of the environment. In Chapter 5 we investigate how, and to which extent, the brain integrates these various self-motion signals for the spatial update. Participants were oscillated sideways while keeping gaze fixed on a stationary target. When the motion direction changed, a reference target was shown either in front or behind the fixation point. Half a cycle later, at the next reversal, we tested updating of this reference location by asking participants to judge whether a briefly flashed probe was shown to the left or right of the memorized target. Results show that both the direction and magnitude of the bias in spatial updating depends on the location of the object being updated with respect to gaze, implying that a gaze-centered reference frame is involved. We further show that these biases can be caused by an underestimated of translation amplitude, a bias of visually perceived objects towards the fovea, or by a combination of both.
 
-\section{Discussion}
+\section{Concluding remarks}
+
+To be done.
+
+%Pieter's suggestions: 10-line summary, why optimality?, questions that remain, where do we go in the future (neurophysiology, neurostimulation, modeling, ...).
+
 
 %[Could it be that the fixation target is a world-fixed reference? Add something about that here or later.]
 
 %%%%%%%%%%%%%
 % Integrated model
 
-Could check Anna/Alexandra results again -> updating + self-motion effect.
-Reaching poster I've made for SfN
+%Could check Anna/Alexandra results again -> updating + self-motion effect.
+%Reaching poster I've made for SfN
 
 %%%%%%%%%%%%%%
 % Relation to other studies
 
-Based on our updating and self-motion perception studies -> is it possible to make predictions for other studies?
-What would we predict van Pelt would do for instance?
+%Based on our updating and self-motion perception studies -> is it possible to make predictions for other studies?
+%What would we predict van Pelt would do for instance?
 
 %%%%%%%%%%%%%%
 % Conclusion
