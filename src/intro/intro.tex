@@ -24,18 +24,18 @@ While many sensory organs supply information that can be used to estimate positi
 \begin{figure}
     \includegraphics[width=0.5\textwidth]{src/intro/figures/vestibular.pdf}
     \caption{Schematic view of the inner ear complex consisting of the auditory system (cochlea) and the vestibular system. The vestibular system has three angular velocity (semicircular canals) and two linear acceleration (saccule and utricle) sensors.}
-    \label{intro:fig6}
+    \label{intro:vestibular}
 \end{figure}
 
 
 \subsubsection{Semicircular canals}
 
-The semicircular canals measure the three-dimensional rotational velocity of the head. Each side of the head contains three orthogonally oriented canals allowing for rotation to be perceived in all three dimensions. Each of the six canals consists of a circular tube filled with a fluid known as endolymph (see \figref{intro:fig3}A). One part of the tube, the ampulla, is a bit thicker than the rest and contains a membrane, the cupula, that separates the fluid. When the head rotates, the fluid stays behind because of its inertia which in turn causes the membrane to deflect (see \figref{intro:fig3}B). While the inertial fluid motion suggests that the cupula should be sensitive to angular acceleration, reactive forces resulting from the fluid motion, such as endolymph viscosity and cupular elasticity,  cause the cupular deflection to reflect angular velocity instead \cite{goldberg2012}.
+The semicircular canals measure the three-dimensional rotational velocity of the head. Each side of the head contains three orthogonally oriented canals allowing for rotation to be perceived in all three dimensions. Each of the six canals consists of a circular tube filled with a fluid known as endolymph (see \figref{intro:fig:canals}A). One part of the tube, the ampulla, is a bit thicker than the rest and contains a membrane, the cupula, that separates the fluid. When the head rotates, the fluid stays behind because of its inertia which in turn causes the membrane to deflect (see \figref{intro:fig:canals}B). While the inertial fluid motion suggests that the cupula should be sensitive to angular acceleration, reactive forces resulting from the fluid motion, such as endolymph viscosity and cupular elasticity,  cause the cupular deflection to reflect angular velocity instead \cite{goldberg2012}.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/intro/figures/canals.pdf}
     \caption{Detailed view of a semicircular canal \panelref{A} in rest and \panelref{B} during rotation. Inertia of the endolymph in the canal causes the cupula to deflect during rotation.}
-    \label{intro:fig3}
+    \label{intro:fig:canals}
 \end{figure}
 
 The deflection of the cupula is transduced by special hair cells which are partially embedded in the cupula. These hair cells contain bundles of small protrusions, or hairs, on their apical surface. Each bundle contains several smaller stereocilia mechanically linked to one larger kinocilium \cite{pickles1984}. When the stereocilia are stretched towards the kinocilium the links cause cation channels (mechanoelectric transducers or METs) to open and the membrane to depolarize. Glutamate is then released into the synapse and causes the afferent neuron to depolarize and, after sufficient depolarizations, to generate action potentials \cite{purves2012}. These action potentials transmit the angular velocity sensed by the canals to the central nervous system through the  vestibulocochlear nerve.
@@ -44,14 +44,14 @@ Initially, the afferent signal closely follows rotational velocity, as opposed t
 
 
 \subsubsection{Otoliths}
-The linear acceleration and gravitational forces are measured by the two otolith organs on either side of the head: the saccule and the utricule. Each otolith consists of an endolymph filled compartment containing calcium carbonate crystals known as otoconia. Due to their high inertia, these otoconia fall behind during linear acceleration, and move ahead during deceleration. In addition, they fall downward as a result of the gravitational field. The otoconia are mounted on top of a flexible polysaccharide gel, in which hair cells, similar to those found in the semicircular canals, are partly embedded \cite{goldberg2012}.  
+The linear acceleration and gravitational forces are measured by the two otolith organs on either side of the head: the saccule and the utricule. Each otolith consists of an endolymph filled compartment containing calcium carbonate crystals known as otoconia (\figref{intro:fig:otoliths}A). Due to their high inertia, these otoconia fall behind during linear acceleration (\figref{intro:fig:otoliths}B), and move ahead during deceleration. In addition, they fall downward as a result of the gravitational field (\figref{intro:fig:otoliths}C). The otoconia are mounted on top of a flexible polysaccharide gel, in which hair cells, similar to those found in the semicircular canals, are partly embedded \cite{goldberg2012}.  
 
 Einstein's equivalence principle states that  it is not possible to measure forces caused by linear acceleration and by gravity independently. The signal coming from the otoliths is therefore proportional to the combination of these forces \cite{fernandez1976b}, which is commonly referred to as the gravito-inertial force (GIF). Compared to the three semicircular canals, which are able to sense rotation in three dimensions due to their orthogonal organization, either side of the head only contains two otolith organs. It is still possible to sense the gravitoinertial force in three dimensions because the otolith organs are curved, and the orientation of the hair cells determined the direction of sensitivity \cite{goldberg2012}.
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/intro/figures/otoliths.pdf}
     \caption{Detailed view of an otolith \panelref{A} in rest, \panelref{B} during head tilt, and \panelref{C} during linear acceleration. The high inertia of the otoconia keeps them from moving rapidly during both head tilt as well as linear acceleration. As the effect is physically identical in either case, head tilt and linear acceleration cannot be disambiguated based on the otolith signal alone.}
-    \label{intro:fig7}
+    \label{intro:fig:otoliths}
 \end{figure}
 
 For many actions, the brain needs to disentangle the contributions of gravity and linear acceleration to the gravitointertial force. For example, the linear vestibuloocular reflex (LVOR) that stabilizes gaze during translation should be sensitive to translation while ignoring gravity. Under normal circumstances, the brain is able to perform this task well \cite{merfeld1995}, but during extreme conditions such as in airplanes or space flight errors might occur. The somatogravic illusion \cite{glasauer1995} is an example of a disambiguation error. In this illusion an airplane accelerates forward which causes an inertial force in the opposite direction. The direction of the resulting GIF will therefore be in between gravity (downward) and the intertial force (backward). The brain erroneously interprets the (majority of the) GIF as being caused by gravity, leading to the perception of "nose-up" pitch tilt.
@@ -71,14 +71,14 @@ Since then, the contribution of specific organs to GIF perception has been demon
 Even though the vestibular and somatosensory systems directly measure the gravito-inertial force, orientation and navigational information can also be extracted from the visual system. In many cases, especially when the low latency of the vestibular signal is not required, the visual signal even overshadows the vestibular one \cite{wright2005,gaerlan2012}.
 
 \subsubsection{Vection}
-When we move through the environment, the image of the world on our retina shifts. This large-field shift pattern, also known as optic flow, depends on the movement being made. Lateral translation (\figref{intro:fig2}A) for example causes a different pattern than roll rotation (\figref{intro:fig2}B). At the turn of the 19th century von Helmholtz \citeyear{vonhelmholtz1867} recognized the importance of these flow signals for self-motion perception. In some cases the optic flow signal is so strong that it causes a percept of self-motion in stationary participants, called vection \cite{dichgans1978}. This is experienced, for example, when sitting on the train and a neighbouring train starts to move. This effect is much less likely to occur when e.g. on the platform, suggesting that the vection signal is integrated with prior knowledge about the environment before causing self-motion perception \cite{andersen1985,lepecq1995}
+When we move through the environment, the image of the world on our retina shifts. This large-field shift pattern, also known as optic flow, depends on the movement being made. Lateral translation (\figref{intro:fig:vection}A) for example causes a different pattern than roll rotation (\figref{intro:fig:vection}B). At the turn of the 19th century von Helmholtz \citeyear{vonhelmholtz1867} recognized the importance of these flow signals for self-motion perception. In some cases the optic flow signal is so strong that it causes a percept of self-motion in stationary participants, called vection \cite{dichgans1978}. This is experienced, for example, when sitting on the train and a neighbouring train starts to move. This effect is much less likely to occur when e.g. on the platform, suggesting that the vection signal is integrated with prior knowledge about the environment before causing self-motion perception \cite{andersen1985,lepecq1995}
 
 
 \begin{figure}
     \includegraphics[width=1.0\textwidth]{src/intro/figures/optic_flow.eps}
 
     \caption{Vection pattern during \panelref{A} lateral translation and \panelref{B} rotation. During translation nearby targets (red) have a larger retinal displacement compared to far away ones (blue). Retinal displacement across rotation does not depend on target distance. }
-    \label{intro:fig2}
+    \label{intro:fig:vection}
 \end{figure}
 
 Similar retinal shifts are also observed during movement of the eyes or head. When interpreting optic flow the brain needs to distinguish object- from self-motion, this process is called optic flow parsing. One strategy is to use extra-retinal cues such as the vestibular, and somatosensory signals to subtract out the retinal stimulation due to self-motion \cite{wertheim1994,wexler2001,macneilage2012}.
@@ -86,34 +86,30 @@ Similar retinal shifts are also observed during movement of the eyes or head. Wh
 While the extra-retinal information does contribute to optic flow parsing, the existence of vection \cite{dichgans1978} suggests that the brain can parse optic flow using a purely visual approach \cite{rushton2005,warren2007}. Warren and Rushton \citeyear{warren2009} have shown that the brain indeed uses the global pattern of retinal motion caused by self-motion to parse optic flow. Even though global retinal flow patterns are used to disambiguate between object- and self-motion, it does not mean that a percept of self-motion, i.e. vection, exists. Research has shown that vection can take up to 30s to establish, but that purely visual optic flow parsing occurs within 1s \cite{warren2009}.
 
 \subsubsection{Landmarks}
-In addition to relative cues, the brain seems to use absolute cues in both the perception of gravity and self-motion. For the perception of gravity, it makes use of the fact that many lines within the world are aligned with either the horizon or gravity. Straight lines therefore acts as a priors attracting the perceived direction of gravity towards them. A special case is the rod-and-frame illusion (\figref{intro:fig9}), where the perceived angle of a rod relative to gravity is affected by the orientation of the frame that contains it \cite{witkin1948}. 
+In addition to relative cues, the brain seems to use absolute cues in both the perception of gravity and self-motion. For the perception of gravity, it makes use of the fact that many lines within the world are aligned with either the horizon or gravity (\figref{intro:fig:treeframe}A). Straight lines therefore acts as a priors attracting the perceived direction of gravity towards them. A special case is the rod-and-frame illusion (\figref{intro:fig:treeframe}B), where the perceived angle of a rod relative to gravity is affected by the orientation of the frame that contains it \cite{witkin1948}. 
 
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{src/intro/figures/treeframe.pdf}
 	\caption{\panelref{A} Trees are aligned with gravity, making them ideal cues for orientation. \panelref{B} The rod-and-frame illusion; even though the frame is rotated, participants might perceive the line as being slanted.}
-	\label{intro:fig9}
+	\label{intro:fig:treeframe}
 \end{figure}
 
-Similarly, our position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. Sequoia trees in \figref{intro:fig1}) with our knowledge about the environment we can determine our location (in this case northern California). Because the experiments outlined in this thesis were performed in near darkness, these absolute navigational cues can be considered less relevant. 
+Similarly, our position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. Sequoia trees in \figref{intro:fig:treeframe}A) with our knowledge about the environment we can determine our location (in this case northern California). Because the experiments outlined in this thesis were performed in near darkness, these absolute navigational cues can be considered less relevant. 
 
 
 \subsubsection{Oculomotor}
 Self-motion is typically accompanied by eye movements that help to improve dynamic visual acuity and reduce retinal slip. In Chapter 3 of this thesis, we explore whether these eye movements may have a reversed role, providing cues about self-motion perception beyond optic flow parsing. 
 
 In 1963, \citeauthor{guedry1963} reported a substantial underestimation of displacement when their observers watched a small body-fixed target compared to displacements in the dark. Because of the VOR, eye movement in darkness are larger than those in the body-fixed condition. The underestimation in the body-fixed condition can therefore be interpreted as the involvement of eye movements, although the authors did not suggest this 
-Studies on postural sway also indicate a role of eye movement is self-motion perception. Making eye movements causes postural sway to increase, suggesting that eye movements influence self-motion perception \cite{glasauer2005,rogrigues2015}.
+Studies on postural sway also indicate a role of eye movement is self-motion perception. Making eye movements causes postural sway to increase, suggesting that eye movements influence self-motion perception \cite{glasauer2005,rodrigues2015}.
 
-%\begin{figure}
-%	\includegraphics[width=1.0\textwidth]{src/intro/figures/...}
-%\end{figure}
-
-One complication is that the magnitude, $e$, of these eye movements not only depend on the translation amplitude, $T$, but also on the fixation depth, $d$. When fixating position $(x, d)$, the eye position at starting position is $e_0 = atan⁡(d/x) \approx d/x$. By subtracting the eye position after the translation, $e_1 = atan⁡(d/(x+T)) \approx d/(x+T)$, we obtain the eye movement amplitude, $e \approx d/T$. In Chapter 4 we explore whether the brain takes this geometry into account and compensates for fixation depth when using eye movements in self-motion perception.
+One complication is that the magnitude, $e$, of these eye movements not only depend on the translation amplitude, $T$, but also on the fixation depth, $d$. When fixating position $(x, d)$, the eye position at starting position is $e_0 = atan(d/x) \approx d/x$. By subtracting the eye position after the translation, $e_1 = atan(d/(x+T)) \approx d/(x+T)$, we obtain the eye movement amplitude, $e \approx d/T$. In Chapter 4 we explore whether the brain takes this geometry into account and compensates for fixation depth when using eye movements in self-motion perception.
 
 
 \section{Reflexive uses for the self-motion}
 While vection is a valuable cue to self-motion perception, the brain wants to minimize vection because it blurs the image on the fovea, which hampers visual perception. Several reflexive mechanisms attempt to keep stable fixation to avoid image blurring during self-motion. Two such mechanisms are the vestibulo-ocular reflex, the VOR, and the optokinetic reflex, the OKR.
 
-The vestibulo-ocular reflex (VOR) is driven by the short-latency vestibular signal and compensates for both rotation and translation of the head. The rotational and translational part of the VOR have their own dedicated reflex arcs. The translational VOR, or TVOR, is driven by the otolith signal while the rotational VOR, or RVOR, is mainly driven by the semicircular canals. The RVOR operates during head rotation by counter rotating the eyes in the opposite direction to the head. Because its gain is about one, eye velocity is about equal, but of opposite sign, to the head velocity. The TVOR operates during head translation, when the head moves orthogonally to the line of sight. In contrast to the RVOR, the TVOR needs to take fixation depth into account. Simple geometry shows that the ideal TVOR response is inversely proportional to fixation distance, $e_vor = atan⁡(d/T)$. As a result, no compensatory eye movements are required when fixating targets at infinity to maintain a stable retinal image. 
+The vestibulo-ocular reflex (VOR) is driven by the short-latency vestibular signal and compensates for both rotation and translation of the head. The rotational and translational part of the VOR have their own dedicated reflex arcs. The translational VOR, or TVOR, is driven by the otolith signal while the rotational VOR, or RVOR, is mainly driven by the semicircular canals. The RVOR operates during head rotation by counter rotating the eyes in the opposite direction to the head. Because its gain is about one, eye velocity is about equal, but of opposite sign, to the head velocity. The TVOR operates during head translation, when the head moves orthogonally to the line of sight. In contrast to the RVOR, the TVOR needs to take fixation depth into account. Simple geometry shows that the ideal TVOR response is inversely proportional to fixation distance, $e_{vor} = atan⁡(d/T)$. As a result, no compensatory eye movements are required when fixating targets at infinity to maintain a stable retinal image. 
 
 The optokinetic reflex is driven by optic-flow, and also compensates for both translational and rotational movement. Because the cells driving the OKR are more sensitive to slow motion, the OKR compensates predominantly for the low frequency components of movements. While the VOR dies away during sustained rotation, the OKR remains because it is sensitive to constant velocity stimuli \cite{soodak1988}.
 
@@ -220,7 +216,7 @@ When seated straight this task, participants do not make any static errors and a
     \includegraphics[width=1.0\textwidth]{src/intro/figures/svv.pdf}
 
     \caption{Subjective visual vertical task (SVV); \panelref{A} Graphical representation of the SVV task. \panelref{B} Bias and \panelref{C} uncertainty as a function of roll angle in a typical participant (circles). The dashed line represents the typical pattern.}
-    \label{intro:fig4}
+    \label{intro:fig5}
 \end{figure}
 
 \subsection{Translation perception}
