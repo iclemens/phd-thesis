@@ -21,7 +21,7 @@ The signals used for self-motion and orientation perception, can be split in two
 \subsection{Vestibular system}
 
 \begin{figure}
-    \includegraphics[width=0.5\textwidth]{src/intro/figures/Vestibular.png}
+    \includegraphics[width=0.5\textwidth]{src/intro/figures/vestibular.pdf}
     \caption{Schematic view of the inner ear complex consisting of the auditory system (cochlea) and the vestibular system. The vestibular system has three angular velocity (semicircular canals) and two linear acceleration (saccule and utricle) sensors.}
     \label{intro:fig6}
 \end{figure}
@@ -32,7 +32,7 @@ The signals used for self-motion and orientation perception, can be split in two
 The semicircular canals measure the three-dimensional rotational velocity of the head. Each side of the head contains three orthogonally oriented canals allowing for rotation to be perceived in all three dimensions. Each of the six canals consists of a circular tube filled with a fluid known as endolymph (see \figref{intro:fig3}A). One part of the tube, the ampulla, is a bit thicker than the rest and contains a membrane, the cupula, that separates the fluid. When the head rotates, the fluid stays behind because of its inertia which in turn causes the membrane to deflect (see \figref{intro:fig3}B). While the inertial fluid motion suggests that the cupula should be sensitive to angular acceleration, reactive forces resulting from the fluid motion, such as endolymph viscosity and cupular elasticity,  cause the cupular deflection to reflect angular velocity instead \cite{goldberg2012}.
 
 \begin{figure}
-    \includegraphics[width=1.0\textwidth]{src/intro/figures/Canals.png}
+    \includegraphics[width=1.0\textwidth]{src/intro/figures/canals.pdf}
     \caption{Detailed view of a semicircular canal \panelref{A} in rest and \panelref{B} during rotation. Inertia of the endolymph in the canal causes the cupula to deflect during rotation.}
     \label{intro:fig3}
 \end{figure}
@@ -48,7 +48,7 @@ The linear acceleration and gravitational forces are measured by the two otolith
 Einstein's equivalence principle states that  it is not possible to measure forces caused by linear acceleration and by gravity independently. The signal coming from the otoliths is therefore proportional to the combination of these forces \cite{fernandez1976b}, which is commonly referred to as the gravito-inertial force (GIF). Compared to the three semicircular canals, which are able to sense rotation in three dimensions due to their orthogonal organization, either side of the head only contains two otolith organs. It is still possible to sense the gravitoinertial force in three dimensions because the otolith organs are curved, and the orientation of the hair cells determined the direction of sensitivity \cite{goldberg2012}.
 
 \begin{figure}
-    \includegraphics[width=1.0\textwidth]{src/intro/figures/Otoliths.png}
+    \includegraphics[width=1.0\textwidth]{src/intro/figures/otoliths.pdf}
     \caption{Detailed view of an otolith \panelref{A} in rest, \panelref{B} during head tilt, and \panelref{C} during linear acceleration. The high inertia of the otoconia keeps them from moving rapidly during both head tilt as well as linear acceleration. As the effect is physically identical in either case, head tilt and linear acceleration cannot be disambiguated based on the otolith signal alone.}
     \label{intro:fig7}
 \end{figure}
@@ -88,20 +88,12 @@ While the extra-retinal information does contribute to optic flow parsing, the e
 In addition to relative cues, the brain also seems to use absolute cues in both the perception of gravity and self-motion. For the perception of gravity, it makes use of the fact that many lines within the world are aligned with either the horizon or gravity. Straight lines therefore acts as a priors attracting the perceived direction of gravity towards them. A special case is the rod-and-frame illusion (\figref{intro:fig9}), where the perceived angle of a rod relative to gravity is affected by the orientation of the frame that contains it \cite{witkin1948}. 
 
 \begin{figure}
-	\includegraphics[width=1.0\textwidth]{src/intro/figures/RodFrame.png}
-	\caption{..}
+	\includegraphics[width=1.0\textwidth]{src/intro/figures/treeframe.pdf}
+	\caption{\panelref{A} As many edges in the world, most trees are aligned with gravity and can serve as absolute orientation cues.  \panelref{B} The rod-and-frame illusion.}
 	\label{intro:fig9}
 \end{figure}
 
-Similarly, our position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. \figref{intro:fig1}) with our knowledge about the environment we can determine our location (in this case Grand Canyon). Because the experiments outlined in this thesis were performed in near darkness, these absolute navigational cues can be considered less relevant. 
-
-% Why not use redwood forest instead? It has lots of vertical trees.
-\begin{figure}
-    \includegraphics[width=1.0\textwidth]{src/intro/figures/Canyon.pdf}
-
-    \caption{While the scene in the left panel might not give precise information about your location in the world, it does narrow it down to somewhere in the vicinity of the Grand Canyon (right panel). In addition, the horizon in the scene gives information about the orientation of the horizontal plane and thus about the orientation of the viewer with respect to gravity. \copyright Mojan Brenn}
-    \label{intro:fig1}
-\end{figure}
+Similarly, our position within the world can be established using world-fixed landmarks. With the exception of animals and vehicles, most items in the world rarely change position. By comparing our current visual scene (e.g. the Sequoias in \figref{intro:fig1}) with our knowledge about the environment we can determine our location (in this case northern California). Because the experiments outlined in this thesis were performed in near darkness, these absolute navigational cues can be considered less relevant. 
 
 
 \subsubsection{Oculomotor}
