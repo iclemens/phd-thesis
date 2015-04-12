@@ -26,25 +26,13 @@ The brain uses these self-motion signals to update ego-centric spatial represent
 
 \section{Concluding remarks}
 
-To be done.
+To integrate multiple redundant sensory signals into a single percept, the brain commonly employs a process called Bayesian integration (see Chapter 1). In this process both sensory signals as well as prior information about the environment are combined by weighting them by their relative precision. Inversely, by assuming Bayes’ optimal integration it is, for some systems, possbile to estimate the precision of sensory signals. In Chapter 2 we have demonstrated this concept for spatial orientation perception.
 
-%Pieter's suggestions: 10-line summary, why optimality?, questions that remain, where do we go in the future (neurophysiology, neurostimulation, modeling, ...).
+In Chapter 3 and 4 we have introduced eye movements as a novel cue to self-motion. Whether these  eye movements are integrated with out self-motion cues in a statiscially optimal fashion remains an open question, as our models did not take precision into account. While we hypothesize that this is indeed  the case, the weight of the oculomotor signal might not be easily determined.
 
+Fixation targets can be world-stationary, body-stationary or somewhere in-between. Only when a fixation target is world-stationary should the eye movement signal be used for self-motion perception, otherwise it is uninformative. From a probablisitic perspective, one would weight the self-motion estimate given a world-stationary target (x=ed) and the estimate given a body-stationary target (x=0) based on the relative probability of the fixation target beging world- or body-stationary respectively. In darkness only prior knowledge can be used, and we hypothesize that the prior probability of fixating a world-stationary target is high. This in turn causes the eye movement signal to have a significant weight and thus contribution to the oculomotor based self-motion estimate. The reliability of the oculomotor signal can be weighted in a similar way, taking the probability of  world- versus body-stationary fixations into account.
 
-%[Could it be that the fixation target is a world-fixed reference? Add something about that here or later.]
+In Chapter 5 we show that eye movements are taken into account when updating the remebered location of previously seen targets. If the same signal used for self-motion perception influences spatial updating, then the type of fixation (world- versus body-stationary) should have an effect on spatial updating as well. Furthermore any increase in noise due to the  updating process should be proportional to the differences in noise observed in the oculomotor-based self-motion estimates. 
 
-%%%%%%%%%%%%%
-% Integrated model
-
-%Could check Anna/Alexandra results again -> updating + self-motion effect.
-%Reaching poster I've made for SfN
-
-%%%%%%%%%%%%%%
-% Relation to other studies
-
-%Based on our updating and self-motion perception studies -> is it possible to make predictions for other studies?
-%What would we predict van Pelt would do for instance?
-
-%%%%%%%%%%%%%%
-% Conclusion
-
+We have performed a pilot experiment where participants had to reach towards remembered targets after intervening translation. Preliminary results suggest that reaching errors are large when fixating a  body-stationary target during translation, while no such errors exist while fixating world-stationary targets \cite{clemens2010}. Suggesting that the eye-movement based self-motion cues are indeed used in spatial updating.
+ 
