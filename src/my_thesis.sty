@@ -12,13 +12,16 @@
 
 \newcommand{\siang}[2][]{#2\degree#1}
 
-\newcommand{\panelref}[1]{\textbf{#1}}
 \newcommand{\ttest}[3]{\textit{t}(#1) = #2, p $<$ #3}
 
 \newcommand{\people}[2][, ]{%
 	\def\nextitem{\def\nextitem{#1}}%
 	\@for \el:=#2\do{\nextitem\person{\el}}%
 }
+
+
+\newcommand{\panel}[1]{\textbf{#1}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -39,5 +42,9 @@
 }
 
 \newcommand{\figref}[2][ and ]{\commonref{#1}{Figure}{#2}}
+\newcommand{\panelref}[2]{\figref{#1}\hyperref[#1]{#2}}
+
 \newcommand{\tabref}[2][ and ]{\commonref{#1}{Table}{#2}}
 \newcommand{\eqnref}[2][ and ]{\commonref{#1}{Equation}{#2}}
+
+\newcommand{\chapter}[2][ and ]{\commonref{#1}{Chapter}{#2}}
