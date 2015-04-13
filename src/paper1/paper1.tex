@@ -407,7 +407,7 @@ In conclusion, we have tested the performance of healthy subjects in two psychop
 \section{Appendix}
 \label{p1:sec:appendix}
 
-Here we provide further explanation about the Bayesian computations underlying the SVV as expressed in \eqnref[ and ]{p1:eqn6,p1:eqn10} in Materials and Methods. \figref{p1:fig8} illustrates graphically that the variance of the posterior distribution in a single trial ($\sigma^2_{\tilde{H}S}$) is not simply the same as the variance in its peak location in multiple trials, $\sigma^2(\tilde{H}_S)$. In a single trial (\figref{p1:fig8}A-C), the optimal estimate of head tilt is based on the likelihood (\figref{p1:fig8}B, green curve) associated with the combined sensory input from the direct and the indirect pathway (\figref{p1:fig8}A, green line, $\hat{H}_S$) and the prior (\figref{p1:fig8}B, blue curve), by multiplication of the two probability distributions. The prior distribution is a Gaussian with mean $H_{SP}$ and variance $\sigma^2_{HSP}$. The peak of the resulting posterior distribution (\figref{p1:fig8}B, orange curve) is used as the optimal estimate of head tilt ($\tilde{H}_S$), given by the following: 
+Here we provide further explanation about the Bayesian computations underlying the SVV as expressed in \eqnref[ and ]{p1:eqn6,p1:eqn10} in Materials and Methods. \figref{p1:fig8} illustrates graphically that the variance of the posterior distribution in a single trial ($\sigma^2_{\tilde{H}S}$) is not simply the same as the variance in its peak location in multiple trials, $\sigma^2(\tilde{H}_S)$. In a single trial (\panelref{p1:fig8}{A-C}), the optimal estimate of head tilt is based on the likelihood (\figref{p1:fig8}B, green curve) associated with the combined sensory input from the direct and the indirect pathway (\panelref{p1:fig8}{A}, green line, $\hat{H}_S$) and the prior (\panelref{p1:fig8}{B}, blue curve), by multiplication of the two probability distributions. The prior distribution is a Gaussian with mean $H_{SP}$ and variance $\sigma^2_{HSP}$. The peak of the resulting posterior distribution (\panelref{p1:fig8}{B-C}, orange curve) is used as the optimal estimate of head tilt ($\tilde{H}_S$), given by the following: 
 
 % Equation 13
 \begin{equation}
@@ -440,7 +440,7 @@ in which $\sigma_{HS}$ denotes the noise in the sensory signal, known to the obs
               = \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
 \end{equation}
 
-and is reflected by the width of the orange curve in \figref{p1:fig8}B. \figref{p1:fig8}D-F illustrates performance in multiple trials, in which the posterior distributions vary due to sensory noise ($\sigma_{HS}$), whereas the prior remains fixed. The variance of each posterior distribution is fixed and is given by \eqnref{p1:eqn16}. 
+and is reflected by the width of the orange curve in \panelref{p1:fig8}{B}. \panelref{p1:fig8}{D-F} illustrates performance in multiple trials, in which the posterior distributions vary due to sensory noise ($\sigma_{HS}$), whereas the prior remains fixed. The variance of each posterior distribution is fixed and is given by \eqnref{p1:eqn16}. 
 
 \begin{figure}
     \includegraphics[width=0.80\textwidth]{src/paper1/figure8.pdf}
@@ -462,5 +462,5 @@ That the variance of the peak locations across multiple trials, $\sigma^2(\tilde
 	= \frac{\sigma^2_{HSP}}{\sigma^2_{HS} + \sigma^2_{HSP}} \cdot \sigma^2_{HS}
 \end{equation}
 
-which is equivalent to \eqnref{p1:eqn10} in Materials and Methods. Corresponding panels G-I (\figref{p1:fig8}) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. \figref{p1:fig8}I illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (\figref{p1:fig8}B), which follows from the comparison of \eqnref{p1:eqn16,p1:eqn17}, respectively. 
+which is equivalent to \eqnref{p1:eqn10} in Materials and Methods. Corresponding panels G-I (\figref{p1:fig8}) illustrate the distribution of the sensory signals for a given tilt angle (green-shaded curve), the prior distribution (blue-shaded curve), and the optimal estimates (orange-shaded curve), respectively. \panelref{p1:fig8}{I} illustrates that the distribution of the optimal estimates across many trials has a lower variance than the posterior distribution in each single trial (\panelref{p1:fig8}{B}), which follows from the comparison of \eqnref{p1:eqn16,p1:eqn17}, respectively. 
 
