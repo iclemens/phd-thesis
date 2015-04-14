@@ -696,30 +696,7 @@ FUNCTION {update.no.initials}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 FUNCTION {check.add.initials.aut}
-{   %
-    % If last name is equal to previous last name
-    % but initials are different, then initials should
-    % be cited. If initials are also the same, initials
-    % should be cited if that is the case for the previous
-    % author .
-    %
-  aut1s aut1s.old =
-    { aut1f aut1f.old =
-        { cite.initials.old  'cite.initials := }
-        { #1             'cite.initials :=
-          aut1f          'aut1f.old :=
-          aut1s          'aut1s.old :=
-          cite.initials  'cite.initials.old :=
-        }
-      if$
-    }
-    {  %
-       % Different last name.
-      aut1f          'aut1f.old :=
-      aut1s          'aut1s.old :=
-      cite.initials  'cite.initials.old :=
-    }
-  if$
+{
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
