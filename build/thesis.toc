@@ -1,0 +1,101 @@
+\select@language {british}
+\select@language {british}
+\contentsline {chapter}{\numberline {1}General introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Sensory signals for navigation}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Vestibular}{3}{subsection.1.1.1}
+\contentsline {subsubsection}{Semicircular canals}{4}{figure.caption.2}
+\contentsline {subsubsection}{Otoliths}{6}{figure.caption.3}
+\contentsline {subsection}{\numberline {1.1.2}Somatosensory}{8}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Visual}{8}{subsection.1.1.3}
+\contentsline {subsubsection}{Vection}{9}{subsection.1.1.3}
+\contentsline {subsubsection}{Landmarks}{10}{figure.caption.5}
+\contentsline {subsubsection}{Oculomotor}{11}{figure.caption.6}
+\contentsline {section}{\numberline {1.2}Vestibular reflexes for the self-motion compensation}{12}{section.1.2}
+\contentsline {section}{\numberline {1.3}Multisensory integration}{13}{section.1.3}
+\contentsline {section}{\numberline {1.4}Studying the link between sensory signals and perception}{16}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Body-tilt perception}{16}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Visual vertical perception}{17}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Translation perception}{18}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Outline of this thesis}{19}{section.1.5}
+\contentsline {chapter}{\numberline {2}Multisensory processing in spatial orientation:\\An inverse probabilistic approach}{21}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{23}{section.2.1}
+\contentsline {section}{\numberline {2.2}Materials and Methods}{25}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Subjects}{25}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Setup}{26}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Experiments}{26}{subsection.2.2.3}
+\contentsline {subsubsection}{SBT}{26}{subsection.2.2.3}
+\contentsline {subsubsection}{SVV}{28}{figure.caption.10}
+\contentsline {subsection}{\numberline {2.2.4}Data analysis}{28}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Sensory integration model}{29}{subsection.2.2.5}
+\contentsline {subsubsection}{SBT computation}{30}{subsection.2.2.5}
+\contentsline {subsubsection}{SVV computation}{31}{equation.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Model fitting}{34}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Model evaluation}{36}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Model validation: independent test of neck noise}{37}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}Model simulation of patient data}{38}{subsection.2.2.9}
+\contentsline {section}{\numberline {2.3}Results}{38}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Psychometric results}{38}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Model predictions}{42}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Sensory weights}{43}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Model evaluation}{45}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Model validation}{46}{subsection.2.3.5}
+\contentsline {section}{\numberline {2.4}Discussion}{47}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Comparison with previous work}{47}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Implications of the model}{48}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Model evaluation}{49}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Clinical implications}{50}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Appendix}{52}{section.2.5}
+\contentsline {chapter}{\numberline {3}Integration of ocular and vestibular signals for self-motion perception in darkness}{55}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{57}{section.3.1}
+\contentsline {section}{\numberline {3.2}Materials and methods}{58}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participants}{58}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Experimental setup}{58}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Paradigm}{59}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Data analysis}{62}{subsection.3.2.4}
+\contentsline {subsubsection}{Model}{63}{equation.3.2.1}
+\contentsline {section}{\numberline {3.3}Results}{64}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Eye movement contributions to self-motion perception}{67}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Precision depends on PSE}{69}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Discussion}{70}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Alternative interpretations}{72}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Implications for other studies}{73}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Possible neural substrate}{74}{subsection.3.4.3}
+\contentsline {chapter}{\numberline {4}Translation perception is modulated by eye movements that are partially scaled by fixation depth}{75}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{77}{section.4.1}
+\contentsline {section}{\numberline {4.2}Materials and methods}{78}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Participants}{78}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Experimental setup}{78}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Paradigm}{79}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Data analysis}{81}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Model}{82}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Results}{83}{section.4.3}
+\contentsline {section}{\numberline {4.4}Discussion}{88}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Relation to other studies}{88}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Alternative explanations}{90}{subsection.4.4.2}
+\contentsline {chapter}{\numberline {5}Visual stability across combined eye and body motion}{91}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{93}{section.5.1}
+\contentsline {section}{\numberline {5.2}Methods}{94}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Participants}{94}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Setup}{95}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Visual stimuli}{95}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Paradigm}{96}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Data analysis}{98}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Model}{99}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Results}{101}{section.5.3}
+\contentsline {section}{\numberline {5.4}Discussion}{106}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Relation to previous studies}{107}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Modelling implications}{108}{subsection.5.4.2}
+\contentsline {chapter}{\numberline {6}Summary and discussion}{111}{chapter.6}
+\contentsline {section}{\numberline {6.1}Multisensory processing in spatial orientation}{112}{section.6.1}
+\contentsline {section}{\numberline {6.2}Eye movements influence self-motion perception}{113}{section.6.2}
+\contentsline {section}{\numberline {6.3}Partial compensation for fixation depth in self-motion perception}{113}{section.6.3}
+\contentsline {section}{\numberline {6.4}Gaze-dependent effects in spatial updating}{114}{section.6.4}
+\contentsline {section}{\numberline {6.5}Concluding remarks}{114}{section.6.5}
+\contentsline {chapter}{Bibliography}{117}{chapter*.41}
+\select@language {dutch}
+\contentsline {chapter}{Nederlandse samenvatting}{133}{section*.43}
+\select@language {british}
+\contentsline {chapter}{Curriculum vitae}{139}{section*.45}
+\contentsline {chapter}{List of publications}{141}{section*.47}
+\contentsline {chapter}{Acknowledgments}{143}{section*.49}
+\contentsline {chapter}{Donders Series}{145}{section*.51}

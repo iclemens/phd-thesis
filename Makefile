@@ -6,6 +6,7 @@ BIBTEX_CMD=bibtex
 all: thesis.pdf	thesis_a4.pdf
 
 %.pdf: src/%.tex
+	mkdir -p build
 	cp src/refs.bib src/*_custom.bst build
 	$(LATEX_CMD) $(LATEX_ARGS) -jobname $(*F) $<
 	cd build; bibtex $(*F)
