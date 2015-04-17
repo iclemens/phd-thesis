@@ -21,14 +21,15 @@
 \usepackage{longtable}
 \usepackage{siunitx}
 \usepackage[outercaption]{sidecap}
-%\usepackage{fancyhdr}
+\usepackage{fancyhdr}
 \usepackage{wrapfig}
 \usepackage{lmodern}
 \usepackage[font={scriptsize, sf}, labelfont={sf,scriptsize,bf}]{caption}
 \usepackage{src/apacite_custom}
-\usepackage{src/thesis}
+\usepackage{src/my_thesis}
 
-\pagestyle{plain}
+%\usepackage{apacite}
+%\usepackage[Gray,squaren,thinqspace,thinspace]{SIunits}
 
 \floatsetup[table]{font={scriptsize, sf}}
 
@@ -41,6 +42,7 @@
 % Indent paragraphs
 \setlength{\parindent}{1.0cm}
 
+%\bibliographystyle{plain_custom}
 \bibliographystyle{apacite_custom}
 
 \renewcommand{\baselinestretch}{1.2}
@@ -62,5 +64,4 @@
 {1pc}
 {\titlerule
 \vspace{1pc}%
-\thispagestyle{empty}
 \Huge}
