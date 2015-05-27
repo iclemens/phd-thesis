@@ -3,7 +3,7 @@ LATEX_CMD=pdflatex
 LATEX_ARGS=-output-directory build -file-line-error
 BIBTEX_CMD=bibtex
 
-all: thesis.pdf	thesis_a4.pdf
+all: thesis.pdf
 
 %.pdf: src/%.tex
 	mkdir -p build
