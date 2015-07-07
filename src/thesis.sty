@@ -49,3 +49,13 @@
 \newcommand{\eqnref}[2][ and ]{\commonref{#1}{Equation}{#2}}
 
 \newcommand{\Chapter}[2][ and ]{\commonref{#1}{Chapter}{#2}}
+
+\newcommand{\Hoofdstuk}[1]{%
+	\IfSubStr{#1}{,}{%
+		Hoofdstukken %
+	}{%
+		\hyperref[#1]{Hoofdstuk }%
+	}%
+	\def\nextitem{\def\nextitem{{ en }}}%
+	\@for \el:=#1\do{\nextitem\ref{\el}}%
+}
