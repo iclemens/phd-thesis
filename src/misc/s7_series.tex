@@ -11,7 +11,13 @@
 \noindent
 
 \newcommand{\dientry}[8]{%
-\noindent #1. #2 (#3). \href{http://dx.doi.org/#8}{\emph{#4}} #5, #6, #7\npar%
+\noindent #1. #2 (#3). %
+\IfSubStr{#8}{/}{%
+\href{http://dx.doi.org/#8}{\emph{#4}}
+}{%
+\emph{#4}  
+}%
+#5, #6, #7\npar%
 }
 
 \input{src/misc/s7_series_list}
