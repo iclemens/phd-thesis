@@ -267,6 +267,13 @@ def resolveCitations(source):
 source = resolveCitations(source)
 
 
+def boldHTML(match):
+	return "<b>" + match.group(1) + "</b>"
+
+source = re.sub("\\\\textbf{([^}])}", boldHTML, source, flags = re.MULTILINE)
+
+
+
 title = ""
 
 print """
