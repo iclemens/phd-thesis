@@ -5,6 +5,7 @@
 
 \usepackage[dutch,british]{babel}
 \usepackage[nottoc]{tocbibind}
+\usepackage{multicol}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -24,9 +25,12 @@
 %\usepackage{fancyhdr}
 \usepackage{wrapfig}
 \usepackage{lmodern}
+\usepackage{multicol}
 \usepackage[font={scriptsize, sf}, labelfont={sf,scriptsize,bf}]{caption}
 \usepackage{src/apacite_custom}
 \usepackage{src/thesis}
+
+
 
 \pagestyle{plain}
 
@@ -64,3 +68,26 @@
 \vspace{1pc}%
 \thispagestyle{empty}
 \Huge}
+
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\footnotesize\begin{multicols}{2}[\chapter{\refname}]%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist\end{multicols}}
+\makeatother
