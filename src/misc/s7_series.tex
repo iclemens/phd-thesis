@@ -15,9 +15,13 @@
 \IfSubStr{#8}{/}{%
 \href{http://dx.doi.org/#8}{\emph{#4}}
 }{%
-\emph{#4}  
+\emph{#4}
 }%
 #5, #6, #7\npar%
 }
-
+{
+\footnotesize
+\begin{multicols}{2}
 \input{src/misc/s7_series_list}
+\end{multicols}
+}
