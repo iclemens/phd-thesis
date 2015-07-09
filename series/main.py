@@ -52,7 +52,7 @@ for line in file:
     country = match.group(1)[::-1].strip()
     city = match.group(2)[::-1].strip()
     university = match.group(3)[::-1].strip()
-    title = match.group(4)[::-1]
+    title = match.group(4)[::-1].replace('&', '\&')
 
     if country[-1] == ".":
         country = country[0:-1]
