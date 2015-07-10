@@ -37,7 +37,7 @@
 36.	Majdandzic, J. (2010). Cerebral mechanisms of processing action goals in self and others. Radboud University Nijmegen, Nijmegen, the Netherlands.
 37.	Snijders, T.M. (2010). More than words - Neural and genetic dynamics of syntactic unification. Radboud University Nijmegen, Nijmegen, the Netherlands.
 38.	Grootens, K.P. (2010). Cognitive dysfunction and effects of antipsychotics in schizophrenia and borderline personality disorder. Radboud University Nijmegen Medical Centre, Nijmegen, the Netherlands.
-39.	Nieuwenhuis, I.L.C. (2010). Memory consolidation: A process of integration – Converging evidence from MEG, fMRI and behavior. Radboud University Nijmegen Medical Centre, Nijmegen, the Netherlands.
+39.	Nieuwenhuis, I.L.C. (2010). Memory consolidation: A process of integration - Converging evidence from MEG, fMRI and behavior. Radboud University Nijmegen Medical Centre, Nijmegen, the Netherlands.
 40.	Menenti, L.M.E. (2010). The right language: Differential hemispheric contributions to language production and comprehension in context. Radboud University Nijmegen, Nijmegen, the Netherlands.
 41.	Van Dijk, H.P. (2010). The state of the brain, how alpha oscillations shape behaviour and event related responses. Radboud University Nijmegen, Nijmegen, the Netherlands.
 42.	Meulenbroek, O.V. (2010). Neural correlates of episodic memory in healthy aging and Alzheimer's disease.  Radboud University Nijmegen, Nijmegen, the Netherlands.
@@ -101,7 +101,7 @@
 100.	Meeuwissen, E.B. (2012). Cortical oscillatory activity during memory formation. Radboud University Nijmegen, Nijmegen, The Netherlands.
 101.	Arnold, J.F. (2012). When mood meets memory: Neural and behavioral perspectives on emotional memory in health and depression. Radboud University Nijmegen, Nijmegen, The Netherlands.
 102.	Gons, R.A.R. (2012). Vascular risk factors in cerebral small vessel disease: A diffusion tensor imaging study. Radboud University Nijmegen Medical Centre, Nijmegen, the Netherlands.
-103.	Wingbermühle, E. (2012). Cognition and emotion in adults with Noonan syndrome: A neuropsychological perspective. Radboud University Nijmegen, Nijmegen, The Netherlands.
+103.	Wingberm\"uhle, E. (2012). Cognition and emotion in adults with Noonan syndrome: A neuropsychological perspective. Radboud University Nijmegen, Nijmegen, The Netherlands.
 104.	Walentowska, W. (2012). Facing emotional faces. The nature of automaticity of facial emotion processing studied with ERPs. Radboud University Nijmegen, Nijmegen, The Netherlands.
 105.	Hoogman, M. (2012). Imaging the effects of ADHD risk genes. Radboud University Nijmegen, Nijmegen, The Netherlands.
 106.	Tramper, J. J. (2012). Feedforward and feedback mechanisms in sensory motor control. Radboud University Nijmegen, Nijmegen, The Netherlands.
