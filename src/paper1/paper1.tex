@@ -1,6 +1,4 @@
 
-\thispagestyle{empty}
-
 \chapter{Multisensory processing in spatial orientation:\\An inverse probabilistic approach}
 \chaptermark{}
 \label{p1}
@@ -388,12 +386,12 @@ In the SVV literature, it is widely assumed that the visual vertical is determin
 According to our model, statistically optimal performance requires the use of information from both direct and indirect pathways to estimate body and head orientation in space (\figref{p1:fig1}). Thus, if one of the sensory inputs is lost or severely disrupted, SBT and SVV performance will deteriorate, but should not completely break down due to their multimodality dependence. By setting the appropriate parameter values of the model to infinity, we simulated the model to predict SVV and SBT performance in two patient groups: bilateral vestibular patients (noise level of the otoliths set to infinity) and patients with somatosensory loss (noise level of the body sensors set to infinity). \figref{p1:fig7} shows the results of these simulations.
 
 % FIXME: Change figure 7 such that the panels are side-by-side.
-\begin{SCfigure}
-    \includegraphics[width=0.5\textwidth]{src/paper1/figure7.pdf}
+\begin{figure}
+    \includegraphics[width=1.0\textwidth]{src/paper1/figure7.pdf}
 
     \caption{Clinical implications of the model. The model simulates the SBT and SVV in a vestibular patient by raising the level of the otolith noise to infinity, keeping the other parameters at the mean values of \tabref{p1:tab1}. A somatosensory patient is modelled by setting the noise level of the body sensors to infinity. Solid lines, Patient predictions. Dashed lines, Prediction for normals.}
     \label{p1:fig7}
-\end{SCfigure}
+\end{figure}
 
 When the otolith signal is lost (vestibular patient), the model predicts increased but constant noise levels in both the SBT and SVV, regardless of tilt angle. From the perspective of our model, the increased SBT variability can be attributed to the loss of the otolith contribution through the indirect body-in-space pathway. The increased bias in the SVV, predicted by the model, can also be understood: as the sensory-derived head-tilt estimate becomes noisier, the effect of the prior becomes more noticeable. Although there are no accuracy and variance measurements across the entire tilt range in these patients, the few previously published deficits are consistent with these predictions. Bisdorff et al. \citeyear{bisdorff1996} have shown that bilateral vestibular patients performed quite accurately in the SBT at upright, but were \textapprox40\% more variable than normal subjects. Bronstein et al. \citeyear{bronstein1996} showed that vestibular patients still compensated for their tilt angle when testing the SVV at 90\textdegree, but with a bias about twice as large as in normal subjects, consistent with our simulations.
 
