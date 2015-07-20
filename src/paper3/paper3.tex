@@ -31,7 +31,7 @@ When gaze is world-stable during whole-body translation, the eye displacement co
 
 This hypothesis implies that oculomotor signals are always combined with vestibular signals to estimate self-motion, even in complete darkness.  In this case, the size of the unconstrained eye movements should resemble a VOR movement that is intermediate between body- and world-fixed fixation, and should parametrically relate to the perceived self-motion.
 
-To test whether eye movements are used in self-motion perception, we employed a two-alternative forced choice (2AFC) paradigm in which participants were presented with two consecutive lateral translations. They had to indicate whether the second translation was longer or shorter than the first. Eye movements during each interval were either constrained using a  body or world stationary fixation point or not constrained at all (i.e. free). We show that identical translations were perceived shorter when gaze was body stationary compared to world stationary. Furthermore, using a linear model we predicted perceived displacement during the free gaze condition based on vestibular signals and unconstrained eye movements. We conclude that eye movements influence self-motion perception even in the absence of optic flow or other visual stimulation. 
+To test whether eye movements are used in self-motion perception, we employed a two-alternative forced choice (2AFC) paradigm in which participants were presented with two consecutive lateral translations. They had to indicate whether the second translation was longer or shorter than the first. Eye movements during each interval were either constrained using a  body or world stationary fixation point or not constrained at all (i.e. free). We show that identical translations were perceived shorter when gaze was body stationary compared to world stationary. Furthermore, using a linear model we predicted perceived displacement during the free gaze condition based on vestibular signals and unconstrained eye movements. We conclude that eye movements influence self-motion perception even in the absence of optic flow or other visual stimulation.
 
 
 %%%%%%%%%%%
@@ -210,11 +210,11 @@ In order to relate psychophysical performance to eye movement behaviour we recor
     5 & 0.13 (\textpm 0.03) \\
     6 & 0.33 (\textpm 0.04) \\
     7 & 0.58 (\textpm 0.02) \\
-    8 & 0.21 (\textpm 0.02) \\    
+    8 & 0.21 (\textpm 0.02) \\
     \end{tabular}
-    
+
     \caption{Estimated eye movement contribution ($\alpha$) to the perception of self-motion (see \eqnref{p3:eq5}). Standard deviations are based on a bootstrap for each participant.}
-    
+
     \label{p3:tab2}
 \end{table}
 
@@ -224,14 +224,14 @@ To quantify the role of eye movements in self-motion perception, we tested a lin
     \includegraphics[width=0.5\textwidth]{src/paper3/figure5.pdf}
 
     \caption{Effect of difference movement amplitude between reference and probe interval (i.e. the bias) on response uncertainty ($\sigma$). A data point is shown for every participant and condition (symbol colour) pair, following the same colour scheme as in \figref{p3:fig2}. The dashed black line is the linear regression trend line.}
-    
+
     \label{p3:fig5}
 \end{figure}
 
 \subsection{Precision depends on PSE}
 \label{p3:sec:precision}
 
-The psychometric curves of the example participant in \figref{p3:fig2} show that precision ($\sigma^{-2}$ in \eqnref{p3:eq1}) decreases as the difference between translated distance in the reference and probe intervals (i.e. the bias) increases. In \figref{p3:fig5} precision is plotted as a functions of bias for all participants and all conditions, showing a significant linear relationship ($R^2 = 0.64$) between the two. This effect, which follows Weber's perceptual law \cite{fechner1860} is consistent with the signal-dependence of (discrimination) precision that has been shown recently for vertical self-motion \cite{nesti2014}.
+The psychometric curves of the example participant in \figref{p3:fig2} show that precision ($\sigma^{-2}$ in \eqnref{p3:eq1}) decreases as the difference between the PSE and the reference (i.e. the bias) increases. In \figref{p3:fig5} precision is plotted as a functions of bias for all participants and all conditions, showing a significant linear relationship ($R^2 = 0.64$) between the two. This effect, which follows Weber's perceptual law \cite{fechner1860} is consistent with the signal-dependence of (discrimination) precision that has been shown recently for vertical self-motion \cite{nesti2014}.
 
 
 %%%%%%%%%%%%%%
@@ -243,7 +243,7 @@ The psychometric curves of the example participant in \figref{p3:fig2} show that
 We investigated the contribution of eye movements to the perception of passively-induced self-motion. Experiments were performed in the absence of full-field optic flow to eliminate the contribution of this visual motion signal. Perception of self-motion was compared across three fixation types: during free fixation the fixation target was extinguished before the movement, while during world and body fixation, targets  remained stable relative to the world and body, respectively. Our results show that self-motion is underestimated during body fixation (in which the eyes remain stationary) compared to world fixation (in which the eyes move to maintain fixation).The eye movements during free fixation, which  are driven by the VOR, show a non-unity gain with excursions in-between body- and world-fixation conditions. Self-motion perception reflects this pattern of eye movements, suggesting an important contribution of this extraretinal signal to the perception of self-motion.
 
  To quantitatively characterise the separate vestibular and eye movement contributions, we fit a single parameter model to the perceptual responses for the body versus world comparison conditions and validated this model independently by predicting the effects of eye movements on self-motion perception during free fixation conditions. This model takes into account subject specific oculomotor weight and eye movement patterns. Based on these inputs it accurately predicts the responses in the free fixation conditions. This demonstrates that extra-retinal eye movement signals are used as a cue in the perception of self-motion, contributing significantly to the self-motion percept with a weight of approximately 25 percent, even in the absence of optic flow.
- 
+
 It is surprising that an influence of eye movements can be observed even for body- stationary fixations, during which the stationary eye movement signal is clearly in conflict with the non-zero vestibular signal. While this demonstrates the strength of the assumption that fixation targets are world-stationary, it raises the question how reliable this assumption is. Simultaneous recording of angular head and eye movements during natural behaviour reveals that approximately 80 percent of eye movements can be classified as compensatory, i.e. eye movements directed opposite to head movement and therefore consistent with maintenance of world-fixed fixation \cite{einhauser2007}. Similarly, other studies have shown that world-stationary fixations are common for many every day activities, ranging from making a cup of tea \cite{hayhoe2014} to driving a car \cite{land1994}, to walking \cite{foulsham2011} and even reaching, where people tend to look at the source and destination of the object, but not at the hand \cite{flanagan2003}. Because world-stationary fixations are so common, the natural world statistics imply that self-motion and eye movements are highly correlated, thus making eye movements a fairly reliable cue for self-motion.
 
 Even when fixation is not world-fixed, eye movement signals are combined with optic flow signals to yield realistic self-motion estimates \cite<e.g>{royden1992, vandenberg2000}. During world-fixed fixation, the eyes move to compensate for body translation, thereby reducing the optic flow component in the retinal signal. The self-motion estimate will therefore be driven predominantly by the eye movement signal. On the other hand, in the body-fixed condition, eye movements are minimal and optic flow maximal such that perceived self-motion will be driven predominantly by the optic flow signal itself. Because our experiment was performed in darkness, this optic flow signal was absent in the body-fixed condition which can explain why self-motion was underestimated.
@@ -267,4 +267,3 @@ Studies conducted to characterise vestibular-only sensitivity are often performe
 \subsection{Possible neural substrate}
 
 This leaves us with the question of where in the brain these effects originate. The locus of our effect is likely to carry both eye movement and vestibular signals. Prime candidate areas known to carry both vestibular and eye movement signals are the vestibular nuclei \cite{henn1974,daunton1979} and the cerebellum \cite{waespe1981}. On the other hand, eye movements could influence self-motion perception indirectly via optic flow processing. In particular, cortical areas that carry both vestibular and optic flow signals (which can be modulated by eye movements) include the ventral intraparietal area (VIP; \citeNP{bremmer2002,chen2011}), and the dorsal medial superior temporal area (MSTd; \citeNP{gu2008}). Future work should reveal how such brain areas, directly or indirectly, merge both vestibular and oculomotor signals into a coherent percept of self-motion.
-
